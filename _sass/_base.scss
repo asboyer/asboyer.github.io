@@ -1047,8 +1047,7 @@ nav[data-toggle="toc"] {
 }
 
 .clearfix {
-  // padding-bottom: 15px;
-  // margin: 0px;
+  padding-bottom: 15px;
 }
 
 /* small screens */
@@ -1108,4 +1107,17 @@ nav[data-toggle="toc"] {
 
 #bold-name-txt {
   color: var(--global-theme-color);
+}
+
+#typer {
+    margin-left: 5px;
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+    color: var(--global-theme-color);
+}
+
+@keyframes caret {
+    50% {
+    border-color: transparent;
+    }
 }
