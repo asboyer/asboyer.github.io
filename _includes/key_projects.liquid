@@ -7,7 +7,7 @@
         style="max-height: 60vw"
       {% endif %}
     >
-      <table class="table table-sm table-borderless">
+      <table class="table table-sm table-borderless" style="margin: 0px">
         {% assign key_projects = site.projects %}
         {% if site.key_projects.limit %}
           {% assign key_projects_limit = site.key_projects.limit %}
@@ -15,13 +15,19 @@
           {% assign key_projects_limit = key_projects_size %}
         {% endif %}
         {% for item in key_projects limit: key_projects_limit %}
+          {% if item.key %}
           <tr>
             <!-- add an image here! -->
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th> 
+            {% if item.img %}
+                       <th scope="row" style="width: 20%">
+                            {% include figure.liquid path=item.img sizes="(min-width: 768px) 156px, 50vw" alt="project thumbnail" %}</th> 
+
+            {% endif %}
             <td>
               {% if item.redirect == blank %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
               {% elsif item.redirect contains '://' %}
+
                 <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a>
                 <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -40,10 +46,11 @@
               {% endif %}
             </td>
           </tr>
+          {% endif %}
         {% endfor %}
       </table>
     </div>
   {% else %}
-    <p>No posts so far...</p>
+    <p>No projects so far...</p>
   {% endif %}
 </div>

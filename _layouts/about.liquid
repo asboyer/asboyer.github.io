@@ -53,6 +53,12 @@ layout: default
     {% endif %}
 
     <!-- favorite projects -->
+    {% if page.key_projects %}
+      <h2>
+        <a href="{{ '/projects/' | relative_url }}" style="color: inherit">key projects</a>
+      </h2>
+      {% include key_projects.liquid %}
+    {% endif %}
     <!-- do latest post thing but for projects -->
 
     <!-- Selected papers -->
