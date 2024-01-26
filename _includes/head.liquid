@@ -25,9 +25,9 @@
 <!-- Code Syntax Highlighting -->
 <link
   rel="stylesheet"
-  href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url | bust_file_cache }}"
+  href="{{ '/assets/css/gruvbox.dark.css' | relative_url | bust_file_cache }}"
   media=""
-  id="highlight_theme_light"
+  id="highlight_theme_dark"
 >
 
 {% if page.toc and page.toc.sidebar %}
@@ -53,11 +53,20 @@
 
 <!-- Dark Mode -->
 {% if site.enable_darkmode %}
-  <link
-    rel="stylesheet"
-    href="{{ '/assets/css/jekyll-pygments-themes-native.css' | relative_url | bust_file_cache }}"
-    media="none"
-    id="highlight_theme_dark"
-  >
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/gruvbox.light.css' | relative_url | bust_file_cache }}"
+  media=""
+  id="highlight_theme_light"
+>
   <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
+
+<noscript>
+  <link
+  rel="stylesheet"
+  href="{{ '/assets/css/gruvbox.dark.css' | relative_url | bust_file_cache }}"
+  media=""
+  id="highlight_theme_light"
+>
+</noscript>
