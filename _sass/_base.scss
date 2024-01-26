@@ -219,7 +219,8 @@ blockquote {
 }
 
 .post-description {
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
+  margin-bottom: 0px !important;
   font-size: 0.875rem;
 
   a {
@@ -673,7 +674,7 @@ footer.sticky-bottom {
     color: var(--global-divider-color);
     border-bottom: 1px solid var(--global-divider-color);
     padding-top: 0.5rem;
-    margin-top: 2rem;
+    margin-top: 0px;
     margin-bottom: 1rem;
     text-align: right;
   }
