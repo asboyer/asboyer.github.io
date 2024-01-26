@@ -636,8 +636,33 @@ footer.sticky-bottom {
   .grid-sizer,
   .grid-item {
     width: 250px;
-    margin-bottom: 10px;
+    padding: 10px
   }
+
+// .grid {  
+//   border: 0.05em solid black;
+// }
+
+// .grid-items {
+//   border: 0.05em solid red;
+//   width:100%;
+//   display: flex;
+//   justify-content: center;
+// }
+
+.grid-items {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+.grid-item {
+
+}
+
+// #grid-item {
+   
+// }
 
   h2.category {
     color: var(--global-divider-color);
