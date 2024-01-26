@@ -8,13 +8,16 @@
       {% endif %}
     >
       <table class="table table-sm table-borderless" style="margin: 0px">
-        {% assign key_projects = site.projects %}
+
+
+        {% assign sorted_projects = site.projects | sort: "importance" %}
+
         {% if site.key_projects.limit %}
           {% assign key_projects_limit = site.key_projects.limit %}
         {% else %}
           {% assign key_projects_limit = key_projects_size %}
         {% endif %}
-        {% for item in key_projects limit: key_projects_limit %}
+        {% for item in sorted_projects limit: key_projects_limit %}
           {% if item.key %}
             <tr>
               <!-- add an image here! -->
@@ -55,4 +58,5 @@
   {% else %}
     <p>No projects so far...</p>
   {% endif %}
+
 </div>
