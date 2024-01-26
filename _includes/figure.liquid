@@ -1,6 +1,12 @@
 {% assign img_path = include.path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
+{% assign home = include.home %}
 
+
+{% if home %}
+<figure style="margin: 0px">
+{% else %}
 <figure>
+{% endif %}
   <picture>
     <!-- Auto scaling with imagemagick -->
     <!--

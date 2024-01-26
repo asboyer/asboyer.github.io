@@ -57,12 +57,12 @@ let setTheme = (theme) => {
 };
 
 let setHighlight = (theme) => {
-  if (theme == "dark") {
-    document.getElementById("highlight_theme_light").media = "none";
-    document.getElementById("highlight_theme_dark").media = "";
-  } else {
+  if (theme == "light") {
     document.getElementById("highlight_theme_dark").media = "none";
     document.getElementById("highlight_theme_light").media = "";
+  } else {
+    document.getElementById("highlight_theme_light").media = "none";
+    document.getElementById("highlight_theme_dark").media = "";
   }
 };
 
@@ -130,7 +130,7 @@ let transTheme = () => {
 let initTheme = (theme) => {
   if (theme == null || theme == "null") {
     const userPref = window.matchMedia;
-    if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
+    if ((userPref && userPref("(prefers-color-scheme: dark)").matches) || (true)) {
       theme = "dark";
     }
   }
