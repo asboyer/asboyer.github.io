@@ -23,6 +23,11 @@ hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
+#invisible-line {
+    clear: both !important;
+    visibility: hidden !important;
+}
+
 table {
   color: var(--global-text-color) !important;
   td,
