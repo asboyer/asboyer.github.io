@@ -161,7 +161,7 @@ pagination:
           {% if categories != "" %}
           &nbsp; &middot; &nbsp;
             {% for category in post.categories %}
-            
+
               <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}"> {{ category }}</a> &nbsp;
               {% endfor %}
           {% endif %}

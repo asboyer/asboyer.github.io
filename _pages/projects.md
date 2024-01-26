@@ -63,6 +63,7 @@ horizontal: false
       {% include projects.liquid %}
     {% endfor %}
     </div>
+
   </div>
   {% endif %}
 {% endif %}

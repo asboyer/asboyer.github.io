@@ -24,8 +24,8 @@ hr {
 }
 
 #invisible-line {
-    clear: both !important;
-    visibility: hidden !important;
+  clear: both !important;
+  visibility: hidden !important;
 }
 
 table {
@@ -384,7 +384,7 @@ blockquote {
     // margin-top: 0px;
     // padding-top: 0px;
     // padding-bottom: 0px;
-    // margin-bottom: 0px; 
+    // margin-bottom: 0px;
     a {
       i::before {
         color: var(--global-text-color);
@@ -642,33 +642,32 @@ footer.sticky-bottom {
   .grid-sizer,
   .grid-item {
     width: 250px;
-    padding: 10px
+    padding: 10px;
   }
 
-// .grid {  
-//   border: 0.05em solid black;
-// }
+  // .grid {
+  //   border: 0.05em solid black;
+  // }
 
-// .grid-items {
-//   border: 0.05em solid red;
-//   width:100%;
-//   display: flex;
-//   justify-content: center;
-// }
+  // .grid-items {
+  //   border: 0.05em solid red;
+  //   width:100%;
+  //   display: flex;
+  //   justify-content: center;
+  // }
 
-.grid-items {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-}
+  .grid-items {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
 
-.grid-item {
+  .grid-item {
+  }
 
-}
+  // #grid-item {
 
-// #grid-item {
-   
-// }
+  // }
 
   h2.category {
     color: var(--global-divider-color);
@@ -1139,16 +1138,16 @@ nav[data-toggle="toc"] {
 }
 
 #typer {
-    margin-left: 5px;
-    border-right: .05em solid;
-    animation: caret 1s steps(1) infinite;
-    color: var(--global-theme-color);
+  margin-left: 5px;
+  border-right: 0.05em solid;
+  animation: caret 1s steps(1) infinite;
+  color: var(--global-theme-color);
 }
 
 @keyframes caret {
-    50% {
+  50% {
     border-color: transparent;
-    }
+  }
 }
 
 .newsletter-form-input {
@@ -1163,7 +1162,7 @@ nav[data-toggle="toc"] {
 }
 
 .newsletter-loading-button {
-  background: var(--global-theme-color); 
+  background: var(--global-theme-color);
   color: var(--global-bg-color);
 }
 
@@ -1178,4 +1177,3 @@ nav[data-toggle="toc"] {
 .newsletter-back-button {
   color: var(--global-theme-color);
 }
-

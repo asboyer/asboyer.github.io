@@ -8,7 +8,7 @@ profile:
   align: right
   image: l.png
   image_circular: false # crops the image to make it circular
-  more_info: > # 
+  more_info: > #
     <p>asboyer@gatech.edu</p>
     <p>Computer Science, B.S.</p>
 

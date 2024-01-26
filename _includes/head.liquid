@@ -53,20 +53,20 @@
 
 <!-- Dark Mode -->
 {% if site.enable_darkmode %}
-<link
-  rel="stylesheet"
-  href="{{ '/assets/css/gruvbox.light.css' | relative_url | bust_file_cache }}"
-  media=""
-  id="highlight_theme_light"
->
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/gruvbox.light.css' | relative_url | bust_file_cache }}"
+    media=""
+    id="highlight_theme_light"
+  >
   <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
 <noscript>
   <link
-  rel="stylesheet"
-  href="{{ '/assets/css/gruvbox.dark.css' | relative_url | bust_file_cache }}"
-  media=""
-  id="highlight_theme_light"
->
+    rel="stylesheet"
+    href="{{ '/assets/css/gruvbox.dark.css' | relative_url | bust_file_cache }}"
+    media=""
+    id="highlight_theme_light"
+  >
 </noscript>
