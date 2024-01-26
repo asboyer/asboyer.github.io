@@ -6,7 +6,7 @@ subtitle: developer & entrepreneur. cs @ <a href='https://directory.gatech.edu/d
 
 profile:
   align: right
-  image: l.png
+  image: logo/l.png
   image_circular: false # crops the image to make it circular
   more_info: > #
     <p><a href="mailto:asboyer@gatech.edu">asboyer<span id="link-text">@</span>gatech<span id="link-text">.</span>edu<a/></p>
