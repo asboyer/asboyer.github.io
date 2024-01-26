@@ -1150,3 +1150,32 @@ nav[data-toggle="toc"] {
     border-color: transparent;
     }
 }
+
+.newsletter-form-input {
+  color: var(--global-bg-color);
+  background: var(--global-text-color);
+  border: 1px solid var(--global-bg-color);
+}
+
+.newsletter-form-button {
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+}
+
+.newsletter-loading-button {
+  background: var(--global-theme-color); 
+  color: var(--global-bg-color);
+}
+
+.newsletter-success {
+  color: var(--global-text-color);
+}
+
+.newsletter-error {
+  color: var(--global-theme-color);
+}
+
+.newsletter-back-button {
+  color: var(--global-theme-color);
+}
+

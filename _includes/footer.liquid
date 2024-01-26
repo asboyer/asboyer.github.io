@@ -14,7 +14,8 @@
     </div>
   </footer>
 {% else %}
-  <footer class="sticky-bottom mt-5" role="contentinfo">
+  <footer class="sticky-bottom mt-5" role="contentinfo" id>
+    {% include mail.liquid %}
     <div class="container">
       {% if site.last_updated %}
         Last updated: {{ 'now' | date: '%B %d, %Y' }}.
