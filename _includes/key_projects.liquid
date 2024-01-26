@@ -29,7 +29,8 @@
             <td style="vertical-align: middle;">
 
               {% if item.redirect == blank %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}:</a>
+                {{ item.description }}
               
               {% elsif item.redirect contains '://' %}
 
