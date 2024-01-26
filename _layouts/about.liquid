@@ -51,7 +51,7 @@ layout: default
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
+      <h2 style="margin-top: 30px">
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
@@ -59,7 +59,7 @@ layout: default
 
     <!-- Latest posts -->
     {% if page.latest_posts %}
-      <h2>
+      <h2 style="margin-top: 20px">
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
@@ -67,7 +67,7 @@ layout: default
 
     <!-- favorite projects -->
     {% if page.key_projects %}
-      <h2>
+      <h2 style="margin-top: 20px">
         <a href="{{ '/projects/' | relative_url }}" style="color: inherit">key projects</a>
       </h2>
       {% include key_projects.liquid %}
