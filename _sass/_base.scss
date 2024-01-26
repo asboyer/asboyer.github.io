@@ -26,6 +26,7 @@ hr {
 #invisible-line {
   clear: both !important;
   visibility: hidden !important;
+  margin: 8px !important;
 }
 
 table {
@@ -1133,6 +1134,12 @@ nav[data-toggle="toc"] {
   z-index: 1;
 }
 
+@media (max-width: 575px) {
+  .toc-sidebar {
+    display: none !important;
+  }
+}
+
 #bold-name-txt {
   color: var(--global-theme-color);
 }
@@ -1154,6 +1161,11 @@ nav[data-toggle="toc"] {
   color: var(--global-bg-color);
   background: var(--global-text-color);
   border: 1px solid var(--global-bg-color);
+  outline: none;
+}
+
+.newsletter-form-input:focus {
+  border-color: var(--global-theme-color) !important;
 }
 
 .newsletter-form-button {
@@ -1180,4 +1192,16 @@ nav[data-toggle="toc"] {
 
 #link-text {
   color: var(--global-text-color) !important; 
+}
+
+@media (max-width: 575px) {
+  #more-info-home {
+    display: none !important;
+  }
+  #info-home {
+    display: none !important;
+  }
+  #profile-picture-home {
+    display: none !important;
+  }
 }
