@@ -5,21 +5,18 @@ layout: default
   <header class="post-header">
     {% if page.animation %}
       <script type="text/javascript" src="/assets/js/typing.js"></script>
-    <h1 class="post-title">
-    <noscript>
-        <span class="font-weight-normal" id="bold-name-txt">a</span>ndrew 
-        <span class="font-weight-normal" id="bold-name-txt">s</span>.
-        <span class="font-weight-normal" id="bold-name-txt">boyer</span>
-    </noscript>
-        <span id="text">
-        </span>
-    </h1>
+      <h1 class="post-title">
+        <noscript>
+          <span class="font-weight-normal" id="bold-name-txt">a</span>ndrew <span class="font-weight-normal" id="bold-name-txt">s</span>.
+          <span class="font-weight-normal" id="bold-name-txt">boyer</span>
+        </noscript>
+        <span id="text"> </span>
+      </h1>
     {% else %}
-    <h1 class="post-title">
-        <span class="font-weight-normal" id="bold-name-txt">a</span>ndrew 
-        <span class="font-weight-normal" id="bold-name-txt">s</span>.
+      <h1 class="post-title">
+        <span class="font-weight-normal" id="bold-name-txt">a</span>ndrew <span class="font-weight-normal" id="bold-name-txt">s</span>.
         <span class="font-weight-normal" id="bold-name-txt">boyer</span>
-    </h1>
+      </h1>
     {% endif %}
     <p class="desc">{{ page.subtitle }}</p>
   </header>
@@ -86,7 +83,7 @@ layout: default
       {%- include selected_papers.html %}
     {%- endif %}
 
-      <!-- Social -->
+    <!-- Social -->
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
