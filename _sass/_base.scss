@@ -1205,3 +1205,12 @@ nav[data-toggle="toc"] {
     display: none !important;
   }
 }
+
+#github-icon {
+  color: var(--global-text-color) !important;
+}
+
+#github-icon:hover {
+  color: var(--global-theme-color) !important;
+
+}

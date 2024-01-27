@@ -6,7 +6,7 @@ description: A growing collection of your cool projects.
 center_top: true
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [fun, school, work]
 horizontal: false
 ---
 
