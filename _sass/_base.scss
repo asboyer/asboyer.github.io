@@ -26,6 +26,7 @@ hr {
 #invisible-line {
   clear: both !important;
   visibility: hidden !important;
+  margin: 8px !important;
 }
 
 table {
@@ -219,8 +220,8 @@ blockquote {
 }
 
 .post-description {
-  // margin-bottom: 2rem;
-  margin-bottom: 0px !important;
+  margin-bottom: 1rem;
+  // margin-bottom: 0px !important;
   font-size: 0.875rem;
 
   a {
@@ -615,7 +616,7 @@ footer.sticky-bottom {
 .projects {
   a {
     text-decoration: none;
-
+    text-align: center !important;
     &:hover {
       .card-title {
         color: var(--global-theme-color);
@@ -627,6 +628,7 @@ footer.sticky-bottom {
     img {
       width: 100%;
     }
+    height: 380px !important;
   }
 
   .card-item {
@@ -639,15 +641,20 @@ footer.sticky-bottom {
     }
   }
 
+  .card-body {
+    padding-bottom: 5px !important;
+    padding-top: 0px !important;
+    .row {
+      justify-content: center;
+      margin: 7px;
+    }
+  }
+
   .grid-sizer,
   .grid-item {
     width: 250px;
     padding: 10px;
   }
-
-  // .grid {
-  //   border: 0.05em solid black;
-  // }
 
   // .grid-items {
   //   border: 0.05em solid red;
@@ -661,13 +668,6 @@ footer.sticky-bottom {
     flex-wrap: wrap !important;
     justify-content: center !important;
   }
-
-  .grid-item {
-  }
-
-  // #grid-item {
-
-  // }
 
   h2.category {
     color: var(--global-divider-color);
@@ -1133,6 +1133,12 @@ nav[data-toggle="toc"] {
   z-index: 1;
 }
 
+@media (max-width: 575px) {
+  .toc-sidebar {
+    display: none !important;
+  }
+}
+
 #bold-name-txt {
   color: var(--global-theme-color);
 }
@@ -1154,6 +1160,11 @@ nav[data-toggle="toc"] {
   color: var(--global-bg-color);
   background: var(--global-text-color);
   border: 1px solid var(--global-bg-color);
+  outline: none;
+}
+
+.newsletter-form-input:focus {
+  border-color: var(--global-theme-color) !important;
 }
 
 .newsletter-form-button {
@@ -1175,5 +1186,37 @@ nav[data-toggle="toc"] {
 }
 
 .newsletter-back-button {
+  color: var(--global-theme-color);
+}
+
+#link-text {
+  color: var(--global-text-color) !important;
+}
+
+@media (max-width: 575px) {
+  #more-info-home {
+    display: none !important;
+  }
+  #info-home {
+    display: none !important;
+  }
+  #profile-picture-home {
+    display: none !important;
+  }
+}
+
+#github-icon {
+  color: var(--global-text-color) !important;
+}
+
+#github-icon:hover {
+  color: var(--global-theme-color) !important;
+}
+
+#content-resume {
+  margin-left: 2rem !important;
+}
+
+#no-link-title {
   color: var(--global-theme-color);
 }

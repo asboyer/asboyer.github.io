@@ -2,14 +2,14 @@
 layout: about
 title: home
 permalink: /
-subtitle: developer & entrepreneur. cs @ <a href='#'>georgia tech</a>.
+subtitle: developer & entrepreneur. cs @ <a href='https://directory.gatech.edu/directory/detail/Andrew/Boyer?dn=ZnUPgG7TRJIo1QcqJFfjAfNGjE%2BJf2zzmGiOToNIXG8YW6T9aPf9YRhnOHmk5oTS'>georgia tech</a>.
 
 profile:
   align: right
-  image: l.png
+  image: logo/l.png
   image_circular: false # crops the image to make it circular
   more_info: > #
-    <p>asboyer@gatech.edu</p>
+    <p><a href="mailto:asboyer@gatech.edu">asboyer<span id="link-text">@</span>gatech<span id="link-text">.</span>edu<a/></p>
     <p>Computer Science, B.S.</p>
 
 news: true # includes a list of news items
@@ -20,8 +20,7 @@ key_projects: true # preview of projects on home page
 animation: true
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Welcome to the second edition of my website!
+After nearly _3 years_ of the [original asboyer.com](https://asboyercom.pythonanywhere.com/) and [994 commits](https://github.com/asboyer/asboyer.com) later, it was time to close the chapter on the original variation. I built it completely from scratch, essentially using the process as a way to teach myself web development. I started with just `HTML` and `CSS`, and eventually implemented `JavaScript` and `jQuery`, as well as [`flask`](https://flask.palletsprojects.com/en/3.0.x/).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. Jekyll will render your [publications page](/al-folio/publications/) automatically. Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-your [publications page](/al-folio/publications/) automatically. Jekyll will render your [publications page](/al-folio/publications/) automatically. Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I built this site off a `Jekyll` template, that way I could run this page off [GitHub pages](https://pages.github.com/) for free! It's integration with [Markdown](https://www.markdownguide.org/) provides a more frictionless process for adding content, in a way I couldn't replicate on the old project. That means you will be seeing a lot more [blogposts](/blog) and [updates](/news), so be sure to sign up to the [mailing list](/#subscribe) below! I would love to hear feedback on the new site.

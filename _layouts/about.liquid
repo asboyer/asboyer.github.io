@@ -23,7 +23,7 @@ layout: default
 
   <article>
     {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      <div id="profile-picture-home" class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
@@ -39,12 +39,12 @@ layout: default
           %}
         {% endif %}
         {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+          <div id="more-info-home" class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div id="info-home" class="clearfix">{{ content }}</div>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
