@@ -9,20 +9,17 @@
     >
       <table class="table table-sm table-borderless" style="margin: 0px">
 
-
         {% assign sorted_projects = site.projects | sort: "importance" %}
 
         {% if site.key_projects.limit %}
           {% assign key_projects_limit = site.key_projects.limit %}
-        {% else %}
-          {% assign key_projects_limit = key_projects_size %}
         {% endif %}
-        {% for item in sorted_projects limit: key_projects_limit %}
+        {% for item in sorted_projects %}
           {% if item.key %}
             <tr>
               <!-- add an image here! -->
               {% if item.img %}
-                <th scope="row" style="width: 20%; padding-right: 35px; padding-left: 0px !important">
+                <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
                   {% include figure.liquid home=true path=item.img sizes="(min-width: 768px) 156px, 50vw" alt="project thumbnail" %}
                 </th>
               {% endif %}
@@ -30,7 +27,6 @@
               <td style="vertical-align: middle;">
                 {% if item.redirect == blank %}
                   <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>{% if item.description %}:{% endif %}
-
                   {{ item.description }}
 
                 {% elsif item.redirect contains '://' %}

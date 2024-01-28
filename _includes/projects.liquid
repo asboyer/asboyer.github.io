@@ -9,10 +9,17 @@
           alt="project thumbnail"
         %}
       {% endif %}
-      <div class="card-body" style="padding-bottom: 5px !important;">
-        <h2 class="card-title text-lowercase">{{ project.title }}</h2>
+      <div class="card-body">
+      {% if project.title.size > 15 %}
+      <h2 class="card-title text-lowercase" style="font-size: 1.5rem">{{ project.title }}</h2>
+      {% else %}
+      <h2 class="card-title text-lowercase">{{ project.title }}</h2>
+      
+      {% endif %}
+
+
         <p class="card-text">{{ project.description }}</p>
-        <div class="row ml-1 mr-1 p-0" style="justify-content: center; padding: 5px; margin-top: 5px;">
+        <div class="row ml-1 mr-1 p-0">
           {% if project.github %}
             <div class="github-icon" style="margin-right: 5px">
               <div class="icon" data-toggle="tooltip" title="Code Repository">
