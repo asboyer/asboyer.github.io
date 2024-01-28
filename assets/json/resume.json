@@ -1,199 +1,403 @@
 {
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Andrew Boyer",
+    "label": "CS @ Georgia Tech",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "asboyer@gatech.edu",
+    "phone": "",
+    "url": "https://asboyer.com",
+    "summary": "Interested in all things computers and math. I am always looking for an opportunity to explore interests, express creativity, and learn. ",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "city": "Atlanta",
       "countryCode": "US",
-      "region": "California"
+      "region": "Georgia"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "LinkedIn",
+        "username": "asboyer",
+        "url": "https://www.linkedin.com/in/asboyer/"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "theCoderSchool",
+      "position": "Staff Instructor",
+      "startDate": "2020-09-30",
+      "endDate": "2022-09-30",
+      "highlights": [],
+      "summary": "Teaching kids ages six to fifteen programming in Python, Scratch, Bash, Java, and JavaScript. Developing curriculum and leading sessions of one to five students through project and lecture based learning.",
+      "url": "https://www.linkedin.com/company/thecoderschool/",
+      "location": "Sudbury, Massachusetts, United States"
+    },
+    {
+      "name": "Massachusetts General Hospital",
+      "position": "Research Student",
+      "startDate": "2021-08-31",
+      "endDate": "2022-03-31",
+      "highlights": [],
+      "summary": "Department of Neurology, Research. Worked on data analysis and machine learning.",
+      "url": "https://www.linkedin.com/company/massachusetts-general-hospital/"
+    },
+    {
+      "name": "Cyber Summer Camp",
+      "position": "Founder",
+      "startDate": "2020-06-30",
+      "endDate": "2022-03-31",
+      "highlights": [],
+      "summary": "Directing and leading camps to teach younger students about computer security. Developed all curriculum.",
+      "url": "https://www.linkedin.com/company/cyber-summer-camp/",
+      "location": "Wayland, Massachusetts, United States"
+    },
+    {
+      "name": "IntelyCare",
+      "position": "Data Science Intern",
+      "startDate": "2021-08-31",
+      "endDate": "2021-09-30",
+      "highlights": [],
+      "summary": "Worked on analyzing data sets with Python programming and data analysis tools.",
+      "url": "https://www.linkedin.com/company/intelycare/"
+    },
+    {
+      "name": "IntelyCare",
+      "position": "Product Intern",
+      "startDate": "2021-07-31",
+      "endDate": "2021-08-31",
+      "highlights": [],
+      "summary": "Leveraged technical writing to document key workflows for product team.",
+      "url": "https://www.linkedin.com/company/intelycare/"
+    },
+    {
+      "name": "IntelyCare",
+      "position": "Automation Engineer Intern",
+      "startDate": "2021-03-31",
+      "endDate": "2021-06-30",
+      "highlights": [],
+      "summary": "Worked with quality assurance team to create web automation test scripts.",
+      "url": "https://www.linkedin.com/company/intelycare/"
+    },
+    {
+      "name": "Wayland Student Press Network",
+      "position": "Guest Contributor ",
+      "startDate": "2020-09-30",
+      "endDate": "2021-06-30",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/wayland-student-press-network/"
+    },
+    {
+      "name": "Wayland Student Press Network",
+      "position": "Staff Reporter",
+      "startDate": "2019-09-30",
+      "endDate": "2020-08-31",
+      "highlights": [],
+      "summary": "Co-founder of Half Hour Hook and music reviewer",
+      "url": "https://www.linkedin.com/company/wayland-student-press-network/"
+    },
+    {
+      "name": "Wayland Town Soccer",
+      "position": "Sports Referee",
+      "startDate": "2018-08-31",
+      "endDate": "2020-11-30",
+      "highlights": [],
+      "summary": "Refereed soccer games for Wayland Town Soccer and BAYS.",
+      "url": "https://www.linkedin.com/company/wayland-town-soccer/",
+      "location": "Wayland, Massachusetts, United States"
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "Boy Scouts of America",
+      "position": "Eagle Scout",
+      "startDate": "2011-09-30",
+      "endDate": "2011-09-30",
+      "summary": "Active member of Troop 156 from 2011 - 2019, achieved Eagle Scout award.",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/8118"
+    },
+    {
+      "organization": "Reboot Hacks",
+      "position": "Founder and Executive Director ",
+      "startDate": "2020-09-30",
+      "endDate": "2022-06-30",
+      "summary": "Building the next-generation of New England tech events for students.",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/76358633"
+    },
+    {
+      "organization": "National Honor Society",
+      "position": "Member",
+      "startDate": "2021-06-30",
+      "endDate": "2022-06-30",
+      "summary": "Tutoring students at high school and leading service projects.",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/11094416"
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "Georgia Institute of Technology",
+      "area": "Computer Science",
+      "url": "https://gatech.edu",
+      "studyType": "Bachelor of Science - BS",
+      "startDate": "2023-05-31",
+      "score": "",
+      "courses": [
+        "CS 2050 - Discrete Math"
+      ]
+    },
+    {
+      "institution": "Arizona State University",
+      "area": "Computer Science",
+      "url": "https://asu.edu",
+      "studyType": "Bachelor of Science - BS",
+      "startDate": "2022-08-31",
+      "endDate": "2023-05-31",
+      "score": "",
+      "courses": [
+        "MAT 267 - Calculus III for Engineers",
+        "CSE 205 - Object-Oriented Programming & Data",
+        "CSE 240 - Programming Languages"
+      ]
+    },
+    {
+      "institution": "Wayland High School ",
+      "area": "",
+      "studyType": "High School Diploma",
+      "startDate": "2018-12-31",
+      "endDate": "2022-12-31",
+      "score": "",
+      "courses": [
+        "AP Statistics",
+        "AP Computer Science A",
+        "AP Calculus BC"
+      ]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Xerox Award for Innovation and Information Technology",
+      "date": "2021-06-30",
+      "awarder": "University of Rochester High School Awards Program",
+      "summary": "For outstanding achievement in the pursuit of innovative approaches and an appreciation for the possibilities of technology"
+    },
+    {
+      "title": "Achievement Award - Honors English ",
+      "date": "2020-06-30",
+      "awarder": null,
+      "summary": "Best academic performance in Honors English 2 (2020)"
+    },
+    {
+      "title": "Eagle Scout",
+      "date": "2019-09-30",
+      "awarder": "Boy Scouts of America",
+      "summary": "Highest achievement and rank attainable in the Scouts BSA program of the Boy Scouts of America"
+    },
+    {
+      "title": "Achievement Award - Honors Mandarin",
+      "date": "2019-06-30",
+      "awarder": null,
+      "summary": "Best academic performance in Honors Mandarin (2019)"
+    },
+    {
+      "title": "Outstanding Exchange Student ",
+      "date": "2019-05-31",
+      "awarder": "Jingshan Yuanyang School",
+      "summary": "Attended the JSYY school in Beijing, China. Studied abroad, traveled, and lived with a host family"
+    },
+    {
+      "title": "Honor Roll: High Honors",
+      "date": "2018-09-30",
+      "awarder": null,
+      "summary": "Students who earn an unweighted GPA above 3.6 and meet the requirements for the honor roll are named to the high honors list"
     }
   ],
   "certificates": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "name": "Referee",
+      "issuer": "Wayland Town Soccer",
+      "endDate": "2021-01-31",
+      "startDate": "2018-09-30"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "name": "Biomedical Research Investigators and Key Personnel",
+      "issuer": "CITI Program",
+      "endDate": "2024-08-31",
+      "startDate": "2021-08-31",
+      "url": "https://www.citiprogram.org/verify/?wb8aa41e8-9d8d-4151-80e0-f2a32e5a1731-43871376"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "name": "CITI Good Clinical Practice Course",
+      "issuer": "CITI Program",
+      "endDate": "2024-08-31",
+      "startDate": "2021-08-31",
+      "url": "https://www.citiprogram.org/verify/?wbd7664c8-9561-4d26-8a4a-3a6b059c14e1-43871377"
     }
   ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
-  ],
+  "publications": [],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Python",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Programming",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Marketing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Quality Assurance",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Data Science",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Teaching",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Computer Hardware",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Cascading Style Sheets (CSS)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Information Technology",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Chinese",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Curriculum Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux System Administration",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Computer Hardware Assembly",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Computer Science",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Kali Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Leadership",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "English",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Cybersecurity",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Microsoft Excel",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Bash",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Communication",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML5",
+      "level": "",
+      "keywords": []
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
+      "fluency": "Limited Working",
+      "language": "Chinese "
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
+      "fluency": "Native Speaker",
+      "language": "English"
     }
   ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
+  "interests": [],
+  "references": [],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Goat Grade",
+      "startDate": "2020-02-28",
+      "summary": "Web scraping basketball statistics and ranking players using our algorithm, displaying rankings on website",
+      "url": "http://goatgrade.com",
+      "endDate": "2020-02-28"
+    },
+    {
+      "name": "Reporty",
+      "startDate": "2020-06-30",
+      "summary": "Reporty is an open source python library that contains useful functions for organizing and distributing visual data",
+      "url": "https://pypi.org/project/reporty/",
+      "endDate": "2020-11-30"
     }
-  ]
+  ],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
 }
