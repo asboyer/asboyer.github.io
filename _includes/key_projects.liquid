@@ -8,8 +8,7 @@
       {% endif %}
     >
       <table class="table table-sm table-borderless" style="margin: 0px">
-
-        {% assign sorted_projects = site.projects | sort: "importance" %}
+        {% assign sorted_projects = site.projects | sort: 'importance' %}
 
         {% if site.key_projects.limit %}
           {% assign key_projects_limit = site.key_projects.limit %}
@@ -26,11 +25,13 @@
 
               <td style="vertical-align: middle;">
                 {% if item.redirect == blank %}
-                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>{% if item.description %}:{% endif %}
+                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                  {%- if item.description %}:{% endif %}
                   {{ item.description }}
 
                 {% elsif item.redirect contains '://' %}
-                  <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a>{% if item.description %}:{% endif %}
+                  <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a>
+                  {%- if item.description %}:{% endif %}
                   {{ item.description }}
                   <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -56,5 +57,4 @@
   {% else %}
     <p>No projects so far...</p>
   {% endif %}
-
 </div>

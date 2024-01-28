@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // check if text isn't finished yet
     if (i < text.length) {
       // add the next character to h1
-      document.getElementById("text").innerHTML =
-        text.substring(0, i + 1) + '<span id="typer" aria-hidden="true"></span>';
+      document.getElementById("text").innerHTML = text.substring(0, i + 1) + '<span id="typer" aria-hidden="true"></span>';
       document.getElementById("text").innerHTML = document
         .getElementById("text")
         .innerHTML.replace(

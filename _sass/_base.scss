@@ -472,8 +472,6 @@ footer.sticky-bottom {
 .cv {
   margin-bottom: 40px;
 
-
-
   .card {
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
@@ -647,8 +645,8 @@ footer.sticky-bottom {
     padding-bottom: 5px !important;
     padding-top: 0px !important;
     .row {
-        justify-content: center; 
-        margin: 7px;
+      justify-content: center;
+      margin: 7px;
     }
   }
 
@@ -670,7 +668,6 @@ footer.sticky-bottom {
     flex-wrap: wrap !important;
     justify-content: center !important;
   }
-
 
   h2.category {
     color: var(--global-divider-color);
@@ -1193,7 +1190,7 @@ nav[data-toggle="toc"] {
 }
 
 #link-text {
-  color: var(--global-text-color) !important; 
+  color: var(--global-text-color) !important;
 }
 
 @media (max-width: 575px) {
@@ -1221,5 +1218,5 @@ nav[data-toggle="toc"] {
 }
 
 #no-link-title {
-  color: var(--global-theme-color)
+  color: var(--global-theme-color);
 }

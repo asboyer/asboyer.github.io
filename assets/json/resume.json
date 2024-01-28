@@ -143,9 +143,7 @@
       "studyType": "Bachelor of Science - BS",
       "startDate": "2023-05-31",
       "score": "",
-      "courses": [
-        "CS 2050 - Discrete Math"
-      ]
+      "courses": ["CS 2050 - Discrete Math"]
     },
     {
       "institution": "Arizona State University",
@@ -155,11 +153,7 @@
       "startDate": "2022-08-31",
       "endDate": "2023-05-31",
       "score": "",
-      "courses": [
-        "MAT 267 - Calculus III for Engineers",
-        "CSE 205 - Object-Oriented Programming & Data",
-        "CSE 240 - Programming Languages"
-      ]
+      "courses": ["MAT 267 - Calculus III for Engineers", "CSE 205 - Object-Oriented Programming & Data", "CSE 240 - Programming Languages"]
     },
     {
       "institution": "Wayland High School ",
@@ -168,11 +162,7 @@
       "startDate": "2018-12-31",
       "endDate": "2022-12-31",
       "score": "",
-      "courses": [
-        "AP Statistics",
-        "AP Computer Science A",
-        "AP Calculus BC"
-      ]
+      "courses": ["AP Statistics", "AP Computer Science A", "AP Calculus BC"]
     }
   ],
   "awards": [
