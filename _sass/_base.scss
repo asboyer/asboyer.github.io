@@ -1172,6 +1172,10 @@ nav[data-toggle="toc"] {
   color: var(--global-bg-color);
 }
 
+.newsletter-form {
+  touch-action: manipulation !important;
+}
+
 .newsletter-loading-button {
   background: var(--global-theme-color);
   color: var(--global-bg-color);
