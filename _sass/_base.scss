@@ -1172,10 +1172,6 @@ nav[data-toggle="toc"] {
   color: var(--global-bg-color);
 }
 
-.newsletter-form {
-  touch-action: manipulation !important;
-}
-
 .newsletter-loading-button {
   background: var(--global-theme-color);
   color: var(--global-bg-color);
@@ -1191,6 +1187,24 @@ nav[data-toggle="toc"] {
 
 .newsletter-back-button {
   color: var(--global-theme-color);
+}
+
+@media (max-width: 575px) {
+  .newsletter-form-input {
+    font-size: 16px !important;
+  }
+  .newsletter-form-button {
+    font-size: 16px !important;
+  }
+  .newsletter-loading-button {
+    font-size: 16px !important;
+  }
+  .newsletter-success {
+    font-size: 16px !important;
+  }
+  .newsletter-error {
+    font-size: 16px !important;
+  }
 }
 
 #link-text {
