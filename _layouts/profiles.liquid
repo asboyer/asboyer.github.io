@@ -33,4 +33,13 @@ layout: page
       {% endfor %}
     {% endif %}
   </article>
+
+  {% if page.updates %}
+    <h2 style="margin-top: 15px">
+      <hr>
+      <a href="{{ '/thoughts/' | relative_url }}" style="color: inherit">random thoughts</a>
+    </h2>
+    {% include updates.liquid limit=true %}
+  {% endif %}
+
 </div>
