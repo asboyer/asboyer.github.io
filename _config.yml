@@ -172,6 +172,11 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  updates:
+    defaults:
+      layout: post
+    output: true
+    permalink: /thoughts/:path/
 
 announcements:
   enabled: true
