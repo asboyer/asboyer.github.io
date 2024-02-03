@@ -9,7 +9,7 @@ profile:
   image: logo/l.png
   image_circular: false # crops the image to make it circular
   more_info: > #
-    <p><a href="mailto:asboyer@gatech.edu">asboyer<span id="link-text">@</span>gatech<span id="link-text">.</span>edu<a/></p>
+    <p><a href="mailto:asboyer.com@gmail.com">asboyer<span id="link-text">.</span>com<span id="link-text">@</span>gmail<span id="link-text">.</span>com<a/></p>
     <p>Computer Science, B.S.</p>
 
 news: true # includes a list of news items
@@ -18,6 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 key_projects: true # preview of projects on home page
 animation: true
+notes: true
 ---
 
 Welcome to the second edition of my website!
