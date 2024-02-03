@@ -1217,9 +1217,12 @@ nav[data-toggle="toc"] {
   color: var(--global-theme-color) !important;
 }
 
-#content-resume {
-  margin-left: 2rem !important;
+@media (min-width: 767px) {
+  #content-resume {
+    margin-left: 2rem !important;
+  }
 }
+
 
 #no-link-title {
   color: var(--global-theme-color);
