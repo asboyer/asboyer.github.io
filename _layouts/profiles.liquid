@@ -34,12 +34,12 @@ layout: page
     {% endif %}
   </article>
 
-  {% if page.updates %}
+  {% if page.notes %}
     <h2 style="margin-top: 15px">
       <hr>
-      <a href="{{ '/thoughts/' | relative_url }}" style="color: inherit">random thoughts</a>
+      <a href="{{ '/notes/' | relative_url }}" style="color: inherit">random notes</a>
     </h2>
-    {% include updates.liquid limit=true %}
+    {% include notes.liquid limit=true %}
   {% endif %}
 
 </div>
