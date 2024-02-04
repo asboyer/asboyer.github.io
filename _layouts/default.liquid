@@ -2,14 +2,12 @@
 <html lang="{{ site.lang }}">
   <!-- Head -->
   <head>
-    {% if page.redirect_time %}
-      {% assign time = page.time%}
-    {% else %}
-      {% assign time = 2 %}
-    {% endif %}
     {% if page.redirect %}
-      <meta http-equiv="refresh" content="{{ time }}; url={{ page.redirect }}">
-    {% endif %}
+      {% if page.redirect == true %}
+        {% assign redirect = site.baseurl | append: "/" %}
+      {% else %}
+        {% assign redirect = page.redirect %}
+      {% endif %}
     {% include head.liquid %}
   </head>
 
