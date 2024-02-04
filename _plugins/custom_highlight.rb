@@ -85,7 +85,8 @@ module Jekyll
         end
 
         options[:linenos] = "inline" if options[:linenos] == true
-        options[:start_line] = Integer(options[:start_line]) unless options[:start_line].nil?
+        options[:start_line] = Integer(options[:start_line]) unless options[:start_line].nil?     
+        options[:mark_lines] = Array(options[:mark_lines]).map(&:to_i)
         options
       end
 
@@ -119,6 +120,7 @@ module Jekyll
         formatter = ::Rouge::Formatters::HTMLLegacy.new(
           :line_numbers => @highlight_options[:linenos],
           :start_line   => @highlight_options[:start_line] || 1,
+          :highlight_lines => @highlight_options[:mark_lines],
           :wrap         => false,
           :css_class    => "highlight",
           :gutter_class => "gutter",
@@ -126,6 +128,14 @@ module Jekyll
         )
         lexer = ::Rouge::Lexer.find_fancy(@lang, code) || Rouge::Lexers::PlainText
         formatter.format(lexer.lex(code))
+      end
+
+      def mark_lines
+        value = @highlight_options[:mark_lines]
+        return value.map(&:to_i) if value.is_a?(Array)
+
+        raise SyntaxError, "Syntax Error for mark_lines declaration. Expected a " \
+                           "double-quoted list of integers."
       end
 
       def render_codehighlighter(code)

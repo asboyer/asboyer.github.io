@@ -73,7 +73,7 @@ After adding this to `_conig.yml`, I encountered no errors in running the site, 
 
 I came to the frustrating realization that those fields are hardcoded into the library and custom categories cannot be added. Seems like it would be a simple thing to do?
 
-{% custom_highlight ruby linenos start_line=5 %}
+{% dustom_highlight ruby linenos start_line=5 mark_lines="5 7" %}
 DEFAULTS = {
   "layout"     => "archive",
   "enabled"    => [],
@@ -85,8 +85,7 @@ DEFAULTS = {
     "category" => "/category/:name/",
   },
 }.freeze
-{% endcustom_highlight %}
-
+{% enddustom_highlight %}
 <hr>
 
 [^1]: I made sure to make the respective `archive-author.liquid` file in `_layouts`
