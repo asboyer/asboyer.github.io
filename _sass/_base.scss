@@ -1205,10 +1205,13 @@ nav[data-toggle="toc"] {
   #more-info-home {
     display: none !important;
   }
-  #info-home {
+  #profile-picture-home {
     display: none !important;
   }
-  #profile-picture-home {
+}
+
+@media (max-width: 740px) {
+  #more-info-home {
     display: none !important;
   }
 }

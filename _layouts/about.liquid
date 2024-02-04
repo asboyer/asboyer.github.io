@@ -3,25 +3,6 @@ layout: default
 ---
 <div class="post">
   <header class="post-header">
-    {% if page.animation %}
-      <script type="text/javascript" src="/assets/js/typing.js"></script>
-      <h1 class="post-title">
-        <noscript>
-          <span class="font-weight-normal" id="bold-name-txt">a</span>ndrew <span class="font-weight-normal" id="bold-name-txt">s</span>.
-          <span class="font-weight-normal" id="bold-name-txt">boyer</span>
-        </noscript>
-        <span id="text"> </span>
-      </h1>
-    {% else %}
-      <h1 class="post-title">
-        <span class="font-weight-normal" id="bold-name-txt">a</span>ndrew <span class="font-weight-normal" id="bold-name-txt">s</span>.
-        <span class="font-weight-normal" id="bold-name-txt">boyer</span>
-      </h1>
-    {% endif %}
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  <article>
     {% if page.profile %}
       <div id="profile-picture-home" class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
@@ -44,6 +25,25 @@ layout: default
       </div>
     {% endif %}
 
+    {% if page.animation %}
+      <script type="text/javascript" src="/assets/js/typing.js"></script>
+      <h1 class="post-title">
+        <noscript>
+          <span class="font-weight-normal" id="bold-name-txt">a</span>ndrew <span class="font-weight-normal" id="bold-name-txt">s</span>.
+          <span class="font-weight-normal" id="bold-name-txt">boyer</span>
+        </noscript>
+        <span id="text"> </span>
+      </h1>
+    {% else %}
+      <h1 class="post-title">
+        <span class="font-weight-normal" id="bold-name-txt">a</span>ndrew <span class="font-weight-normal" id="bold-name-txt">s</span>.
+        <span class="font-weight-normal" id="bold-name-txt">boyer</span>
+      </h1>
+    {% endif %}
+    <p class="desc">{{ page.subtitle }}</p>
+  </header>
+
+  <article>
     <div id="info-home" class="clearfix">{{ content }}</div>
 
     <!-- News -->

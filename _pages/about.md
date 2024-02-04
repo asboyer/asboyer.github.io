@@ -21,7 +21,6 @@ animation: true
 notes: true
 ---
 
-Welcome to the second edition of my website!
-After nearly _3 years_ of the [original asboyer.com](https://asboyercom.pythonanywhere.com/) and [994 commits](https://github.com/asboyer/asboyer.com) later, it was time to close the chapter on the original variation. I built it completely from scratch, essentially using the process as a way to teach myself web development. I started with just `HTML` and `CSS`, and eventually implemented `JavaScript` and `jQuery`, as well as [`flask`](https://flask.palletsprojects.com/en/3.0.x/).
+Welcome to [asboyer.com](https://asboyer.com), the digital home of **Andrew S. Boyer**, a passionate **developer**, **entrepreneur**, and **[Georgia Tech Computer Science](https://www.cc.gatech.edu/) student**. Here, you'll find a showcase of my journey through technology, from **cybersecurity** to **software development**, and my commitment to **teaching** and **innovating** in the tech space.
 
-I built this site off a `Jekyll` template, that way I could run this page off [GitHub pages](https://pages.github.com/) for free! It's integration with [Markdown](https://www.markdownguide.org/) provides a more frictionless process for adding content, in a way I couldn't replicate on the old project. That means you will be seeing a lot more [blogposts](/blog) and [updates](/news), so be sure to sign up to the [mailing list](/#subscribe) below! I would love to hear feedback on the new site.
+Dive into my projects, learn from my experiences, and discover the power of **coding** and **creativity**. Join me in exploring the endless possibilities that technology offers.
