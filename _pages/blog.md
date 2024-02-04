@@ -29,7 +29,7 @@ pagination:
   </div>
   {% endif %}
 
-{% if site.display_tags or site.display_categories %}
+{% if site.display_tags or site.display_categories or site.display_authors %}
 
   <div class="tag-category-list">
     <ul class="p-0 m-0">
@@ -47,6 +47,17 @@ pagination:
       {% for category in site.display_categories %}
         <li>
           <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+        </li>
+        {% unless forloop.last %}
+          <p>&bull;</p>
+        {% endunless %}
+      {% endfor %}
+      {% if site.display_authors.size > 0 and site.display_tags.size > 0 %}
+        <p>&bull;</p>
+      {% endif %}
+      {% for author in site.display_authors %}
+        <li>
+          <i class="fa-solid fa-at fa-sm"></i> <a href="{{ author | slugify | prepend: '/blog/category/' | relative_url }}">{{ author }}</a>
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
@@ -119,6 +130,8 @@ pagination:
     {% assign year = post.date | date: "%Y" %}
     {% assign tags = post.tags | join: "" %}
     {% assign categories = post.categories | join: "" %}
+    {% assign authors = post.authors | join: "" %}
+
 
     <li>
 
@@ -161,8 +174,21 @@ pagination:
           {% if categories != "" %}
           &nbsp; &middot; &nbsp;
             {% for category in post.categories %}
+            {% assign author_string = category | slugify %}
+            {% if site.all_authors contains author_string %}
+            {% else %}
 
               <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}"> {{ category }}</a> &nbsp;
+          {% endif %}
+
+              {% endfor %}
+          {% endif %}
+
+          {% if authors != "" %}
+          &nbsp; &middot; &nbsp;
+            {% for author in post.authors %}
+
+              <i class="fa-solid fa-at fa-sm"></i> <a href="{{ author | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}"> {{ author }}</a> &nbsp;
               {% endfor %}
           {% endif %}
     </p>

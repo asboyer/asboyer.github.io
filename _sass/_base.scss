@@ -898,6 +898,10 @@ html.transition *:after {
     margin-bottom: 0;
   }
 
+  #light-tag {
+      color: var(--global-text-color-light) !important;
+  }
+
   .post-tags {
     color: var(--global-text-color-light);
     font-size: 0.875rem;

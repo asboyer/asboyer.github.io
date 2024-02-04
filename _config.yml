@@ -275,6 +275,8 @@ jekyll-archives:
 
 display_tags: ["python", "basketball", "code"] # these tags will be displayed on the front page of your blog
 display_categories: ["projects"] # these categories will be displayed on the front page of your blog
+display_authors: ["Andrew Boyer"]
+all_authors: ["andrew-boyer"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
