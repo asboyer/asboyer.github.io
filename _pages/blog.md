@@ -177,8 +177,9 @@ pagination:
             {% assign author_string = category | slugify %}
             {% if site.all_authors contains author_string %}
             {% else %}
-
+              <span style="white-space: nowrap;">
               <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}"> {{ category }}</a> &nbsp;
+              </span>
           {% endif %}
 
               {% endfor %}
