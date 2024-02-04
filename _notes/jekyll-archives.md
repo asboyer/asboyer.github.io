@@ -14,14 +14,14 @@ Right now, the way `jekyll-archives` works is you can add the following archive 
 
 ```yml
 jekyll-archives:
-  enabled: []
-  layout: archive
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
+    enabled: []
+    layout: archive
+    permalinks:
+        year: '/:year/'
+        month: '/:year/:month/'
+        day: '/:year/:month/:day/'
+        tag: '/tag/:name/'
+        category: '/category/:name/'
 ```
 
 My own configuration is very similar, following the docs percisely:
@@ -62,6 +62,21 @@ jekyll-archives:
 
 
 After adding this to `_conig.yml`, I encountered no errors in running the site, and I began setting up my `blog.md` file to begin solidyfing the authors functionality. However, when I visited the `/blog/author/andrew-boyer` location, it did not exist! And yes, I made sure to include the `andrew-boyer` in the `authors` field in my `.md` file [^1].
+
+{% highlight yml linenos %}
+jekyll-archives:
+  enabled: [year, tags, categories, authors]
+  layouts:
+    year: archive-year
+    tag: archive-tag
+    category: archive-category
+    author: archive-author
+  permalinks:
+    year: "/blog/:year/"
+    tag: "/blog/tag/:name/"
+    category: "/blog/category/:name/"
+    author: "/blog/author/:name/"
+{% endhighlight %}
 
 <hr>
 
