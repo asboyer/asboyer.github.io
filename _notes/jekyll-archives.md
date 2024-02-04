@@ -6,15 +6,6 @@ related_posts: false
 title: jekyll archives is annoying
 author: Andrew Boyer
 giscus_comments: true
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    css_class: "highlight"
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 15
 ---
 
 `jekyll-archives` is annoying. While I think it does a lot of great things, it is missing a key functionality that would make it awesome.
@@ -75,15 +66,15 @@ I came to the frustrating realization that those fields are hardcoded into the l
 
 {% custom_highlight ruby linenos start_line=5 %}
 DEFAULTS = {
-  "layout"     => "archive",
-  "enabled"    => [],
-  "permalinks" => {
-    "year"     => "/:year/",
-    "month"    => "/:year/:month/",
-    "day"      => "/:year/:month/:day/",
-    "tag"      => "/tag/:name/",
-    "category" => "/category/:name/",
-  },
+"layout" => "archive",
+"enabled" => [],
+"permalinks" => {
+"year" => "/:year/",
+"month" => "/:year/:month/",
+"day" => "/:year/:month/:day/",
+"tag" => "/tag/:name/",
+"category" => "/category/:name/",
+},
 }.freeze
 {% endcustom_highlight %}
 
