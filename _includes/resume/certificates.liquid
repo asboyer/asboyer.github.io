@@ -19,12 +19,12 @@
             {% endfor %}
             <td colspan="{{ i }}" class="list-group-category">
               {% if content.url %}
-              <a href="{{ content.url }}">{{ content.name }}</a>
-            {% else %}
-              <span id="no-link-title">
-                {{ content.name }}
-              </span>
-            {% endif %}
+                <a href="{{ content.url }}">{{ content.name }}</a>
+              {% else %}
+                <span id="no-link-title">
+                  {{ content.name }}
+                </span>
+              {% endif %}
             </td>
           </tr>
           <tr>

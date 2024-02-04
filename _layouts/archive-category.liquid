@@ -4,11 +4,11 @@ layout: default
 <div class="post">
   <header class="post-header">
     {% if site.all_authors contains page.title %}
-    <h1 class="post-title"><i class="fa-solid fa-at fa-sm"></i> {{ page.title | deslugify }}</h1>
-    <p class="post-description">an archive of posts by this author</p>
+      <h1 class="post-title"><i class="fa-solid fa-at fa-sm"></i> {{ page.title | deslugify }}</h1>
+      <p class="post-description">an archive of posts by this author</p>
     {% else %}
-    <h1 class="post-title"><i class="fa-solid fa-at fa-sm"></i> {{ page.title }}</h1>
-    <p class="post-description">an archive of posts in this category</p>
+      <h1 class="post-title"><i class="fa-solid fa-at fa-sm"></i> {{ page.title }}</h1>
+      <p class="post-description">an archive of posts in this category</p>
     {% endif %}
   </header>
 

@@ -899,7 +899,7 @@ html.transition *:after {
   }
 
   #light-tag {
-      color: var(--global-text-color-light) !important;
+    color: var(--global-text-color-light) !important;
   }
 
   .post-tags {
@@ -1226,7 +1226,6 @@ nav[data-toggle="toc"] {
     margin-left: 2rem !important;
   }
 }
-
 
 #no-link-title {
   color: var(--global-theme-color);

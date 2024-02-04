@@ -107,35 +107,35 @@
     }
   ],
   "education": [
-      {
-        "institution": "Georgia Institute of Technology",
-        "area": "Computer Science",
-        "url": "https://gatech.edu",
-        "studyType": "Bachelor of Science - BS",
-        "startDate": "2023-05-31",
-        "score": "",
-        "courses": ["CS 2050 - Discrete Math"]
-      },
-      {
-        "institution": "Arizona State University",
-        "area": "Computer Science",
-        "url": "https://asu.edu",
-        "studyType": "Bachelor of Science - BS",
-        "startDate": "2022-08-31",
-        "endDate": "2023-05-31",
-        "score": "",
-        "courses": ["MAT 267 - Calculus III for Engineers", "CSE 205 - Object-Oriented Programming & Data", "CSE 240 - Programming Languages"]
-      },
-      {
-        "institution": "Wayland High School ",
-        "area": "",
-        "studyType": "High School Diploma",
-        "startDate": "2018-12-31",
-        "endDate": "2022-12-31",
-        "score": "",
-        "courses": ["AP Statistics", "AP Computer Science A", "AP Calculus BC"]
-      }
-    ],
+    {
+      "institution": "Georgia Institute of Technology",
+      "area": "Computer Science",
+      "url": "https://gatech.edu",
+      "studyType": "Bachelor of Science - BS",
+      "startDate": "2023-05-31",
+      "score": "",
+      "courses": ["CS 2050 - Discrete Math"]
+    },
+    {
+      "institution": "Arizona State University",
+      "area": "Computer Science",
+      "url": "https://asu.edu",
+      "studyType": "Bachelor of Science - BS",
+      "startDate": "2022-08-31",
+      "endDate": "2023-05-31",
+      "score": "",
+      "courses": ["MAT 267 - Calculus III for Engineers", "CSE 205 - Object-Oriented Programming & Data", "CSE 240 - Programming Languages"]
+    },
+    {
+      "institution": "Wayland High School ",
+      "area": "",
+      "studyType": "High School Diploma",
+      "startDate": "2018-12-31",
+      "endDate": "2022-12-31",
+      "score": "",
+      "courses": ["AP Statistics", "AP Computer Science A", "AP Calculus BC"]
+    }
+  ],
   "volunteer": [
     {
       "organization": "Boy Scouts of America",
@@ -387,17 +387,11 @@
   "interests": [
     {
       "name": "Computers",
-      "keywords": [
-        "Software Development",
-        "Hardware Assembly"
-      ]
+      "keywords": ["Software Development", "Hardware Assembly"]
     },
     {
       "name": "Entrepreneurship",
-      "keywords": [
-        "Business development",
-        "Sales/Marketing"
-      ]
+      "keywords": ["Business development", "Sales/Marketing"]
     }
   ],
   "references": [
