@@ -33,6 +33,8 @@
         {% else %}
           <abbr class="badge">{{ entry.abbr }}</abbr>
         {% endif %}
+      {% else %}
+        
       {% endif %}
     </div>
   {% endif %}
@@ -40,8 +42,8 @@
   <!-- Entry bib key -->
   <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    {% if entry.link %}
-      <div class="title"><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></div>
+    {% if entry.url %}
+      <div class="title"><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></div>
     {% else %}
       <div class="title">{{ entry.title }}</div>
     {% endif %}
@@ -156,7 +158,7 @@
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
-      {{ periodical | strip }}{% if entry.journal %}&nbsp; &middot; &nbsp;{{ entry.journal }}{% endif %}
+      {{ periodical | strip }}{% if entry.journal %}&nbsp; &middot; &nbsp;<em>{{ entry.journal }}</em>{% endif %}
     </div>
     <div class="periodical">
       {{ entry.note | strip }}
