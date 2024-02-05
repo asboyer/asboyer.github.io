@@ -77,6 +77,15 @@ layout: default
   </header>
 
   <article class="post-content">
+    {% if page.admin_note %}
+      <h3 class="author-note-title"><i id="note-icon" class="fas fa-at"></i>&nbsp;a note from asboyer</h3>
+        <div id="author-note">
+          {{ page.admin_note }}
+        </div>
+    {% endif %}
+    {% if page.admin_note and page.note %}
+    <span style="margin: 5px"></span>
+    {% endif %}
     {% if page.note %}
       {% if page.warning %}
         <h3 class="author-note-title"><i id="note-icon-warning" class="fa-solid fa-triangle-exclamation"></i>&nbsp;a note from the author</h3>
@@ -89,8 +98,10 @@ layout: default
           {{ page.note }}
         </div>
       {% endif %}
-      <hr>
     {% endif %}
+    {% if page.note or page.admin_note %}
+      <hr>
+      {% endif %}
 
     {% if page.toc and page.toc.beginning %}
       <div id="table-of-contents">
