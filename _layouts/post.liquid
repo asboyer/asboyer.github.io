@@ -38,6 +38,11 @@ layout: default
       {% endif %}
     </p>
     <p class="post-tags">
+      {% if page.unfinished %}
+      <span style="font-size: .875em">
+        <i class="fa-solid fa-pen fa-sm"></i> <em>note is in progress</em>
+      <span>
+      {% endif %}
       {% if url_beginning == '/blog/' %}
         <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
       {% endif %}
@@ -74,6 +79,22 @@ layout: default
   </header>
 
   <article class="post-content">
+
+    {% if page.note %}
+      {% if page.warning %}
+    <h3 class="author-note-title"><i id="note-icon-warning" class="fa-solid fa-triangle-exclamation"></i>&nbsp;a note from the author</h3>
+      <div id="author-note-warning">
+       {{ page.note }}
+      </div>
+      {% else %}
+    <h3 class="author-note-title"><i id="note-icon" class="fas fa-sticky-note"></i>&nbsp;a note from the author</h3>
+      <div id="author-note">
+       {{ page.note }}
+      </div>
+    {% endif %}
+      <hr>
+    {% endif %}
+
     {% if page.toc and page.toc.beginning %}
       <div id="table-of-contents">
         {% toc %}
@@ -90,6 +111,7 @@ layout: default
     <div class="publications">
       {% bibliography --cited_in_order %}
     </div>
+
   {% endif %}
 
   {% if site.related_blog_posts.enabled %}

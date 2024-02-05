@@ -29,6 +29,8 @@ hr {
   margin: 8px !important;
 }
 
+
+
 table {
   color: var(--global-text-color) !important;
   td,
@@ -894,7 +896,7 @@ html.transition *:after {
 .post {
   .post-meta {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 1rem;
     margin-bottom: 0;
   }
 
@@ -904,7 +906,7 @@ html.transition *:after {
 
   .post-tags {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     padding-top: 0.25rem;
     padding-bottom: 1rem;
 
@@ -922,6 +924,15 @@ html.transition *:after {
       }
     }
   }
+}
+
+#markdown-content {
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+}
+
+#navbar {
+  font-size: 1.1rem !important;
 }
 
 progress {
@@ -1232,4 +1243,35 @@ nav[data-toggle="toc"] {
 
 #no-link-title {
   color: var(--global-theme-color);
+}
+
+.author-note-title {
+  color: var(--global-text-color);
+}
+
+#note-icon {
+  color: var(--global-theme-color);
+}
+
+#author-note {
+    border: .75px dotted var(--global-theme-color);
+    background-color: var(--global-code-bg-color);
+    font-family: monospace;
+    padding: 10px;
+    font-size: 0.8rem;
+    max-width: 330px;
+}
+
+#author-note-warning {
+    border: .75px dotted var(--global-danger-block);
+    background-color: var(--global-danger-block-bg);
+    font-family: monospace;
+    padding: 10px;
+    font-size: 0.8rem;
+    max-width: 330px;
+    color: var(--global-danger-block-text);
+}
+
+#note-icon-warning {
+  color: var(--global-danger-block);
 }

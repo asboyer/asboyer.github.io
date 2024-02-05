@@ -6,6 +6,7 @@ related_posts: false
 title: jekyll archives is annoying
 author: Andrew Boyer
 giscus_comments: true
+unfinished: true
 ---
 
 `jekyll-archives` is annoying. While I think it does a lot of great things, it is missing a key functionality that would make it awesome.
