@@ -29,8 +29,6 @@ hr {
   margin: 8px !important;
 }
 
-
-
 table {
   color: var(--global-text-color) !important;
   td,
@@ -1254,22 +1252,22 @@ nav[data-toggle="toc"] {
 }
 
 #author-note {
-    border: .75px dotted var(--global-theme-color);
-    background-color: var(--global-code-bg-color);
-    font-family: monospace;
-    padding: 10px;
-    font-size: 0.8rem;
-    max-width: 330px;
+  border: 0.75px dotted var(--global-theme-color);
+  background-color: var(--global-code-bg-color);
+  font-family: monospace;
+  padding: 10px;
+  font-size: 0.8rem;
+  max-width: 330px;
 }
 
 #author-note-warning {
-    border: .75px dotted var(--global-danger-block);
-    background-color: var(--global-danger-block-bg);
-    font-family: monospace;
-    padding: 10px;
-    font-size: 0.8rem;
-    max-width: 330px;
-    color: var(--global-danger-block-text);
+  border: 0.75px dotted var(--global-danger-block);
+  background-color: var(--global-danger-block-bg);
+  font-family: monospace;
+  padding: 10px;
+  font-size: 0.8rem;
+  max-width: 330px;
+  color: var(--global-danger-block-text);
 }
 
 #note-icon-warning {

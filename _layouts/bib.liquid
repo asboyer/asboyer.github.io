@@ -34,7 +34,7 @@
           <abbr class="badge">{{ entry.abbr }}</abbr>
         {% endif %}
       {% else %}
-        
+
       {% endif %}
     </div>
   {% endif %}
@@ -43,7 +43,9 @@
   <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
     {% if entry.url %}
-      <div class="title"><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></div>
+      <div class="title">
+        <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
+      </div>
     {% else %}
       <div class="title">{{ entry.title }}</div>
     {% endif %}
@@ -75,15 +77,15 @@
           {% endfor %}
         {% endif %}
 
-{% if forloop.length > 1 %}
-  {% if forloop.first == false %}
-    {% if forloop.last or author_array_limit != author_array_size or forloop.index == 2 %}
-      {% if forloop.index == 2 and author_array_limit == 2 %}&nbsp; &middot; &nbsp;{% else %}&nbsp; &middot; &nbsp;{% endif %}
-    {% else %}
-      &nbsp; &middot; &nbsp;
-    {% endif %}
-  {% endif %}
-{% endif %}
+        {% if forloop.length > 1 %}
+          {% if forloop.first == false %}
+            {% if forloop.last or author_array_limit != author_array_size or forloop.index == 2 %}
+              {% if forloop.index == 2 and author_array_limit == 2 %}&nbsp; &middot; &nbsp;{% else %}&nbsp; &middot; &nbsp;{% endif %}
+            {% else %}
+              &nbsp; &middot; &nbsp;
+            {% endif %}
+          {% endif %}
+        {% endif %}
 
         {% if author_is_self %}
           <em>
@@ -158,7 +160,10 @@
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
-      {{ periodical | strip }}{% if entry.journal %}&nbsp; &middot; &nbsp;<em>{{ entry.journal }}</em>{% endif %}
+      {{ periodical | strip -}}
+      {%- if entry.journal -%}
+        &nbsp; &middot; &nbsp;<em>{{ entry.journal }}</em>
+      {%- endif %}
     </div>
     <div class="periodical">
       {{ entry.note | strip }}
