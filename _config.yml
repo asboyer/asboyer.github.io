@@ -172,11 +172,16 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  notes:
+    defaults:
+      layout: post
+    output: true
+    permalink: /notes/:path/
 
 announcements:
   enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 3 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true
@@ -187,6 +192,11 @@ key_projects:
   enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
+
+latest_notes:
+  enabled: true
+  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: # leave blank to include all the blog posts
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -268,8 +278,10 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["python", "basketball", "code"] # these tags will be displayed on the front page of your blog
-display_categories: ["projects"] # these categories will be displayed on the front page of your blog
+display_tags: ["ethics", "code"] # these tags will be displayed on the front page of your blog
+display_categories: ["essays", "projects"] # these categories will be displayed on the front page of your blog
+display_authors: ["Andrew Boyer"]
+all_authors: ["andrew-boyer"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

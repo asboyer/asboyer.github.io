@@ -894,13 +894,17 @@ html.transition *:after {
 .post {
   .post-meta {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 1rem;
     margin-bottom: 0;
+  }
+
+  #light-tag {
+    color: var(--global-text-color-light) !important;
   }
 
   .post-tags {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     padding-top: 0.25rem;
     padding-bottom: 1rem;
 
@@ -918,6 +922,15 @@ html.transition *:after {
       }
     }
   }
+}
+
+#markdown-content {
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+}
+
+#navbar {
+  font-size: 1.1rem !important;
 }
 
 progress {
@@ -1215,10 +1228,13 @@ nav[data-toggle="toc"] {
   #more-info-home {
     display: none !important;
   }
-  #info-home {
+  #profile-picture-home {
     display: none !important;
   }
-  #profile-picture-home {
+}
+
+@media (max-width: 740px) {
+  #more-info-home {
     display: none !important;
   }
 }
@@ -1231,10 +1247,43 @@ nav[data-toggle="toc"] {
   color: var(--global-theme-color) !important;
 }
 
-#content-resume {
-  margin-left: 2rem !important;
+@media (min-width: 767px) {
+  #content-resume {
+    margin-left: 2rem !important;
+  }
 }
 
 #no-link-title {
   color: var(--global-theme-color);
+}
+
+.author-note-title {
+  color: var(--global-text-color);
+}
+
+#note-icon {
+  color: var(--global-theme-color);
+}
+
+#author-note {
+  border: 0.75px dotted var(--global-theme-color);
+  background-color: var(--global-code-bg-color);
+  font-family: monospace;
+  padding: 10px;
+  font-size: 0.8rem;
+  max-width: 330px;
+}
+
+#author-note-warning {
+  border: 0.75px dotted var(--global-danger-block);
+  background-color: var(--global-danger-block-bg);
+  font-family: monospace;
+  padding: 10px;
+  font-size: 0.8rem;
+  max-width: 330px;
+  color: var(--global-danger-block-text);
+}
+
+#note-icon-warning {
+  color: var(--global-danger-block);
 }

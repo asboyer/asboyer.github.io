@@ -4,7 +4,7 @@
     "name": "Andrew Boyer",
     "label": "CS @ Georgia Tech",
     "image": "",
-    "email": "asboyer@gatech.edu",
+    "email": "asboyer.com@gmail.com",
     "phone": "",
     "url": "https://asboyer.com",
     "summary": "Interested in all things computers and math. I am always looking for an opportunity to explore interests, express creativity, and learn. ",
@@ -106,35 +106,6 @@
       "location": "Wayland, Massachusetts, United States"
     }
   ],
-  "volunteer": [
-    {
-      "organization": "Boy Scouts of America",
-      "position": "Eagle Scout",
-      "startDate": "2011-09-30",
-      "endDate": "2011-09-30",
-      "summary": "Active member of Troop 156 from 2011 - 2019, achieved Eagle Scout award.",
-      "highlights": [],
-      "url": "https://www.linkedin.com/company/8118"
-    },
-    {
-      "organization": "Reboot Hacks",
-      "position": "Founder and Executive Director ",
-      "startDate": "2020-09-30",
-      "endDate": "2022-06-30",
-      "summary": "Building the next-generation of New England tech events for students.",
-      "highlights": [],
-      "url": "https://www.linkedin.com/company/76358633"
-    },
-    {
-      "organization": "National Honor Society",
-      "position": "Member",
-      "startDate": "2021-06-30",
-      "endDate": "2022-06-30",
-      "summary": "Tutoring students at high school and leading service projects.",
-      "highlights": [],
-      "url": "https://www.linkedin.com/company/11094416"
-    }
-  ],
   "education": [
     {
       "institution": "Georgia Institute of Technology",
@@ -163,6 +134,35 @@
       "endDate": "2022-12-31",
       "score": "",
       "courses": ["AP Statistics", "AP Computer Science A", "AP Calculus BC"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Boy Scouts of America",
+      "position": "Eagle Scout",
+      "startDate": "2011-09-30",
+      "endDate": "2011-09-30",
+      "summary": "Active member of Troop 156 from 2011 - 2019, achieved Eagle Scout award.",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/8118"
+    },
+    {
+      "organization": "Reboot Hacks",
+      "position": "Founder and Executive Director ",
+      "startDate": "2020-09-30",
+      "endDate": "2022-06-30",
+      "summary": "Building the next-generation of New England tech events for students.",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/76358633"
+    },
+    {
+      "organization": "National Honor Society",
+      "position": "Member",
+      "startDate": "2021-06-30",
+      "endDate": "2022-06-30",
+      "summary": "Tutoring students at high school and leading service projects.",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/11094416"
     }
   ],
   "awards": [
@@ -201,6 +201,22 @@
       "date": "2018-09-30",
       "awarder": null,
       "summary": "Students who earn an unweighted GPA above 3.6 and meet the requirements for the honor roll are named to the high honors list"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Goat Grade",
+      "startDate": "2020-02-28",
+      "summary": "Web scraping basketball statistics and ranking players using our algorithm, displaying rankings on website",
+      "url": "http://goatgrade.com",
+      "endDate": "2020-02-28"
+    },
+    {
+      "name": "Reporty",
+      "startDate": "2020-06-30",
+      "summary": "Reporty is an open source python library that contains useful functions for organizing and distributing visual data",
+      "url": "https://pypi.org/project/reporty/",
+      "endDate": "2020-11-30"
     }
   ],
   "certificates": [
@@ -360,30 +376,36 @@
   ],
   "languages": [
     {
-      "fluency": "Limited Working",
-      "language": "Chinese "
-    },
-    {
       "fluency": "Native Speaker",
       "language": "English"
-    }
-  ],
-  "interests": [],
-  "references": [],
-  "projects": [
-    {
-      "name": "Goat Grade",
-      "startDate": "2020-02-28",
-      "summary": "Web scraping basketball statistics and ranking players using our algorithm, displaying rankings on website",
-      "url": "http://goatgrade.com",
-      "endDate": "2020-02-28"
     },
     {
-      "name": "Reporty",
-      "startDate": "2020-06-30",
-      "summary": "Reporty is an open source python library that contains useful functions for organizing and distributing visual data",
-      "url": "https://pypi.org/project/reporty/",
-      "endDate": "2020-11-30"
+      "fluency": "Limited Working",
+      "language": "Chinese "
+    }
+  ],
+  "interests": [
+    {
+      "name": "Computers",
+      "keywords": ["Software Development", "Hardware Assembly"]
+    },
+    {
+      "name": "Entrepreneurship",
+      "keywords": ["Business development", "Sales/Marketing"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Benjamin Tengelsen",
+      "reference": "Mentor, Data Scientist at IntelyCare"
+    },
+    {
+      "name": "Caroline Yee",
+      "reference": "Supervisor, GM at theCoderSchool Sudbury"
+    },
+    {
+      "name": "Ben Peterson",
+      "reference": "Scouting/Youth Leader, Interventional Cardiologist"
     }
   ],
   "meta": {
