@@ -1287,3 +1287,7 @@ nav[data-toggle="toc"] {
 #note-icon-warning {
   color: var(--global-danger-block);
 }
+
+body.fixed-top-nav {
+  padding-top: 56px !important;
+}
