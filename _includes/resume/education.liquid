@@ -45,7 +45,12 @@
             {% endif %}
           </h6>
           <h6 class="ml-1 ml-md-4" id="content-resume" style="font-size: 0.95rem">{{ content.institution }}</h6>
-          <h6 class="ml-1 ml-md-4" id="content-resume" style="font-size: 0.95rem"><em>{{ content.area }}</em>{% if content.gpa %}&nbsp; &middot; &nbsp;<b>GPA:</b> {{ content.gpa }}/4.0{% endif %}</h6>
+          <h6 class="ml-1 ml-md-4" id="content-resume" style="font-size: 0.95rem">
+            <em>{{ content.area }}</em>
+            {%- if content.gpa -%}
+              &nbsp; &middot; &nbsp;<b>GPA:</b> {{ content.gpa }}/4.0
+            {%- endif %}
+          </h6>
           <ul class="items">
             {% for item in content.courses %}
               <li>
