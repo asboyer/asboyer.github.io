@@ -115,7 +115,14 @@
       "startDate": "2023-05-31",
       "score": "",
       "gpa": "4.0",
-      "courses": ["CS 2050 - Discrete Math", "CS 1332 - Data Structures and Algorithms", "CS 2110 - Computer Organization and Programming", "CS 2340 - Objects and Design", "MATH 1554 - Linear Algebra", "PHYS 2211 - Physics I"]
+      "courses": [
+        "CS 2050 - Discrete Math",
+        "CS 1332 - Data Structures and Algorithms",
+        "CS 2110 - Computer Organization and Programming",
+        "CS 2340 - Objects and Design",
+        "MATH 1554 - Linear Algebra",
+        "PHYS 2211 - Physics I"
+      ]
     },
     {
       "institution": "Arizona State University",
@@ -125,7 +132,13 @@
       "startDate": "2022-08-31",
       "endDate": "2023-05-31",
       "score": "",
-      "courses": ["MAT 267 - Calculus III for Engineers", "CSE 205 - Object-Oriented Programming & Data", "CSE 240 - Programming Languages", "BIO 181 - Biology I", "BIO 182 - Biology II"]
+      "courses": [
+        "MAT 267 - Calculus III for Engineers",
+        "CSE 205 - Object-Oriented Programming & Data",
+        "CSE 240 - Programming Languages",
+        "BIO 181 - Biology I",
+        "BIO 182 - Biology II"
+      ]
     },
     {
       "institution": "Wayland High School ",
