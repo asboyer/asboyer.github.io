@@ -97,13 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function determineColor(value) {
         if (value >= 0 && value < 3) return 'red';
-        else if (value >= 3 && value < 6) return 'yellow';
-        else if (value >= 6 && value < 7) return 'green';
-        else if (value >= 7 && value < 8) return 'blue';
-        else if (value >= 8 && value < 9) return 'purple';
-        else if (value >= 9 && value < 10) return 'gold';
-        else if (value == 10) return 'var(--global-theme-color)';
-        return 'transparent'; // Default if out of range
+        else if (value >= 3 && value < 6) return 'var(--global-album-tier-bad)';
+        else if (value >= 6 && value < 7) return 'var(--global-album-tier-mid)';
+        else if (value >= 7 && value < 8) return 'var(--global-album-tier-good)';
+        else if (value >= 8 && value < 9) return 'var(--global-album-tier-great)';
+        else if (value >= 9 && value < 10) return 'var(--global-album-tier-amazing)';
+        else if (value == 10) return 'var(--global-album-tier-perfect)';
+        return 'var(--global-theme-color)'; // Default if out of range
     }
 
     function animateCircleFill() {

@@ -30,6 +30,14 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
+
+  --global-album-tier-bad: #e56565;
+  --global-album-tier-mid: #f8bc4c;
+  --global-album-tier-good: #75b200;
+  --global-album-tier-great: #00c0ef;
+  --global-album-tier-amazing: #f583ca;
+  --global-album-tier-perfect: #b6fffd;
+  
   .fa-sun {
     padding-left: 10px;
     padding-top: 12px;
@@ -74,6 +82,14 @@ html[data-theme="light"] {
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
+
+  --global-album-tier-bad: #ff2a04;
+  --global-album-tier-mid: #FF5F15;
+  --global-album-tier-good: #319236;
+  --global-album-tier-great: #4c51f7;
+  --global-album-tier-amazing: #9d4dbb;
+  --global-album-tier-perfect: #92b2ff;
+
 
   .fa-sun {
     display: none;
