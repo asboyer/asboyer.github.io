@@ -24,12 +24,11 @@
       type="image/webp"
     >
   {% endif %}
-  {% if include.explicit %}
-  <img id="blurImage" style="filter: blur(6px); cursor: pointer;"
 
-{% else %}
-  <img 
-{% endif %}
+  <img
+    {% if include.explicit %}
+      id="blurImage" style="filter: blur(6px); cursor: pointer;"
+    {% endif %}
     src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
     {% if include.class %}
       class="{{ include.class }}"

@@ -14,4 +14,3 @@ authors:
 {::nomarkdown}
 {% include album.liquid image="assets/img/blog/albums/vultures-cover.jpeg" title="Vultures 1" score="9" artist="Kanye West & Ty Dolla $ign" explicit="true" link="https://open.spotify.com/album/0k7ALIqqds5oGFtpMsaHLK?si=nSekwCJxSF2XOhJKfFB-vQ"%}
 {:/nomarkdown}
-

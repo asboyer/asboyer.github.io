@@ -860,12 +860,10 @@ figure.highlight {
 }
 
 .post {
-
-figure {
-  margin: 0px 0px .7rem !important;
-}  
+  figure {
+    margin: 0px 0px 0.7rem !important;
+  }
 }
-
 
 pre {
   color: var(--global-theme-color);
@@ -944,8 +942,6 @@ html.transition *:after {
 .card-img {
   height: 100% !important;
 }
-
-
 
 progress {
   /* Positioning */
