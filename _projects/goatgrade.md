@@ -9,7 +9,7 @@ redirect: https://goatgrade.com
 website: https://goatgrade.com
 related_publications: false
 key: true
-github: https://github.com/goat-grade
+github: https://github.com/goatgrade
 ---
 
     redirect to website...
