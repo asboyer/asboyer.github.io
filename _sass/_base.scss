@@ -859,6 +859,12 @@ figure.highlight {
   margin: 0 0 1rem;
 }
 
+.post {
+  figure {
+    margin: 0px 0px 0.7rem !important;
+  }
+}
+
 pre {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
@@ -931,6 +937,10 @@ html.transition *:after {
 
 #navbar {
   font-size: 1.1rem !important;
+}
+
+.card-img {
+  height: 100% !important;
 }
 
 progress {
@@ -1098,6 +1108,12 @@ nav[data-toggle="toc"] {
     visibility: hidden;
     height: 0;
     top: 0;
+  }
+}
+
+@media (max-width: 740px) {
+  .card-img {
+    display: none !important;
   }
 }
 
