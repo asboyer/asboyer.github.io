@@ -25,10 +25,10 @@ profiles:
       <p>2023-9-12 15:57:00</p>
       <p>Lisbon, Portugal</p>
   - align: right
-    image: pictures/gym.jpg
+    image: pictures/fit.jpg
     content: 3.md
     image_circular: false # crops the image to make it circular
     more_info: >
-      <p>2023-6-17 15:41:00</p>
+      <p>2023-3-02 10:24:00</p>
       <p>Atlanta, Georgia</p>
 ---
