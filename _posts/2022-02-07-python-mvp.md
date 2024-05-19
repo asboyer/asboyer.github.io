@@ -9,6 +9,7 @@ tags: python basketball code
 read_time: 12
 categories: projects andrew-boyer
 thumbnail: assets/img/blog/jokic.png
+og_image: assets/img/blog/jokic.png
 authors:
   - Andrew Boyer
 ---
