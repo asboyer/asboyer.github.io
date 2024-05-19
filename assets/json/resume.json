@@ -104,6 +104,15 @@
       "summary": "Refereed soccer games for Wayland Town Soccer and BAYS.",
       "url": "https://www.linkedin.com/company/wayland-town-soccer/",
       "location": "Wayland, Massachusetts, United States"
+    },
+    {
+      "name": "Neurture",
+      "position": "Software Engineering Intern",
+      "startDate": "2024-05-06",
+      "highlights": [],
+      "summary": "Working on app development and UI/UX design.",
+      "url": "https://neurtureapp.com/",
+      "location": "Natick, Massachusetts, United States"
     }
   ],
   "education": [
@@ -132,6 +141,7 @@
       "startDate": "2022-08-31",
       "endDate": "2023-05-31",
       "score": "",
+      "gpa": "4.33",
       "courses": [
         "MAT 267 - Calculus III for Engineers",
         "CSE 205 - Object-Oriented Programming & Data",
