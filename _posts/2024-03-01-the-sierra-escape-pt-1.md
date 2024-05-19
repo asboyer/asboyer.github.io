@@ -6,7 +6,7 @@ description: The first part of a new series
 tags: sierra-escape
 categories: short-stories andrew-boyer
 thumbnail: assets/img/blog/sierra_escape.jpeg
-og_image: assets/img/blog/sierra_escape.jpeg
+og_image: /assets/img/blog/sierra_escape.jpeg
 related_publications: false
 giscus_comments: true
 related_posts: false
