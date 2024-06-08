@@ -18,12 +18,12 @@ profiles:
       <p>2023-12-11 16:42:00</p>
       <p>Paris, France</p>
   - align: left
-    image: pictures/art.jpg
+    image: pictures/barcelona.jpg
     content: 2.md
     image_circular: false # crops the image to make it circular
     more_info: >
-      <p>2023-9-12 15:57:00</p>
-      <p>Lisbon, Portugal</p>
+      <p>2024-5-31 20:39:00</p>
+      <p>Barcelona, Spain</p>
   - align: right
     image: pictures/fit.jpg
     content: 3.md
