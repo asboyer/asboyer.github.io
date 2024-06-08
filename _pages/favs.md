@@ -1,8 +1,8 @@
 ---
 layout: page
-title: favorites
+title: reccomendations
 permalink: /favs/
-description: my favorite things
+description: things that I like, and think you might like too
 ---
 
 {% include favs.liquid %}

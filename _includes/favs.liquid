@@ -38,15 +38,20 @@
                         ></path>
                       </svg>
                     {% else %}
-                      <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
+                      <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.name }}</a>
                     {% endif %}
                   {% endif %}
                 {% endif %}
               {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.name }}</a><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">{% if item.score %}&bull; {{ item.score }}/10{% endif %}</span>
               {% endif %}
             </td>
-          </tr>
+      {% for category in item.categories %}
+
+            <th scope="row" style="font-size: .875rem; font-weight: 200"><i class="fa-solid fa-hashtag fa-sm"></i><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a></th>
+      {% endfor %}
+
+            </tr>
         {% endfor %}
       </table>
     </div>
