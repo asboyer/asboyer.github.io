@@ -177,6 +177,11 @@ collections:
       layout: post
     output: true
     permalink: /notes/:path/
+  favs:
+    defaults:
+      layout: post
+    output: true
+    permalink: /favs/:categories/:path/
 
 announcements:
   enabled: true
