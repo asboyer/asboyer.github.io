@@ -47,7 +47,7 @@ layout: default
       {% endif -%}
       class="post-meta"
     >
-      {{ page.date | date: '%B %d, %Y' }}
+      <i class="fa-solid fa-pen fa-sm"></i>{{ page.date | date: '%B %d, %Y' }}
       {% if page.author %}&nbsp; &middot; &nbsp;{{ page.author }}{% endif %}
       {% if page.meta %} • {{ page.meta }}{% endif %}
 
