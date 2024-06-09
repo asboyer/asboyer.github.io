@@ -23,6 +23,6 @@ favs: true
 current_roles: true
 ---
 
-Welcome to [asboyer.com](https://asboyer.com), the digital home of **Andrew S. Boyer**, a passionate **developer**, **entrepreneur**, and **[Georgia Tech Computer Science](https://www.cc.gatech.edu/) student**. Here, you'll find a showcase of my journey through technology, from **cybersecurity** to **software development**, and my commitment to **teaching** and **innovating** in the tech space.
+Welcome to [asboyer.com](https://asboyer.com). I'm **Andrew Boyer**, and this is my personal website. Here you can find my blog posts, short stories, projects, notes, and collections of reccomendations. Currently I'm studying Computer Science at the [Georgia Institute of Technology](https://www.cc.gatech.edu/).
 
-Dive into my projects, learn from my experiences, and discover the power of **coding** and **creativity**. Join me in exploring the endless possibilities that technology offers.
+If you have any questions or just want to chat, feel free to reach out to me. If you want to stay updated on my latest [projects](/projects), [posts](/blog), and [reccomendations](/favs), subscribe to my [newsletter](/subscribe).
