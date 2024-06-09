@@ -24,12 +24,12 @@
 
             <td style="vertical-align: middle;">
               {% if item.redirect == blank %}
-                <a class="news-title" style="font-size: 1.2rem" href="{{ item.url | relative_url }}">{{ item.title }}</a
-                ><span style="font-size: .85rem; font-weight: 20; margin-left: 5px">
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a
+                ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
                   {%- if item.creator %}by {{ item.creator }}{% endif -%}
                 </span>
               {% elsif item.redirect contains '://' %}
-                <a class="news-title" style="font-size: 1.2rem" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
+                <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
                 ><span style="font-size: 1rem; font-weight: 20; margin-left: 5px">
                   {%- if item.creator %}by {{ item.creator }}{% endif -%}
                 </span>
@@ -46,15 +46,15 @@
                   ></path>
                 </svg>
               {% else %}
-                <a class="news-title" style="font-size: 1.2rem" href="{{ item.url | relative_url }}">{{ item.title }}</a
-                ><span style="font-size: .85rem; font-weight: 20; margin-left: 5px">
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a
+                ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
                   {%- if item.creator %}by {{ item.creator }}{% endif -%}
                 </span>
               {% endif %}
               <br>
-              <span style="font-size: .85rem">{{ item.date | date: '%b %d, %Y' }}</span>&nbsp; &middot; &nbsp;
+              <span style="font-size: .75rem">{{ item.date | date: '%b %d, %Y' }}</span>&nbsp; &middot; &nbsp;
               {% for category in item.categories %}
-                <span style="font-size: .85rem; font-weight: 200"
+                <span style="font-size: .75rem; font-weight: 200"
                   ><i class="fa-solid fa-hashtag fa-sm"></i
                   ><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a></span
                 >
