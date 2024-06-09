@@ -182,6 +182,11 @@ collections:
       layout: post
     output: true
     permalink: /favs/:categories/:path/
+  roles:
+    defaults:
+      layout: post
+    output: true
+    permalink: /roles/:categories/:path/
 
 announcements:
   enabled: true
@@ -204,6 +209,11 @@ latest_notes:
   limit: 5 # leave blank to include all the blog posts
 
 latest_favs:
+  enabled: true
+  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: 3 # leave blank to include all the blog posts
+
+current_roles:
   enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
