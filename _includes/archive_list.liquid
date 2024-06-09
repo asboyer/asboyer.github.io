@@ -52,6 +52,9 @@
                   {%- if item.creator %}by {{ item.creator }}{% endif -%}
                 </span>
               {% endif %}
+            </td>
+            <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
+              <i class="fa-solid fa-trophy"></i>
               {% if item.score or item.stars %}
                 <span style="font-size: .875rem">
                   ·
@@ -62,9 +65,6 @@
                   {% endif %}
                 </span>
               {% endif %}
-            </td>
-            <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
-              <span>{{ item.date | date: '%b %d, %Y' }}</span>
             </th>
           </tr>
         {% elsif include.category == 'vinyl' and item.vinyl %}
@@ -114,6 +114,9 @@
                   {%- if item.creator %}by {{ item.creator }}{% endif -%}
                 </span>
               {% endif %}
+            </td>
+            <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
+              <i class="fa-solid fa-record-vinyl"></i>
               {% if item.score or item.stars %}
                 <span style="font-size: .875rem">
                   ·
@@ -124,9 +127,6 @@
                   {% endif %}
                 </span>
               {% endif %}
-            </td>
-            <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
-              <span>{{ item.date | date: '%b %d, %Y' }}</span>
             </th>
           </tr>
         {% elsif item.categories contains include.category %}
