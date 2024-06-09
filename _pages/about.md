@@ -19,6 +19,7 @@ social: false # includes social icons at the bottom of the page
 key_projects: true # preview of projects on home page
 animation: true
 notes: true
+favs: true
 ---
 
 Welcome to [asboyer.com](https://asboyer.com), the digital home of **Andrew S. Boyer**, a passionate **developer**, **entrepreneur**, and **[Georgia Tech Computer Science](https://www.cc.gatech.edu/) student**. Here, you'll find a showcase of my journey through technology, from **cybersecurity** to **software development**, and my commitment to **teaching** and **innovating** in the tech space.
