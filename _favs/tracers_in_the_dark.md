@@ -5,8 +5,9 @@ author: Andrew Boyer
 title: Tracers in the Dark
 creator: Andy Greenberg
 link: https://www.imdb.com/title/tt3032476/
-image: /assets/img/better_call_saul.jpg
+img: /assets/img/favs/books/tracers_in_the_dark.jpg
 categories: books
+type: book
 ---
 
 {::nomarkdown}
