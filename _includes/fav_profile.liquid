@@ -1,86 +1,86 @@
 <style>
-  .centered-flex {
-      display: flex;
-      align-items: center;
-      position: relative; /* Needed for absolute positioning of the animation */
-      justify-content: flex-start; 
-      flex-direction: row
+    .centered-flex {
+        display: flex;
+        align-items: center;
+        position: relative; /* Needed for absolute positioning of the animation */
+        justify-content: flex-start;
+        flex-direction: row
+    }
+    .animation-container {
+        position: relative;
+        right: 0;
+        top: 50%;
+        transform: translateY(-20%);
+    }
+    @keyframes drawCircle {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    /* Placeholder fill animation with immediate execution but will be replaced */
+    @keyframes fillColor {
+        100% { fill: currentColor; }
+    }
+
+    .circle-bg {
+        fill: transparent;
+        stroke: white;
+        stroke-width: 6;
+        stroke-dasharray: 290; /* Approximately 2 * Math.PI * 45 */
+        stroke-dashoffset: 282;
+        animation: drawCircle 1s linear forwards;
+    }
+
+    .number-text {
+        font-size: 2rem;
+        text-anchor: middle;
+        alignment-baseline: central;
+        fill: white;
+        font-weight: 800;
+    }
+
+    .col-md-4 {
+        max-width: 300px;
+        align-self: flex-start;
+    }
+
+    .star {
+        font-size: 24px;
+        text-anchor: middle;
+        alignment-baseline: middle;
+        fill: gold;
+    }
+
+    .text {
+
+    align-self: flex-start;
+
   }
-  .animation-container {
-      position: relative;
-      right: 0;
-      top: 50%;
-      transform: translateY(-20%);
-  }
-  @keyframes drawCircle {
-      to {
-          stroke-dashoffset: 0;
-      }
-  }
 
-  /* Placeholder fill animation with immediate execution but will be replaced */
-  @keyframes fillColor {
-      100% { fill: currentColor; }
-  }
-
-  .circle-bg {
-      fill: transparent;
-      stroke: white;
-      stroke-width: 6;
-      stroke-dasharray: 290; /* Approximately 2 * Math.PI * 45 */
-      stroke-dashoffset: 282;
-      animation: drawCircle 1s linear forwards;
-  }
-
-  .number-text {
-      font-size: 2rem;
-      text-anchor: middle;
-      alignment-baseline: central;
-      fill: white;
-      font-weight: 800;
-  }
-
-  .col-md-4 {
-      max-width: 300px;
-      align-self: flex-start;
-  }
-
-  .star {
-      font-size: 24px;
-      text-anchor: middle;
-      alignment-baseline: middle;
-      fill: gold;
-  }
-
-  .text {
-
-  align-self: flex-start;
-
-}
-
-.backup-text {
-  display: none;
-}
-
-@media (max-width: 768px) { /* breakpoint at 768px */
-  .text {
-    flex-basis: 100%; /* makes the text take up the full width below this breakpoint */
-  }
-}
-
-@media (max-width: 700px) { /* breakpoint at 768px */
-  .text {
-    display: none; /* makes the text take up the full width below this breakpoint */
-  }
   .backup-text {
-    display: block;
+    display: none;
   }
-  .centered-flex {
-    justify-content: center;
-  }
-}
 
-  {% assign img_path = "/assets/img/blog/album/" + include.image %}
+  @media (max-width: 768px) { /* breakpoint at 768px */
+    .text {
+      flex-basis: 100%; /* makes the text take up the full width below this breakpoint */
+    }
+  }
+
+  @media (max-width: 700px) { /* breakpoint at 768px */
+    .text {
+      display: none; /* makes the text take up the full width below this breakpoint */
+    }
+    .backup-text {
+      display: block;
+    }
+    .centered-flex {
+      justify-content: center;
+    }
+  }
+
+    {% assign img_path = "/assets/img/blog/album/" + include.image %}
 </style>
 <div class="centered-flex" style="">
   <!-- Image container -->
@@ -101,13 +101,13 @@
     </div>
   </div>
   <!-- Animation container -->
-   {% if include.score %}
-  <div class="animation-container">
-    <svg viewBox="0 0 120 120" width="120" height="120" id="circleSvg">
-      <circle class="circle-bg" cx="60" cy="60" r="45" id="circleBg"/>
-      <text x="60" y="60" class="number-text" id="numberText">{{ include.score }}</text>
-    </svg>
-  </div>
+  {% if include.score %}
+    <div class="animation-container">
+      <svg viewBox="0 0 120 120" width="120" height="120" id="circleSvg">
+        <circle class="circle-bg" cx="60" cy="60" r="45" id="circleBg"/>
+        <text x="60" y="60" class="number-text" id="numberText">{{ include.score }}</text>
+      </svg>
+    </div>
   {% endif %}
   <div class="text">
     <p>{{ include.content }}</p>
