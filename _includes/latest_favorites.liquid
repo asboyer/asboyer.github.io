@@ -3,9 +3,6 @@
     {% assign favs_size = site.favs | size %}
     <div
       class="table-responsive"
-      {% if site.latest_favs.scrollable and favs_size > 3 %}
-        style="max-height: 60vw"
-      {% endif %}
     >
       <table class="table table-sm table-borderless" style="margin: 0px">
         {% assign favs = site.favs | reverse %}
@@ -58,6 +55,12 @@
                   ><i class="fa-solid fa-hashtag fa-sm"></i
                   ><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a></span
                 >
+                {% if item.vinyl %}
+                  · <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
+                {%- endif %}
+                {% if item.perfect %}
+                  · <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+                {%- endif %}
               {% endfor %}
             </td>
           </tr>

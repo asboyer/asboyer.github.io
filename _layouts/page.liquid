@@ -8,7 +8,15 @@ layout: default
       style="text-align: center"
     {% endif %}
   >
-    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.alt_title %}
+      <h1 class="post-title">{{ page.alt_title }}</h1>
+    {% else %}
+      <h1 class="post-title">
+        {% if page.goat %}<i class="fa-solid fa-trophy"></i> {% elsif page.vinyl %}<i class="fa-solid fa-record-vinyl"></i> {% endif -%}
+        {{- page.title }}
+      </h1>
+    {% endif %}
+
     <p class="post-description">{{ page.description }}</p>
   </header>
 

@@ -18,8 +18,8 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1
+      style="margin-bottom: 0px !important; line-height: 1 !important"
       {% if page.creator %}
-        style="margin-bottom: 0px !important; line-height: 1 !important"
       {% endif %}
       class="post-title"
     >
@@ -28,6 +28,19 @@ layout: default
     {% if page.creator %}
       by {{ page.creator }}
     {% endif %}
+    {% if page.creator and page.released %}&nbsp;&middot;&nbsp;{% endif %}
+    {% if page.released %}
+      <em>{{ page.released }}</em>
+    {% endif %}
+    {% if page.vinyl -%}
+      &nbsp;&middot;&nbsp;&nbsp;<a href="{{ page.vinyl_link }}"
+        ><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i
+      ></a>
+    {%- endif %}
+    {% if page.perfect -%}
+      &nbsp;&middot;&nbsp;&nbsp;<a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+    {%- endif %}
+
     <p
       {% if page.creator %}
         style="margin-top: 5px"
@@ -56,9 +69,46 @@ layout: default
         &nbsp; &middot; &nbsp;
         <i class="fa-solid fa-hashtag fa-sm"></i><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a>
       {% endfor %}
-
-      {% if page.score %}&nbsp; &middot; &nbsp;{{ page.score }}/10{% endif %}
     </p>
+    {% if page.started or page.finished or page.stars %}
+      <p class="post-tags" style="font-size: .875em; padding-bottom: 0px !important">
+        {% if page.started %}
+          <i class="fa-solid fa-play fa-sm" style="color: var(--global-tip-block) !important"></i> <em>{{ page.started }}</em>
+        {% endif %}
+        {% if page.started and page.finished %}
+          &nbsp; &middot; &nbsp;
+        {% endif %}
+        {% if page.finished %}
+          <i class="fa-solid fa-stop fa-sm" style="color: var(--global-album-tier-bad) !important"></i> <em>{{ page.finished }}</em>
+        {% endif %}
+        {% if page.started or page.finished %}
+          {% if page.stars %}
+            &nbsp; &middot; &nbsp;
+          {% endif %}
+        {% endif %}
+        {% if page.stars %}
+          {% if page.star_link %}
+            <style>
+              .post .post-tags i {
+                color: var(--global-theme-color) !important;
+              }
+            </style>
+            <a target="_blank" href="{{ page.star_link }}">
+          {% endif %}
+          {% assign full_stars = page.stars | floor %}
+          {% assign half_star = page.stars | minus: full_stars %}
+
+          {% for i in (1..full_stars) -%}
+            <i class="fa-solid fa-star fa-sm"></i>
+          {%- endfor %}
+
+          {% if half_star > 0 %}<i class="fa-solid fa-star-half fa-sm"></i>{% endif %}
+          {% if page.star_link %}
+            </a>
+          {% endif %}
+        {% endif %}
+      </p>
+    {% endif %}
     <hr>
   </header>
 
@@ -96,6 +146,15 @@ layout: default
       <hr>
     {% endif %}
     <div id="markdown-content" style="margin-top: 15px">
+      {% if page.img %}
+        {% if page.categories == 'songs' %}
+          {% include song.liquid image=page.img title=page.title artist=page.creator link=page.link score=page.score %}
+        {% elsif page.categories == 'albums' or page.score %}
+          {% include album.liquid image=page.img title=page.title artist=page.creator link=page.link score=page.score %}
+        {% else %}
+          {% include fav_profile.liquid image=page.img title=page.title artist=page.creator link=page.link score=page.score content=page.opener %}
+        {% endif %}
+      {% endif %}
       {{ content }}
     </div>
   </article>
