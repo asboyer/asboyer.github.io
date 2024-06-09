@@ -1,8 +1,11 @@
 ---
 layout: page
-title: favorites list
+title: favs
+alt_title: reccomendations
 permalink: /favs/
-description: things that I like, and think you might like too
+description: a list of things that I like, and think you might like too
+nav: true
+nav_order: 5
 ---
 
 {% include favs.liquid %}

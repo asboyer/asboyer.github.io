@@ -1,8 +1,8 @@
 ---
 layout: page
-title: favorite albums
+title: albums
 permalink: /favs/albums/
-description: Albums that I like, and think you might like too
+description: list of favorite albums
 ---
 
 {% include archive_list.liquid category="albums" %}

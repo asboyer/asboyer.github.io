@@ -1,8 +1,8 @@
 ---
 layout: page
-title: favorite playlists
+title: playlist reccomendations
 permalink: /favs/playlists/
-description: Playlists the I really like
+description: list of playlist reccomendations
 ---
 
 {% include archive_list.liquid category="playlists" %}
