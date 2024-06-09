@@ -23,7 +23,6 @@
             {% endif %}
 
             <td style="vertical-align: middle;">
-              <span style="font-size: .85rem">{{ item.date | date: '%b %d, %Y' }}</span><br>
               {% if item.redirect == blank %}
                 <a class="news-title" style="font-size: 1.2rem" href="{{ item.url | relative_url }}">{{ item.title }}</a
                 ><span style="font-size: .85rem; font-weight: 20; margin-left: 5px">
@@ -53,6 +52,7 @@
                 </span>
               {% endif %}
               <br>
+              <span style="font-size: .85rem">{{ item.date | date: '%b %d, %Y' }}</span>&nbsp; &middot; &nbsp;
               {% for category in item.categories %}
                 <span style="font-size: .85rem; font-weight: 200"
                   ><i class="fa-solid fa-hashtag fa-sm"></i
