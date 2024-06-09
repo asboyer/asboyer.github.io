@@ -1,18 +1,8 @@
 ---
 layout: page
-title: Shows
+title: favorite shows
 permalink: /favs/shows/
-description: All posts in the "shows" category.
+description: TV shows that I like, and think you might like too
 ---
 
-<h1>Shows</h1>
-<ul>
-  {% for post in site.favs %}
-    {% if post.categories contains 'shows' %}
-      <li>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt }}</p>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+{% include archive_list.liquid category="shows" %}
