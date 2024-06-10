@@ -210,7 +210,10 @@
                 · <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
               {%- endif %}
               {% if item.perfect %}
-                · <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+                {% if item.vinyl or item.score or item.stars %}
+                  ·
+                {% endif %}
+                <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
               {%- endif %}
             </th>
           </tr>
@@ -279,7 +282,10 @@
                 · <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
               {%- endif %}
               {% if item.perfect %}
-                · <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+                {% if item.vinyl or item.score or item.stars %}
+                  ·
+                {% endif %}
+                <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
               {%- endif %}
             </th>
           </tr>

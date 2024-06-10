@@ -57,19 +57,20 @@
                 </span>
               {% endif %}
               <br>
-              <span style="font-size: .75rem">{{ item.date | date: '%b %d, %Y' }} ·
-              {%- for category in item.categories %}
-                <span style="font-size: .75rem; font-weight: 200"
-                  ><i class="fa-solid fa-hashtag fa-sm"></i
-                  ><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a></span
-                >
-                {% if item.vinyl %}
-                  · <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
-                {%- endif %}
-                {% if item.perfect %}
-                  · <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
-                {%- endif %}
-              {% endfor %}
+              <span style="font-size: .75rem">
+                {{- item.date | date: '%b %d, %Y' }} ·
+                {%- for category in item.categories %}
+                  <span style="font-size: .75rem; font-weight: 200"
+                    ><i class="fa-solid fa-hashtag fa-sm"></i
+                    ><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a></span
+                  >
+                  {% if item.vinyl %}
+                    · <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
+                  {%- endif %}
+                  {% if item.perfect %}
+                    · <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+                  {%- endif %}
+                {% endfor %}
               </span>
             </td>
           </tr>
