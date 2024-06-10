@@ -10,7 +10,9 @@
           <tr>
             {% if item.img %}
               <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
-                {% if item.link %}
+                {% if item.redirect %}
+                  <a class="news-title" href="{{ item.redirect }}" target="_blank">
+                {% else %}
                   <a href="{{ item.url | relative_url }}">
                 {% endif %}
                 {% include figure.liquid home=true path=item.img sizes="(min-width: 768px) 156px, 50vw" alt="project thumbnail" %}
@@ -53,32 +55,38 @@
                   {%- if item.creator %}by {{ item.creator }}{% endif -%}
                 </span>
               {% endif %}
-              {% if item.score or item.stars %}
-                <span style="font-size: .875rem">
+              <br>
+              <span style="font-size: .75rem">{{ item.date | date: '%b %d, %Y' }} ·
+              {%- for category in item.categories %}
+                <i class="fa-solid fa-hashtag fa-sm"></i
+                ><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a>
+            {% endfor %}
+            </span>  
+            </td>
+
+            
+              <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
+
+                {% if item.vinyl %}
+                  <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
+                {%- endif %}
+                {% if item.vinyl and item.perfect %}
+                  · 
+                {% endif %}
+                {% if item.perfect %}
+                <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+                {%- endif %}
+                {% if item.score or item.stars %}
+                  {% if item.vinyl or item.perfect %}
                   ·
+                  {% endif %}
                   {% if item.score %}
                     {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
                   {% else %}
                     {{ item.stars }}/5
                   {% endif %}
-                </span>
               {% endif %}
-            </td>
-
-            {%- for category in item.categories %}
-              <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
-                <span
-                  ><i class="fa-solid fa-hashtag fa-sm"></i
-                  ><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a></span
-                >
-                {% if item.vinyl %}
-                  · <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
-                {%- endif %}
-                {% if item.perfect %}
-                  · <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
-                {%- endif %}
               </th>
-            {% endfor %}
           </tr>
         {% endfor %}
       </table>
