@@ -57,7 +57,7 @@
                 </span>
               {% endif %}
               <br>
-              <span style="font-size: .75rem">{{ item.date | date: '%b %d, %Y' }}</span> ·
+              <span style="font-size: .75rem">{{ item.date | date: '%b %d, %Y' }} ·
               {%- for category in item.categories %}
                 <span style="font-size: .75rem; font-weight: 200"
                   ><i class="fa-solid fa-hashtag fa-sm"></i
@@ -70,6 +70,7 @@
                   · <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
                 {%- endif %}
               {% endfor %}
+              </span>
             </td>
           </tr>
         {% endfor %}
