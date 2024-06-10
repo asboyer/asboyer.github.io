@@ -97,11 +97,17 @@ layout: default
           {% endif %}
           {% assign full_stars = page.stars | floor %}
           {% assign half_star = page.stars | minus: full_stars %}
-
+          {% assign empty_stars = 5 | minus: full_stars %}
+          {% if half_star > 0 %}
+            {% assign empty_stars = empty_stars | minus: 1 %}
+          {% endif %}
           {% for i in (1..full_stars) -%}
             <i class="fa-solid fa-star fa-sm"></i>
           {%- endfor -%}
-          {%- if half_star > 0 %}<i class="fa-solid fa-star-half fa-sm"></i>{% endif %}
+          {%- if half_star > 0 %}<i class="fa-solid fa-star-half-stroke fa-sm"></i>{% endif -%}
+          {%- for i in (1..empty_stars) -%}
+            <i class="fa-regular fa-star fa-sm"></i>
+          {%- endfor -%}
           {% if page.star_link %}
             </a>
           {% endif %}
