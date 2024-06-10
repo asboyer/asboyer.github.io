@@ -10,8 +10,7 @@ inline: false
 link: https://www.amazon.com/Tracers-Dark-Global-Crime-Cryptocurrency/dp/0385548095
 started: 2024-5-8
 finished: 2024-5-8
-stars: 5
-star_link: "https://www.goodreads.com/review/show/4356781237"
+stars: 4.5
 opener: >
   This book is a must-read for anyone interested in the intersection of technology and crime. Andy Greenberg does a fantastic job of weaving together the stories of the people behind the world's most notorious hacks and the technologies that enable them. The book is a thrilling read that will keep you on the edge of your seat from start to finish.
 ---

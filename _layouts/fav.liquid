@@ -100,9 +100,8 @@ layout: default
 
           {% for i in (1..full_stars) -%}
             <i class="fa-solid fa-star fa-sm"></i>
-          {%- endfor %}
-
-          {% if half_star > 0 %}<i class="fa-solid fa-star-half fa-sm"></i>{% endif %}
+          {%- endfor -%}
+          {%- if half_star > 0 %}<i class="fa-solid fa-star-half fa-sm"></i>{% endif %}
           {% if page.star_link %}
             </a>
           {% endif %}
