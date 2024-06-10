@@ -8,7 +8,6 @@ img: /assets/img/favs/books/tracers_in_the_dark.jpg
 categories: books
 inline: false
 link: https://www.amazon.com/Tracers-Dark-Global-Crime-Cryptocurrency/dp/0385548095
-# redirect: "https://www.amazon.com/Tracers-Dark-Global-Crime-Cryptocurrency/dp/0385548095"
 started: 2024-5-8
 finished: 2024-5-8
 stars: 5
