@@ -12,6 +12,8 @@
               <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
                 {% if item.redirect %}
                   <a class="news-title" href="{{ item.redirect }}" target="_blank">
+                {% elsif item.inline %}
+
                 {% else %}
                   <a href="{{ item.url | relative_url }}">
                 {% endif %}
@@ -23,31 +25,32 @@
             {% endif %}
             <td style="vertical-align: middle">
               {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-                {% if item.redirect == blank %}
+                {% if item.redirect == blank -%}
+                  {{- item.title -}}
+                  <span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
+                    {%- if item.creator %}by {{ item.creator }}{% endif -%}
+                  </span>
+                {% endif %}
+              {% elsif item.redirect %}
+                {% if item.redirect contains '://' %}
+                  <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
+                  ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
+                    {%- if item.creator %}by {{ item.creator }}{% endif -%}
+                  </span>
+                  <svg width="2rem" height="1.2rem" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
+                      class="icon_svg-stroke"
+                      stroke="#999"
+                      stroke-width="1.5"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
                 {% else %}
-                  {% if item.redirect %}
-                    {% if item.redirect contains '://' %}
-                      <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
-                      ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
-                        {%- if item.creator %}by {{ item.creator }}{% endif -%}
-                      </span>
-                      <svg width="2rem" height="1.2rem" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
-                          class="icon_svg-stroke"
-                          stroke="#999"
-                          stroke-width="1.5"
-                          fill="none"
-                          fill-rule="evenodd"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    {% else %}
-                      <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
-                    {% endif %}
-                  {% endif %}
+                  <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
                 {% endif %}
               {% else %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a
@@ -85,6 +88,8 @@
               <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
                 {% if item.redirect %}
                   <a class="news-title" href="{{ item.redirect }}" target="_blank">
+                {% elsif item.inline %}
+
                 {% else %}
                   <a href="{{ item.url | relative_url }}">
                 {% endif %}
@@ -96,31 +101,32 @@
             {% endif %}
             <td style="vertical-align: middle">
               {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-                {% if item.redirect == blank %}
+                {% if item.redirect == blank -%}
+                  {{- item.title -}}
+                  <span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
+                    {%- if item.creator %}by {{ item.creator }}{% endif -%}
+                  </span>
+                {% endif %}
+              {% elsif item.redirect %}
+                {% if item.redirect contains '://' %}
+                  <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
+                  ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
+                    {%- if item.creator %}by {{ item.creator }}{% endif -%}
+                  </span>
+                  <svg width="2rem" height="1.2rem" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
+                      class="icon_svg-stroke"
+                      stroke="#999"
+                      stroke-width="1.5"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
                 {% else %}
-                  {% if item.redirect %}
-                    {% if item.redirect contains '://' %}
-                      <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
-                      ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
-                        {%- if item.creator %}by {{ item.creator }}{% endif -%}
-                      </span>
-                      <svg width="2rem" height="1.2rem" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
-                          class="icon_svg-stroke"
-                          stroke="#999"
-                          stroke-width="1.5"
-                          fill="none"
-                          fill-rule="evenodd"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    {% else %}
-                      <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
-                    {% endif %}
-                  {% endif %}
+                  <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
                 {% endif %}
               {% else %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a
@@ -152,6 +158,8 @@
               <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
                 {% if item.redirect %}
                   <a class="news-title" href="{{ item.redirect }}" target="_blank">
+                {% elsif item.inline %}
+
                 {% else %}
                   <a href="{{ item.url | relative_url }}">
                 {% endif %}
@@ -163,31 +171,32 @@
             {% endif %}
             <td style="vertical-align: middle">
               {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-                {% if item.redirect == blank %}
+                {% if item.redirect == blank -%}
+                  {{- item.title -}}
+                  <span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
+                    {%- if item.creator %}by {{ item.creator }}{% endif -%}
+                  </span>
+                {% endif %}
+              {% elsif item.redirect %}
+                {% if item.redirect contains '://' %}
+                  <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
+                  ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
+                    {%- if item.creator %}by {{ item.creator }}{% endif -%}
+                  </span>
+                  <svg width="2rem" height="1.2rem" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
+                      class="icon_svg-stroke"
+                      stroke="#999"
+                      stroke-width="1.5"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
                 {% else %}
-                  {% if item.redirect %}
-                    {% if item.redirect contains '://' %}
-                      <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
-                      ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
-                        {%- if item.creator %}by {{ item.creator }}{% endif -%}
-                      </span>
-                      <svg width="2rem" height="1.2rem" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
-                          class="icon_svg-stroke"
-                          stroke="#999"
-                          stroke-width="1.5"
-                          fill="none"
-                          fill-rule="evenodd"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    {% else %}
-                      <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
-                    {% endif %}
-                  {% endif %}
+                  <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
                 {% endif %}
               {% else %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a
@@ -199,22 +208,25 @@
               <span style="font-size: .75rem">{{ item.date | date: '%b %d, %Y' }}</span>
             </td>
             <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
+              {% if item.vinyl %}
+                <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
+              {%- endif %}
+              {% if item.vinyl and item.perfect %}
+                ·
+              {% endif %}
+              {% if item.perfect %}
+                <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+              {%- endif %}
               {% if item.score or item.stars %}
+                {% if item.vinyl or item.perfect %}
+                  ·
+                {% endif %}
                 {% if item.score %}
                   {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
                 {% else %}
                   {{ item.stars }}/5
                 {% endif %}
               {% endif %}
-              {% if item.vinyl %}
-                · <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
-              {%- endif %}
-              {% if item.perfect %}
-                {% if item.vinyl or item.score or item.stars %}
-                  ·
-                {% endif %}
-                <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
-              {%- endif %}
             </th>
           </tr>
 
@@ -224,6 +236,8 @@
               <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
                 {% if item.redirect %}
                   <a class="news-title" href="{{ item.redirect }}" target="_blank">
+                {% elsif item.inline %}
+
                 {% else %}
                   <a href="{{ item.url | relative_url }}">
                 {% endif %}
@@ -235,31 +249,32 @@
             {% endif %}
             <td style="vertical-align: middle">
               {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-                {% if item.redirect == blank %}
+                {% if item.redirect == blank -%}
+                  {{- item.title -}}
+                  <span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
+                    {%- if item.creator %}by {{ item.creator }}{% endif -%}
+                  </span>
+                {% endif %}
+              {% elsif item.redirect %}
+                {% if item.redirect contains '://' %}
+                  <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
+                  ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
+                    {%- if item.creator %}by {{ item.creator }}{% endif -%}
+                  </span>
+                  <svg width="2rem" height="1.2rem" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
+                      class="icon_svg-stroke"
+                      stroke="#999"
+                      stroke-width="1.5"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
                 {% else %}
-                  {% if item.redirect %}
-                    {% if item.redirect contains '://' %}
-                      <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a
-                      ><span style="font-size: .75rem; font-weight: 20; margin-left: 5px">
-                        {%- if item.creator %}by {{ item.creator }}{% endif -%}
-                      </span>
-                      <svg width="2rem" height="1.2rem" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
-                          class="icon_svg-stroke"
-                          stroke="#999"
-                          stroke-width="1.5"
-                          fill="none"
-                          fill-rule="evenodd"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    {% else %}
-                      <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
-                    {% endif %}
-                  {% endif %}
+                  <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
                 {% endif %}
               {% else %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a
@@ -271,22 +286,25 @@
               <span style="font-size: .75rem">{{ item.date | date: '%b %d, %Y' }}</span>
             </td>
             <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
+              {% if item.vinyl %}
+                <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
+              {%- endif %}
+              {% if item.vinyl and item.perfect %}
+                ·
+              {% endif %}
+              {% if item.perfect %}
+                <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+              {%- endif %}
               {% if item.score or item.stars %}
+                {% if item.vinyl or item.perfect %}
+                  ·
+                {% endif %}
                 {% if item.score %}
                   {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
                 {% else %}
                   {{ item.stars }}/5
                 {% endif %}
               {% endif %}
-              {% if item.vinyl %}
-                · <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
-              {%- endif %}
-              {% if item.perfect %}
-                {% if item.vinyl or item.score or item.stars %}
-                  ·
-                {% endif %}
-                <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
-              {%- endif %}
             </th>
           </tr>
         {% endif %}

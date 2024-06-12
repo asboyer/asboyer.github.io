@@ -152,7 +152,9 @@ layout: default
     {% endif %}
     <div id="markdown-content" style="margin-top: 15px">
       {% if page.img %}
-        {% if page.categories == 'songs' %}
+        {% if page.inline %}
+          {% include fav_profile.liquid image=page.img title=page.title artist=page.creator score=page.score %}
+        {% elsif page.categories == 'songs' %}
           {% include song.liquid image=page.img title=page.title artist=page.creator link=page.link score=page.score %}
         {% elsif page.categories == 'albums' or page.score %}
           {% include album.liquid image=page.img title=page.title artist=page.creator link=page.link score=page.score %}
@@ -160,7 +162,15 @@ layout: default
           {% include fav_profile.liquid image=page.img title=page.title artist=page.creator link=page.link score=page.score content=page.opener %}
         {% endif %}
       {% endif %}
-      {{ content }}
+      {% if page.inline %}
+      {% elsif page.redirect %}
+        {% if page.redirect contains '://' %}
+        {% else %}
+          {{ content }}
+        {% endif %}
+      {% else %}
+        {{ content }}
+      {% endif %}
     </div>
   </article>
 
