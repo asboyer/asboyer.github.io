@@ -110,10 +110,12 @@
     </div>
   {% endif %}
   <div class="text">
-    <p>{{ include.content }}</p>
+    {{ include.content | markdownify }}
   </div>
 </div>
-<p class="backup-text">{{ include.content }}</p>
+<div class="backup-text">
+  {{ include.content | markdownify }}
+</div>
 
 <script>
   {% if include.explicit %}
