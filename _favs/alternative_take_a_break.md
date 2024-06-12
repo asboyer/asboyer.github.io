@@ -7,7 +7,9 @@ creator: hasoyi
 categories: playlists
 redirect: https://www.youtube.com/watch?v=2chfsFTNEXw
 link: https://www.youtube.com/watch?v=2chfsFTNEXw
-inline: true
 img: /assets/img/favs/playlists/take_a_break.png
 perfect: true
+vinyl: true
 ---
+
+bruh

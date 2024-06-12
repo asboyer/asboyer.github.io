@@ -1,8 +1,8 @@
 ---
 layout: page
-title: favorite books
+title: book reccomendations
 permalink: /favs/books/
-description: Books that I like, and think you might like too
+description: list of book reccomendations
 ---
 
 {% include archive_list.liquid category="books" %}
