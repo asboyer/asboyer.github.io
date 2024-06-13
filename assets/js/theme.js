@@ -12,6 +12,7 @@ let setTheme = (theme) => {
   transTheme();
   setHighlight(theme);
   setGiscusTheme(theme);
+  setSearchTheme(theme);
   // if mermaid is not defined, do nothing
   if (typeof mermaid !== "undefined") {
     setMermaidTheme(theme);
@@ -125,6 +126,26 @@ let transTheme = () => {
   window.setTimeout(() => {
     document.documentElement.classList.remove("transition");
   }, 500);
+};
+
+let setSearchTheme = (theme) => {
+  const ninjaKeys = document.querySelector("ninja-keys");
+  if (!ninjaKeys) return;
+
+  if (theme === "light") {
+    ninjaKeys.classList.add("light");
+  } else {
+    ninjaKeys.classList.remove("light");
+  }
+};
+
+let determineComputedTheme = () => {
+  const userPref = window.matchMedia;
+  if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  } else {
+    return "light";
+  }
 };
 
 let initTheme = (theme) => {

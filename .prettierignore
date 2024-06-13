@@ -2,3 +2,5 @@
 **/*.min.js
 assets/css/main.scss
 assets/plotly/demo.html
+assets/js/search-data.js
+assets/js/search/*.js
