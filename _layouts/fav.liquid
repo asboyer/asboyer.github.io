@@ -160,9 +160,9 @@ layout: default
       {% if page.img %}
         {% if page.inline %}
           {% include fav_profile.liquid image=page.img title=page.title artist=page.creator score=page.score %}
-        {% elsif page.categories == 'songs' %}
+        {% elsif page.categories contains 'songs' %}
           {% include song.liquid image=page.img title=page.title artist=page.creator link=page.link score=page.score %}
-        {% elsif page.categories == 'albums' or page.score %}
+        {% elsif page.categories contains 'albums' or page.score %}
           {% include album.liquid image=page.img title=page.title artist=page.creator link=page.link score=page.score %}
         {% else %}
           {% include fav_profile.liquid image=page.img title=page.title artist=page.creator link=page.link score=page.score content=page.opener %}
