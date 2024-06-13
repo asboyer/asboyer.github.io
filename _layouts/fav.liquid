@@ -32,6 +32,12 @@ layout: default
     {% if page.released %}
       <em>{{ page.released }}</em>
     {% endif %}
+    {% if page.creator or page.released %}
+      {% if page.location %}&nbsp;&middot;&nbsp;{% endif -%}
+    {%- endif %}
+    {% if page.location %}
+      <i class="fa-solid fa-location-dot"></i> {{ page.location }}
+    {% endif %}
     {% if page.vinyl -%}
       &nbsp;&middot;&nbsp;&nbsp;<a href="{{ page.vinyl_link }}"
         ><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i
@@ -47,7 +53,7 @@ layout: default
       {% endif -%}
       class="post-meta"
     >
-      <i class="fa-solid fa-pen fa-sm"></i>{{ page.date | date: '%B %d, %Y' }}
+      <i class="fa-solid fa-pen fa-sm"></i> {{ page.date | date: '%B %d, %Y' }}
       {% if page.author %}&nbsp; &middot; &nbsp;{{ page.author }}{% endif %}
       {% if page.meta %} • {{ page.meta }}{% endif %}
 

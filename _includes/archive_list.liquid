@@ -65,6 +65,10 @@
                   ><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a></span
                 >
               {% endfor %}
+              <span style="font-size: .75rem">
+                · <i class="fa-solid fa-calendar fa-sm"></i>
+                <a href="/favs/{{ item.date | date: "%Y" }}/">{{ item.date | date: '%Y' }}</a>
+              </span>
             </td>
             <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
               {% if item.vinyl %}
