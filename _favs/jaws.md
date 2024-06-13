@@ -11,6 +11,5 @@ stars: 5
 star_link: https://letterboxd.com/asboyer/film/jaws/
 released: 1975
 started: 2024-05-21
-opener: >
-  This is a <em>good</em> movie.
+opener: |
 ---

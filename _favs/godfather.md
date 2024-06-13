@@ -9,5 +9,4 @@ categories: books
 link: https://www.amazon.com/Godfather-Deluxe-Mario-Puzo/dp/0593542592
 started: 2024-04-24
 released: 1969
-perfect: true
 ---
