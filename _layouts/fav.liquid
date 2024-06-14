@@ -18,7 +18,7 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1
-      style="margin-bottom: 0px !important; line-height: 1 !important"
+      style="margin-bottom: 5px !important; line-height: 1 !important"
       {% if page.creator %}
       {% endif %}
       class="post-title"
@@ -35,11 +35,51 @@ layout: default
     {% if page.creator or page.released %}
       {% if page.location %}&nbsp;&middot;&nbsp;{% endif -%}
     {%- endif %}
+    {% if page.creator or page.released -%}
+      {%- if page.album %}&nbsp;&middot;&nbsp;{% endif -%}
+    {%- endif %}
+    {% if page.album %}
+      {% if page.album_link %}
+        {% if page.album_link contains 'spotify' %}
+          {% assign icon = 'fa-brands fa-spotify' %}
+        {% elsif page.album_link contains 'soundcloud' %}
+          {% assign icon = 'fa-brands fa-soundcloud' %}
+        {% elsif page.album_link contains 'youtube' %}
+          {% assign icon = 'fa-brands fa-youtube' %}
+        {% else %}
+          {% assign icon = 'fa-solid fa-link' %}
+        {% endif %}
+        <i class="{{ icon }}"></i> <a href="{{ page.album_link }}" target="_blank">{{ page.album -}}</a>
+      {% else %}
+        {% assign exist_album = true %}
+        {% for fav in site.favs %}
+          {% if fav.title contains page.album %}
+            {% assign exist_album = false %}
+            {% if fav.vinyl %}
+              <i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i>
+              <a href="{{ fav.url }}">{{- page.album -}}</a>
+            {% else %}
+              <i class="fa-solid fa-compact-disc"></i> <a href="{{ fav.url }}">{{ page.album -}}
+              </a>
+            {% endif %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if exist_album %}
+          <i class="fa-solid fa-compact-disc"></i> {{ page.album }}
+        {% endif %}
+      {% endif %}
+    {% endif %}
     {% if page.location %}
       <i class="fa-solid fa-location-dot"></i> {{ page.location }}
     {% endif %}
     {% if page.vinyl -%}
-      &nbsp;&middot;&nbsp;&nbsp;<a href="{{ page.vinyl_link }}"
+      {% if page.vinyl_link %}
+        {% assign vinyl_link = page.vinyl_link %}
+      {% else %}
+        {% assign vinyl_link = '/vinyls/' %}
+      {% endif %}
+      &nbsp;&middot;&nbsp;&nbsp;<a href="{{ vinyl_link }}"
         ><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i
       ></a>
     {%- endif %}
