@@ -94,7 +94,7 @@
           {% endfor %}
           {% if site.search_enabled %}
             <!-- Search -->
-            <li class="nav-item">
+            <li class="nav-item" id="search-id">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
                 <span class="nav-link"><i class="fas fa-search"></i></span>
               </button>
@@ -111,6 +111,9 @@
             <noscript>
               <style>
                 .toggle-container {
+                  display: none;
+                }
+                #search-id {
                   display: none;
                 }
               </style>
