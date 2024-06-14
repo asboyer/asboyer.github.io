@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Predicting the NBA MVP with Python
-date: 2022-02-07 17:39:00
+date: 2022-02-07
 description: This is how I built the first varation of Goat Grade
 redirect: https://asboyer.pythonanywhere.com/blog/1
 external_source: asboyer.com v1
