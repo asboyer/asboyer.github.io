@@ -80,11 +80,11 @@
                   </div>
                 </li>
               {% else %}
-              {% if p.title == "blog" and page.url contains "blog" %}
-                {% assign child_page = true %}
-              {% else %}
-                {% assign child_page = false %}
-              {% endif %}
+                {% if p.title == 'blog' and page.url contains 'blog' %}
+                  {% assign child_page = true %}
+                {% else %}
+                  {% assign child_page = false %}
+                {% endif %}
                 <li class="nav-item {% if page.url contains p.permalink %}active{% elsif child_page %}active{% endif %}">
                   {% if p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
