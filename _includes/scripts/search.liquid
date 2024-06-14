@@ -85,7 +85,7 @@
           {% else %}
             title: "{{ title }}",
           {% endif %}
-          description: "{{ post.description | strip_html | strip_newlines | escape }}",
+          description: "{{ post.tags | join: ', ' | strip_html | strip_newlines | replace: '"', "'" | escape | strip }} {{ post.categories | join: ', ' | strip_html | strip_newlines | replace: '"', "'" | escape | strip }} {{ post.description | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' | strip_html | strip_newlines | escape }}",
           section: "Posts",
           handler: () => {
             {% if post.redirect == blank %}

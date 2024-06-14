@@ -6,6 +6,7 @@ description: my journey and what I like to do
 nav: true
 nav_order: 7
 notes: false
+search: true
 
 profiles:
   # if you want to include more than one profile, just replicate the following block
