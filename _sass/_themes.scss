@@ -37,6 +37,8 @@
   --global-album-tier-amazing: #f583ca;
   --global-album-tier-perfect: #b6fffd;
 
+  --global-key-bg-color: rgba(51, 51, 51, 0.44);
+
   .fa-sun {
     padding-left: 10px;
     padding-top: 12px;
@@ -88,6 +90,8 @@ html[data-theme="light"] {
   --global-album-tier-great: #4c51f7;
   --global-album-tier-amazing: #9d4dbb;
   --global-album-tier-perfect: #92b2ff;
+
+  --global-key-bg-color: rgb(239, 241, 244);
 
   .fa-sun {
     display: none;
