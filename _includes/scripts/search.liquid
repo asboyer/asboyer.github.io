@@ -1,6 +1,6 @@
 {% if site.search_enabled %}
   <script type="module" src="{{ '/assets/js/search/ninja-keys.min.js' | relative_url | bust_file_cache }}"></script>
-  <ninja-keys hideBreadcrumbs noAutoLoadMdIcons placeholder="Type to start searching"></ninja-keys>
+  <ninja-keys hideBreadcrumbs noAutoLoadMdIcons placeholder="type to start searching"></ninja-keys>
   <script>
     let searchTheme = determineComputedTheme();
     const ninjaKeys = document.querySelector('ninja-keys');
@@ -85,7 +85,7 @@
           {% else %}
             title: "{{ title }}",
           {% endif %}
-          description: "{{ post.tags | join: ', ' | strip_html | strip_newlines | replace: '"', "'" | escape | strip }} {{ post.categories | join: ', ' | strip_html | strip_newlines | replace: '"', "'" | escape | strip }} {{ post.description | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' | strip_html | strip_newlines | escape }}",
+          description: "{{ post.tags | join: ', ' | strip_html | strip_newlines | replace: '"', "'" | escape | strip }} {{ post.categories | join: ', ' | strip_html | strip_newlines | replace: '"', "'" | escape | strip }} {{ post.date | date: "%Y" }}",
           section: "Posts",
           handler: () => {
             {% if post.redirect == blank %}
@@ -100,12 +100,10 @@
       {%- endfor -%}
       {%- assign news = site.news | reverse -%}
       {%- for item in news -%}
-        {
-          {%- if item.inline -%}
-            {%- assign title = item.content | remove: '<p>' | remove: '</p>' | escape | strip -%}
+        {%- if item.inline -%}
           {%- else -%}
+        {
             {%- assign title = item.title | escape -%}
-          {%- endif -%}
           id: "news-{{ title | slugify }}",
           title: '{{ title | emojify }}',
           description: "{{ item.description | strip_html | strip_newlines | escape }}",
@@ -116,16 +114,16 @@
             },
           {%- endunless -%}
         },
+      {%- endif -%}
       {%- endfor -%}
       {%- for collection in site.collections -%}
         {%- if collection.label != 'news' and collection.label != 'posts' -%}
           {%- for item in collection.docs -%}
-            {
-              {%- if item.inline -%}
-                {%- assign title = item.content | remove: '<p>' | remove: '</p>' | escape | strip -%}
+            {%- if item.inline -%}
               {%- else -%}
+
+            {
                 {%- assign title = item.title | escape -%}
-              {%- endif -%}
               id: "{{ collection.label }}-{{ title | slugify }}",
               title: '{{ title | emojify }}',
               description: "{{ item.description | strip_html | strip_newlines | escape }}",
@@ -136,6 +134,8 @@
                 },
               {%- endunless -%}
             },
+          {%- endif -%}
+
           {%- endfor -%}
         {%- endif -%}
       {%- endfor -%}
