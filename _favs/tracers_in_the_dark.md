@@ -13,6 +13,5 @@ finished: 2024-06-10
 stars: 4
 released: 2022
 star_link: https://www.goodreads.com/review/show/6575621209
-giscus_comments: true
 opener: |
 ---
