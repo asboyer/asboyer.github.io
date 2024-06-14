@@ -3,7 +3,7 @@ layout: profiles
 permalink: /about/
 title: about
 description: my journey and what I like to do
-nav: true
+nav: false
 nav_order: 7
 notes: false
 search: true

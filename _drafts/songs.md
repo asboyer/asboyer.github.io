@@ -1,8 +1,8 @@
 ---
 layout: page
-title: song reccomendations
+title: songs
 permalink: /favs/songs/
-description: list of song reccomendations
+description: list of songs reccomendations
 ---
 
 {% include archive_list.liquid category="songs" %}

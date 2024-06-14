@@ -10,4 +10,5 @@ Gemfile.lock
 node_modules/
 vendor
 secret.py
-__pycache__/*
+.cache
+__pycache__/

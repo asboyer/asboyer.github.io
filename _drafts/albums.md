@@ -1,8 +1,8 @@
 ---
 layout: page
-title: album reccomendations
+title: albums
 permalink: /favs/albums/
-description: list of album reccomendations
+description: list of favorite albums
 ---
 
 {% include archive_list.liquid category="albums" %}

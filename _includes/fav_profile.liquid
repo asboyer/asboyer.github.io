@@ -85,12 +85,12 @@
 <div class="centered-flex" style="">
   <!-- Image container -->
   <div class="col-md-4" style="padding-left: 0px !important">
-    {% if include.explicit %}
+    {% if include.explicit or include.link == blank %}
     {% else %}
       <a href="{{ include.link }}" target="_blank">
     {% endif %}
     {% include figure.liquid path=include.image title=include.title explicit=include.explicit class="img-fluid rounded z-depth-1" %}
-    {% if include.explicit %}
+    {% if include.explicit or include.link == blank %}
     {% else %}
       </a>
     {% endif %}
@@ -110,10 +110,12 @@
     </div>
   {% endif %}
   <div class="text">
-    <p>{{ include.content }}</p>
+    {{ include.content | markdownify }}
   </div>
 </div>
-<p class="backup-text">{{ include.content }}</p>
+<div class="backup-text">
+  {{ include.content | markdownify }}
+</div>
 
 <script>
   {% if include.explicit %}

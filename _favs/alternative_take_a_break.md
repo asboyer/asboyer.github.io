@@ -6,6 +6,6 @@ title: Take a Break
 creator: hasoyi
 categories: playlists
 redirect: https://www.youtube.com/watch?v=2chfsFTNEXw
-inline: true
+link: https://www.youtube.com/watch?v=2chfsFTNEXw
 img: /assets/img/favs/playlists/take_a_break.png
 ---
