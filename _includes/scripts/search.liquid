@@ -117,7 +117,7 @@
       {%- endif -%}
       {%- endfor -%}
       {%- for collection in site.collections -%}
-        {%- if collection.label != 'news' and collection.label != 'posts' -%}
+        {%- if collection.label != 'news' and collection.label != 'posts' and collection.label != 'projects' and collection.label != 'favs' and collection.label != 'roles' -%}
           {%- for item in collection.docs -%}
             {%- if item.inline -%}
               {%- else -%}
@@ -569,28 +569,17 @@
         {
           id: 'light-theme',
           title: 'Change theme to light',
-          description: 'Change the theme of the site to Light',
           section: 'Theme',
           handler: () => {
-            setThemeSetting("light");
+            setTheme("light");
           },
         },
         {
           id: 'dark-theme',
           title: 'Change theme to dark',
-          description: 'Change the theme of the site to Dark',
           section: 'Theme',
           handler: () => {
-            setThemeSetting("dark");
-          },
-        },
-        {
-          id: 'system-theme',
-          title: 'Use system default theme',
-          description: 'Change the theme of the site to System Default',
-          section: 'Theme',
-          handler: () => {
-            setThemeSetting("system");
+            setTheme("dark");
           },
         },
       {%- endif -%}
