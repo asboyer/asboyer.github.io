@@ -24,6 +24,7 @@ title = "a favorite " + args.category
 creator = "creator of the " + args.category
 categories = args.category
 link = args.link
+extra_field = ""
 
 if args.category in ['albums', 'songs', 'playlists', 'artists']:
     client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
@@ -62,6 +63,8 @@ if args.category in ['albums', 'songs', 'playlists', 'artists']:
 
     if args.category == 'songs':
         args.link = result['album']['images'][0]['url']
+        extra_field = f'\nalbum_link: {result["album"]["external_urls"]["spotify"]}'
+        extra_field += f'\nalbum: {result["album"]["name"]}'
     else:
         args.link = result['images'][0]['url']
     
@@ -106,9 +109,9 @@ title: {title}
 creator: {creator}
 img: assets/img/favs/{category}/{image_name}
 categories: {category}
-link: {link}
+link: {link}{extra_field}
 ---
-'''.format(date=today, title=title, creator=creator, image_name=args.image_name, link=link, category=args.category)
+'''.format(date=today, title=title, creator=creator, image_name=args.image_name, link=link, category=args.category, extra_field=extra_field)
 
 # Write the markdown content to the file
 with open(markdown_file_path, 'w') as f:
