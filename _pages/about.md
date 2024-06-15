@@ -20,6 +20,7 @@ key_projects: true # preview of projects on home page
 animation: true
 notes: true
 favs: true
+current_roles: true
 ---
 
 Welcome to [asboyer.com](https://asboyer.com). I'm **Andrew Boyer**, and this is my personal website. Here you can find my blog posts, short stories, projects, notes, and collections of reccomendations. Currently I'm studying Computer Science at the [Georgia Institute of Technology](https://www.cc.gatech.edu/).
