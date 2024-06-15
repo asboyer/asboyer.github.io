@@ -77,6 +77,14 @@ layout: default
     {% endif %}
     <!-- do latest post thing but for projects -->
 
+    {% if page.current_roles %}
+      <h2 style="margin-top: 15px">
+        <hr>
+        <a href="{{ '/resume/' | relative_url }}" style="color: inherit">current roles</a>
+      </h2>
+      {% include current_roles.liquid %}
+    {% endif %}
+
     {% if page.favs %}
       <h2 style="margin-top: 15px">
         <hr>

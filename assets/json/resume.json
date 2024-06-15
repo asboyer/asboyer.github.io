@@ -112,7 +112,13 @@
       "highlights": [],
       "summary": "Working on app development and UI/UX design.",
       "url": "https://neurtureapp.com/",
-      "location": "Natick, Massachusetts, United States"
+      "location": "Remote",
+      "homepage_keyword": "Internship",
+      "homepage_description": "software engineering intern",
+      "homepage_title": "Neurture",
+      "homepage": true,
+      "img": "assets/img/roles/intern/neurture.png",
+      "redirect": "https://neurtureapp.com/"
     }
   ],
   "education": [
@@ -131,7 +137,14 @@
         "CS 2340 - Objects and Design",
         "MATH 1554 - Linear Algebra",
         "PHYS 2211 - Physics I"
-      ]
+      ],
+      "homepage_keyword": "Junior",
+      "homepage_description": "B.S. Computer Science",
+      "homepage_title": "Georgia Tech",
+      "homepage": true,
+      "location": "Atlanta, GA",
+      "img": "assets/img/roles/edu/gatech.png",
+      "redirect": "https://directory.gatech.edu/directory/detail/Andrew/Boyer?dn=ZnUPgG7TRJIo1QcqJFfjAfNGjE%2BJf2zzmGiOToNIXG8YW6T9aPf9YRhnOHmk5oTS"
     },
     {
       "institution": "Arizona State University",
