@@ -119,7 +119,7 @@ with open(markdown_file_path, 'w') as f:
 
 markdown_content = '''---
 layout: page
-title: {category} reccomendations
+title: {category}s
 permalink: /favs/{category}s/
 description: list of {category} reccomendations
 ---
@@ -128,4 +128,17 @@ description: list of {category} reccomendations
 '''.format(category=args.category[:-1])
 
 with open(f'_pages/{args.category}.md', 'w') as f:
+    f.write(markdown_content)
+
+markdown_content = '''---
+layout: page
+title: {year} {category} list
+permalink: /favs/{year}/{category}/
+description: favorite {category}s of {year}
+---
+
+{{% include archive_list.liquid category="{category}s" archive="{year}" %}}
+'''.format(category=args.category[:-1], year=datetime.now().strftime('%Y'))
+
+with open(f'_pages/{args.category}-{datetime.now().strftime('%Y')}.md', 'w') as f:
     f.write(markdown_content)
