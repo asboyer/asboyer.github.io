@@ -63,19 +63,22 @@
               <span style="font-size: .75rem">
                 {{- item.date | date: '%b %d, %Y' }} ·
                 {%- for category in item.categories %}
-                  <i class="fa-solid fa-hashtag fa-sm"></i><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a>
+                  <a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">
+                    {%- include scripts/category-icon.liquid category=category styles="color: var(--global-theme-color) !important" -%}
+                  </a>
                 {% endfor %}
               </span>
             </td>
             <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
               {% if item.vinyl %}
-                <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
-              {%- endif %}
-              {% if item.vinyl and item.perfect %}
-                ·
+                <a href="/vinyls/">
+                  {%- include scripts/category-icon.liquid category='vinyls' styles="color: var(--global-theme-color) !important" -%}
+                </a>
               {% endif %}
               {% if item.perfect %}
-                <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+                <a href="/goats/">
+                  {%- include scripts/category-icon.liquid category='goats' styles="color: var(--global-theme-color) !important" -%}
+                </a>
               {%- endif %}
               {% if item.score or item.stars %}
                 {% if item.vinyl or item.perfect %}

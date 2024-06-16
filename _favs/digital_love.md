@@ -11,4 +11,6 @@ album_link: https://open.spotify.com/album/2noRn2Aes5aoNVsU6iWThc
 album: Discovery
 released: 2001
 score: 93
+vinyls: true
+perfect: true
 ---

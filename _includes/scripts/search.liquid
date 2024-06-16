@@ -541,6 +541,26 @@
             },
           },
         {%- endif -%}
+        {%- if site.letterboxd_username -%}
+          {
+            id: 'letterboxd',
+            title: 'Letterboxd',
+            section: 'Socials',
+            handler: () => {
+              window.open("https://letterboxd.com/{{ site.letterboxd_username }}", "_blank");
+            },
+          },
+        {%- endif -%}
+        {%- if site.goodreads_id -%}
+          {
+            id: 'goodreads',
+            title: 'Goodreads',
+            section: 'Socials',
+            handler: () => {
+              window.open("https://www.goodreads.com/user/show/{{ site.goodreads_id }}", "_blank");
+            },
+          },
+        {%- endif -%}
         {%- if site.rss_icon -%}
           {
             id: 'socials-rss',
