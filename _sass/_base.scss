@@ -1353,3 +1353,9 @@ ninja-keys {
 ninja-keys::part(ninja-input-wrapper) {
   background: var(--global-bg-color);
 }
+
+@media (max-width: 500px) {
+  #fav-score {
+    display: none !important;
+  }
+}

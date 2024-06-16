@@ -119,7 +119,7 @@ with open(markdown_file_path, 'w') as f:
 
 markdown_content = '''---
 layout: page
-title: {category}
+title: {category}s
 permalink: /favs/{category}s/
 description: list of {category} reccomendations
 ---
