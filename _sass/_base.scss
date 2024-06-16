@@ -385,6 +385,7 @@ blockquote {
 
 .social {
   text-align: center;
+  margin-bottom: 12px;
 
   .contact-icons {
     font-size: 2rem;
@@ -393,6 +394,7 @@ blockquote {
     // padding-bottom: 0px;
     // margin-bottom: 0px;
     a {
+      margin: 0.5rem;
       i::before {
         color: var(--global-text-color);
         transition-property: all 0.2s ease-in-out;
@@ -408,6 +410,12 @@ blockquote {
 
   .contact-note {
     font-size: 0.8rem;
+  }
+
+  @media (max-width: 450px) {
+    .contact-icons {
+      font-size: 1.5rem;
+    }
   }
 }
 
