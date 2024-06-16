@@ -112,7 +112,8 @@ layout: default
 
       {% for category in page.categories %}
         &nbsp; &middot; &nbsp;
-        <i class="fa-solid fa-hashtag fa-sm"></i><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a>
+        {% include scripts/category-icon.liquid category=category %}
+        <a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a>
       {% endfor %}
     </p>
     {% if page.started or page.finished or page.stars %}

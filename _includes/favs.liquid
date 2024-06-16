@@ -63,9 +63,8 @@
               <span style="font-size: .75rem">
                 {{- item.date | date: '%b %d, %Y' }} ·
                 {%- for category in item.categories %}
-                  <a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">
-                    {%- include scripts/category-icon.liquid category=category styles="color: var(--global-theme-color) !important" -%}
-                  </a>
+                  {% include scripts/category-icon.liquid category=category %}
+                  <a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category | remove_last: category[-1] }} </a>
                 {% endfor %}
               </span>
             </td>
@@ -80,16 +79,18 @@
                   {%- include scripts/category-icon.liquid category='goats' styles="color: var(--global-theme-color) !important" -%}
                 </a>
               {%- endif %}
-              {% if item.score or item.stars %}
-                {% if item.vinyl or item.perfect %}
-                  ·
+              <span id="fav-score">
+                {% if item.score or item.stars %}
+                  {% if item.vinyl or item.perfect %}
+                    ·
+                  {% endif %}
+                  {% if item.score %}
+                    {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
+                  {% else %}
+                    {{ item.stars }}/5
+                  {% endif %}
                 {% endif %}
-                {% if item.score %}
-                  {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
-                {% else %}
-                  {{ item.stars }}/5
-                {% endif %}
-              {% endif %}
+              </span>
             </th>
           </tr>
         {% endfor %}
