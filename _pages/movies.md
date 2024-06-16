@@ -1,6 +1,6 @@
 ---
 layout: page
-title: movie reccomendations
+title: movies
 permalink: /favs/movies/
 description: list of movie reccomendations
 ---

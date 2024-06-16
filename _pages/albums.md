@@ -1,6 +1,6 @@
 ---
 layout: page
-title: album reccomendations
+title: albums
 permalink: /favs/albums/
 description: list of album reccomendations
 ---

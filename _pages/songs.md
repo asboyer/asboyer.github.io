@@ -1,6 +1,6 @@
 ---
 layout: page
-title: song reccomendations
+title: songs
 permalink: /favs/songs/
 description: list of song reccomendations
 ---

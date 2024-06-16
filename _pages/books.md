@@ -1,6 +1,6 @@
 ---
 layout: page
-title: book reccomendations
+title: books
 permalink: /favs/books/
 description: list of book reccomendations
 ---
