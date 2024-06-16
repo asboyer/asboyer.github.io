@@ -63,30 +63,34 @@
               <span style="font-size: .75rem">
                 {{- item.date | date: '%b %d, %Y' }} ·
                 {%- for category in item.categories %}
-                  <i class="fa-solid fa-hashtag fa-sm"></i><a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a>
+                  {% include scripts/category-icon.liquid category=category %}
+                  <a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category | remove_last: category[-1] }} </a>
                 {% endfor %}
               </span>
             </td>
             <th scope="row" style="font-size: .85rem; font-weight: 200; vertical-align: middle">
               {% if item.vinyl %}
-                <a href="/vinyls/"><i class="fa-solid fa-record-vinyl" style="color: var(--global-theme-color) !important"></i></a>
-              {%- endif %}
-              {% if item.vinyl and item.perfect %}
-                ·
+                <a href="/vinyls/">
+                  {%- include scripts/category-icon.liquid category='vinyls' styles="color: var(--global-theme-color) !important" -%}
+                </a>
               {% endif %}
               {% if item.perfect %}
-                <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
+                <a href="/goats/">
+                  {%- include scripts/category-icon.liquid category='goats' styles="color: var(--global-theme-color) !important" -%}
+                </a>
               {%- endif %}
-              {% if item.score or item.stars %}
-                {% if item.vinyl or item.perfect %}
-                  ·
+              <span id="fav-score">
+                {% if item.score or item.stars %}
+                  {% if item.vinyl or item.perfect %}
+                    ·
+                  {% endif %}
+                  {% if item.score %}
+                    {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
+                  {% else %}
+                    {{ item.stars }}/5
+                  {% endif %}
                 {% endif %}
-                {% if item.score %}
-                  {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
-                {% else %}
-                  {{ item.stars }}/5
-                {% endif %}
-              {% endif %}
+              </span>
             </th>
           </tr>
         {% endfor %}

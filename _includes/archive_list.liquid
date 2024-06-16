@@ -76,14 +76,18 @@
                 ·
               {%- endif %}
               <i class="fa-solid fa-trophy"></i>
-              {% if item.score or item.stars %}
-                ·
-                {% if item.score %}
-                  {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
-                {% else %}
-                  {{ item.stars }}/5
+              <span id="fav-score">
+                {% if item.score or item.stars %}
+                  {% if item.vinyl or item.perfect %}
+                    ·
+                  {% endif %}
+                  {% if item.score %}
+                    {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
+                  {% else %}
+                    {{ item.stars }}/5
+                  {% endif %}
                 {% endif %}
-              {% endif %}
+              </span>
             </th>
           </tr>
         {% elsif include.category == 'vinyl' and item.vinyl %}
@@ -144,16 +148,18 @@
               {% if item.perfect %}
                 · <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
               {%- endif %}
-              {% if item.score or item.stars %}
-                <span style="font-size: .875rem">
-                  ·
+              <span id="fav-score" style="font-size: .875rem">
+                {% if item.score or item.stars %}
+                  {% if item.vinyl or item.perfect %}
+                    ·
+                  {% endif %}
                   {% if item.score %}
                     {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
                   {% else %}
                     {{ item.stars }}/5
                   {% endif %}
-                </span>
-              {% endif %}
+                {% endif %}
+              </span>
             </th>
           </tr>
         {% elsif page.year and item_year == page.year %}
@@ -221,20 +227,27 @@
               {% if item.perfect %}
                 <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
               {%- endif %}
-              {% if item.score or item.stars %}
-                {% if item.vinyl or item.perfect %}
-                  ·
+              <span id="fav-score">
+                {% if item.score or item.stars %}
+                  {% if item.vinyl or item.perfect %}
+                    ·
+                  {% endif %}
+                  {% if item.score %}
+                    {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
+                  {% else %}
+                    {{ item.stars }}/5
+                  {% endif %}
                 {% endif %}
-                {% if item.score %}
-                  {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
-                {% else %}
-                  {{ item.stars }}/5
-                {% endif %}
-              {% endif %}
+              </span>
             </th>
           </tr>
 
         {% elsif item.categories contains include.category %}
+          {% if include.archive %}
+            {% if item_year != include.archive %}
+              {% continue %}
+            {% endif %}
+          {% endif %}
           <tr>
             {% if item.img %}
               <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
@@ -299,16 +312,18 @@
               {% if item.perfect %}
                 <a href="/goats/"><i class="fa-solid fa-trophy" style="color: var(--global-theme-color) !important"></i></a>
               {%- endif %}
-              {% if item.score or item.stars %}
-                {% if item.vinyl or item.perfect %}
-                  ·
+              <span id="fav-score">
+                {% if item.score or item.stars %}
+                  {% if item.vinyl or item.perfect %}
+                    ·
+                  {% endif %}
+                  {% if item.score %}
+                    {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
+                  {% else %}
+                    {{ item.stars }}/5
+                  {% endif %}
                 {% endif %}
-                {% if item.score %}
-                  {{ item.score }}/{% if item.categories contains 'songs' %}100{% else %}10{% endif %}
-                {% else %}
-                  {{ item.stars }}/5
-                {% endif %}
-              {% endif %}
+              </span>
             </th>
           </tr>
         {% endif %}

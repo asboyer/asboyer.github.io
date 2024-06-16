@@ -109,6 +109,9 @@
 {% if site.letterboxd_username: %}
   <a href="https://letterboxd.com/{{ site.letterboxd_username }}" title="Letterboxd"><i class="fa-brands fa-square-letterboxd"></i></a>
 {% endif %}
+{% if site.goodreads_id: %}
+  <a href="https://www.goodreads.com/user/show/{{ site.goodreads_id }}" title="Goodreads"><i class="fa-brands fa-goodreads"></i></a>
+{% endif %}
 {% if site.rss_icon %}
   <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed"><i class="fa-solid fa-square-rss"></i></a>
 {% endif %}

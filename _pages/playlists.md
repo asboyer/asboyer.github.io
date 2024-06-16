@@ -1,6 +1,6 @@
 ---
 layout: page
-title: playlist reccomendations
+title: playlists
 permalink: /favs/playlists/
 description: list of playlist reccomendations
 ---
