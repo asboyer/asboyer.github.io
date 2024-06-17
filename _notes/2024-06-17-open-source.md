@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2024-06-17 05:23:46
-time: 1:23:46 PM
+time: 1:23pm
 location: Lisbon, Portugal
 inline: false
 related_posts: false
