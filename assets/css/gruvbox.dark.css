@@ -30,9 +30,11 @@
 .highlight .nt {
   color: #fb4934;
 }
-.highlight .o,
+.highlight .o {
+  color: #8ec07c;
+}
 .highlight .ow {
-  color: #fbf1c7;
+  color: #fb4934;
 }
 .highlight .p,
 .highlight .pi {
@@ -44,6 +46,10 @@
 }
 .highlight .gd {
   color: #fb4934;
+  background-color: #282828;
+}
+.highlight .nf {
+  color: #8ec07c;
   background-color: #282828;
 }
 .highlight .gh {

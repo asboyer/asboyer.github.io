@@ -6,3 +6,4 @@ assets/plotly/demo.html
 *.py
 assets/js/search-data.js
 assets/js/search/*.js
+*.md

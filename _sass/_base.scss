@@ -14,7 +14,6 @@ h6,
 em,
 div,
 li,
-span,
 strong {
   color: var(--global-text-color);
 }
@@ -894,9 +893,11 @@ figure.highlight {
   }
 }
 
+.highlight {
+  border-radius: 6px;
+}
+
 pre {
-  color: var(--global-theme-color);
-  background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
 
@@ -907,6 +908,14 @@ pre {
     margin-bottom: 0;
     padding: 0;
   }
+}
+
+pre.lineno {
+  color: #92837465 !important;
+}
+
+.code pre {
+  color: #fbf1c7;
 }
 
 code {
