@@ -89,7 +89,7 @@
     {% else %}
       <a href="{{ include.link }}" target="_blank">
     {% endif %}
-    {% include figure.liquid path=include.image title=include.title explicit=include.explicit class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path=include.image title=include.title explicit=include.explicit class="img-fluid rounded z-depth-1" book=true %}
     {% if include.explicit or include.link == blank %}
     {% else %}
       </a>
