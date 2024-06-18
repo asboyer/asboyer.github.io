@@ -27,7 +27,7 @@ Database management Systems (DBMS)
 * interact with software applications, ex: programming languages
 
 **Amazon example:**
-![image](https://github-production-user-asset-6210df.s3.amazonaws.com/52665298/340826529-b25ffa78-cad0-4af8-8d84-0d8b49997147.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240618%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240618T210959Z&X-Amz-Expires=300&X-Amz-Signature=f8e741dce0d6b122f89a355ec22239faa3db30c3a80fc9d3d8cd16cefc33ac00&X-Amz-SignedHeaders=host&actor_id=52665298&key_id=0&repo_id=817007793)
+![image](https://private-user-images.githubusercontent.com/52665298/340844366-287adb8d-85f0-48d4-b4ca-98d26110f5da.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTg3NDcxOTcsIm5iZiI6MTcxODc0Njg5NywicGF0aCI6Ii81MjY2NTI5OC8zNDA4NDQzNjYtMjg3YWRiOGQtODVmMC00OGQ0LWI0Y2EtOThkMjYxMTBmNWRhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MTglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjE4VDIxNDEzN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU2ZjkzMGQwNmI4ZThhZDI4OTY3NmM5MDczZDY4NDAxMTU0YjExYmJlZmE5MzlmMDM3MjU1YTJhNmQzNzJiYjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.PXSzitjkL9f9W21v7uF108mrmo9i8SSdxJRhw8YH-3M)
 Amazon is telling the database management system to alter the database
 
 #### **C.R.U.D**: Create, Read, Update, Delete
