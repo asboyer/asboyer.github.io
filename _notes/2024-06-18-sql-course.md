@@ -60,6 +60,37 @@ Can use a relational database management system (RDBMS)
 * define tables and structures
 * SQL code used on one RDBMS may not be usable on another
 
+SQL is the standard in relational databases
+
+#### **Non relational**
+![image](/assets/img/notes/non_relational.png)
+
+Management systems:
+* MongoDB, firebase, etc.
+* implementation specific -> no standard language
+
+#### Database queries
+Queries
+: are requests made to the database management system for specific information \
+As the structure becomes more complex, it becomes more difficult to get specific pieces of information
+
+---
+
+Tables
+:Have columns, rows
+Columns
+: categories
+Rows
+: a single entry
+
+Primary key
+: uniquely defines a row
+
+![image](/assets/img/notes/primary_key.png)
+How to discern between the Jacks? \
+*Primary key* is different. *Always* going to be unique for each row in the table \
+Can be anything (str, int, etc.), as long as its unique
+
 ---
 
 [^1]: two or more events happening at the same time
