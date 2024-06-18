@@ -1,6 +1,6 @@
 ---
 layout: page
-title: random notes
+title: notebook
 permalink: /notes/
 description: random thoughts, notes, and updates that might be interesting (probably not)
 ---
