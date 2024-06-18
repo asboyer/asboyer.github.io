@@ -26,9 +26,7 @@ Database management Systems (DBMS)
 * handles security, backups, imports/exports, concurrency[^1]
 * interact with software applications, ex: programming languages
 
-**Amazon example:**
-![image](https://private-user-images.githubusercontent.com/52665298/340844366-287adb8d-85f0-48d4-b4ca-98d26110f5da.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTg3NDcxOTcsIm5iZiI6MTcxODc0Njg5NywicGF0aCI6Ii81MjY2NTI5OC8zNDA4NDQzNjYtMjg3YWRiOGQtODVmMC00OGQ0LWI0Y2EtOThkMjYxMTBmNWRhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MTglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjE4VDIxNDEzN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU2ZjkzMGQwNmI4ZThhZDI4OTY3NmM5MDczZDY4NDAxMTU0YjExYmJlZmE5MzlmMDM3MjU1YTJhNmQzNzJiYjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.PXSzitjkL9f9W21v7uF108mrmo9i8SSdxJRhw8YH-3M)
-Amazon is telling the database management system to alter the database
+Amazon will tell the database management system to alter the database
 
 #### **C.R.U.D**: Create, Read, Update, Delete
 * Creating new entries
@@ -47,6 +45,20 @@ Any good DBMS can do these things
     * organize data in anything but a table 
     * key value stores
     * documents
+    * `json`, `xml`, graphs
+
+#### **Relational databases**
+![image](/assets/img/notes/relational.png)
+
+Can use a relational database management system (RDBMS)
+* helps users create and maintain a relational database
+* ex: mySQL, Oracle, postgreSQL, etc.
+
+#### Structured Query Language (SQL)
+* standardized lang for interacting with RDBMS
+* used to perform CRUD operations
+* define tables and structures
+* SQL code used on one RDBMS may not be usable on another
 
 ---
 
