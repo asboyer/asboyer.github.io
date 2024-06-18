@@ -72,7 +72,9 @@
 .highlight .kd {
   color: #fe8019;
 }
-.highlight .s,
+.highlight .s {
+  color: #b8bb26;
+}
 .highlight .sa,
 .highlight .sb,
 .highlight .sc,
