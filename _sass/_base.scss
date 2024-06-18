@@ -67,6 +67,10 @@ img {
   max-width: 90vw;
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (max-width: 700px) {
   .mt-5 {
     margin-top: 1.5rem !important;
@@ -246,6 +250,7 @@ blockquote {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  padding: 0.5rem 0 !important;
 }
 
 .navbar .dropdown-menu {
@@ -1270,6 +1275,9 @@ nav[data-toggle="toc"] {
   }
   .newsletter-error {
     font-size: 16px !important;
+  }
+  .navbar {
+    padding: 0.5rem 1rem !important;
   }
 }
 
