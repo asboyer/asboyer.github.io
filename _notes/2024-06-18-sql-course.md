@@ -77,7 +77,7 @@ As the structure becomes more complex, it becomes more difficult to get specific
 ---
 
 Tables
-:Have columns, rows
+: Have columns, rows
 Columns
 : categories
 Rows
@@ -89,7 +89,28 @@ Primary key
 ![image](/assets/img/notes/primary_key.png)
 How to discern between the Jacks? \
 *Primary key* is different. *Always* going to be unique for each row in the table \
-Can be anything (str, int, etc.), as long as its unique
+Can be anything (str, int, etc.), as long as its unique \
+
+#### Types of Primary keys
+
+1. Surrogate key
+: key that has no mapping to anything in real world (random)
+
+2. Natural key
+: ex: social security number
+
+3. Foreign key
+: stores the primary key of a row in another database table
+
+#### Foreign key example:
+`branch_id` maps to a row in the **Branch** database
+![image](/assets/img/notes/foreign_key_1.png)
+![image](/assets/img/notes/foreign_key_2.png)
+
+**Note**: can have multiple foreign keys \
+Can also use foreign key to map to another row in the same table \
+Can define a **composite key** to define a key that uses multiple columns to combine to make a primary key. \
+ie: two columns uniquely defining a row to make a primary key
 
 ---
 
