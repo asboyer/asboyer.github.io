@@ -1413,3 +1413,36 @@ ninja-keys::part(ninja-input-wrapper) {
     width: 20%;
   }
 }
+
+.top-div {
+  // this div should place two divs directly next to eachother
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right-div {
+  margin-right: 32px;
+}
+
+@media (max-width: 800px) {
+  .right-div {
+    margin-right: 0px;
+  }
+}
+
+.other-div {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .right-div {
+    display: none;
+  }
+  .other-div {
+    display: block;
+  }
+  .top-div {
+    display: block;
+  }
+}

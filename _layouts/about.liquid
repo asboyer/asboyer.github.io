@@ -45,26 +45,33 @@ layout: default
 
   <article>
     <div id="info-home" class="clearfix">{{ content }}</div>
-
-    <!-- News -->
-    {% if page.news and site.announcements.enabled %}
-      <h2 style="margin-top: 25px">
-        <hr>
-
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
+    <hr>
+    <div class="top-div">
+      {% if page.news and site.announcements.enabled %}
+        <div>
+          <h2>
+            <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+          </h2>
+          {% include news.liquid limit=true %}
+          {% if page.latest_posts %}
+            <h2 style="margin-top: 10px">
+              <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+            </h2>
+            {% include latest_posts.liquid %}
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if page.notes %}
+        <div class="right-div">
+          <h2>
+            <a href="{{ '/notes/' | relative_url }}" style="color: inherit">notebook</a>
+          </h2>
+          {% include notes.liquid limit=true %}
+        </div>
+      {% endif %}
+    </div>
 
     <!-- Latest posts -->
-    {% if page.latest_posts %}
-      <h2 style="margin-top: 15px">
-        <hr>
-
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
 
     <!-- favorite projects -->
     {% if page.key_projects %}
@@ -95,11 +102,13 @@ layout: default
     {% endif %}
 
     {% if page.notes %}
-      <h2 style="margin-top: 15px">
-        <hr>
-        <a href="{{ '/notes/' | relative_url }}" style="color: inherit">notebook</a>
-      </h2>
-      {% include notes.liquid limit=true %}
+      <div class="other-div">
+        <h2 style="margin-top: 15px">
+          <hr>
+          <a href="{{ '/notes/' | relative_url }}" style="color: inherit">notebook</a>
+        </h2>
+        {% include notes.liquid limit=true %}
+      </div>
     {% endif %}
 
     <!-- Selected papers -->

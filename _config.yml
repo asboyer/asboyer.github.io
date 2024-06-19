@@ -204,7 +204,7 @@ key_projects:
 latest_notes:
   enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 5 # leave blank to include all the blog posts
+  limit: 8 # leave blank to include all the blog posts
 
 latest_favs:
   enabled: true
