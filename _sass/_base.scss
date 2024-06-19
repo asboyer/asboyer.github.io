@@ -1390,3 +1390,26 @@ ninja-keys::part(ninja-input-wrapper) {
     display: none !important;
   }
 }
+
+#date_width {
+  width: 20%;
+}
+
+#date {
+  width: 10%;
+  font-weight: 100 !important;
+  padding-left: 0px !important;
+}
+
+#date_text {
+  color: var(--global-text-color-light);
+}
+
+@media (max-width: 575px) {
+  #date_width {
+    width: 30%;
+  }
+  #date {
+    width: 20%;
+  }
+}

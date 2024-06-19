@@ -18,7 +18,7 @@
             <tr>
               <!-- add an image here! -->
               {% if item.img %}
-                <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
+                <th scope="row" id="date_width" style=" padding-right: 10px; padding-left: 0px !important">
                   {% include figure.liquid home=true path=item.img sizes="(min-width: 768px) 156px, 50vw" alt="project thumbnail" %}
                 </th>
               {% endif %}

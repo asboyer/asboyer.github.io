@@ -11,7 +11,7 @@ giscus_comments: true
 
 $$ O(n) $$ solution in Python to the [counting valleys](https://www.hackerrank.com/challenges/counting-valleys/problem) problem from HackerRank:
 
-{% custom_highlight python linenos start_line=1 %}
+{% custom_highlight python linenos %}
 def countingValleys(steps, path):
     level = 0
     valleys = 0

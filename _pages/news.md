@@ -5,4 +5,4 @@ permalink: /news/
 description: the offical asboyer news feed
 ---
 
-{% include news.liquid %}
+{% include news.liquid in_page=true %}

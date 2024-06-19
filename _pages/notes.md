@@ -2,7 +2,7 @@
 layout: page
 title: notebook
 permalink: /notes/
-description: random thoughts, notes, and updates that might be interesting (probably not)
+description: random thoughts, notes, and updates that might be interesting
 ---
 
-{% include notes.liquid %}
+{% include notes.liquid in_page=true %}

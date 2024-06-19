@@ -9,7 +9,7 @@
         {% if include.category == 'perfect' and item.perfect %}
           <tr>
             {% if item.img %}
-              <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
+              <th scope="row" id="date_width" style=" padding-right: 10px; padding-left: 0px !important">
                 {% if item.redirect %}
                   <a class="news-title" href="{{ item.redirect }}" target="_blank">
                 {% elsif item.inline %}
@@ -93,7 +93,7 @@
         {% elsif include.category == 'vinyl' and item.vinyl %}
           <tr>
             {% if item.img %}
-              <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
+              <th scope="row" id="date_width" style=" padding-right: 10px; padding-left: 0px !important">
                 {% if item.redirect %}
                   <a class="news-title" href="{{ item.redirect }}" target="_blank">
                 {% elsif item.inline %}
@@ -165,7 +165,7 @@
         {% elsif page.year and item_year == page.year %}
           <tr>
             {% if item.img %}
-              <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
+              <th scope="row" id="date_width" style=" padding-right: 10px; padding-left: 0px !important">
                 {% if item.redirect %}
                   <a class="news-title" href="{{ item.redirect }}" target="_blank">
                 {% elsif item.inline %}
@@ -250,7 +250,7 @@
           {% endif %}
           <tr>
             {% if item.img %}
-              <th scope="row" style="width: 20%; padding-right: 10px; padding-left: 0px !important">
+              <th scope="row" id="date_width" style=" padding-right: 10px; padding-left: 0px !important">
                 {% if item.redirect %}
                   <a class="news-title" href="{{ item.redirect }}" target="_blank">
                 {% elsif item.inline %}
