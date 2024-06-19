@@ -8,6 +8,7 @@ related_posts: false
 title: sql notes
 giscus_comments: true
 unfinished: true
+notebook: true
 ---
 ---
 Notes from [SQL Tutorial - Full Database Course for Beginners](https://www.youtube.com/watch?v=HXV3zeQKqGY)
@@ -78,8 +79,10 @@ As the structure becomes more complex, it becomes more difficult to get specific
 
 Tables
 : Have columns, rows
+
 Columns
 : categories
+
 Rows
 : a single entry
 
@@ -87,9 +90,11 @@ Primary key
 : uniquely defines a row
 
 ![image](/assets/img/notes/primary_key.png)
-How to discern between the Jacks? \
-*Primary key* is different. *Always* going to be unique for each row in the table \
-Can be anything (str, int, etc.), as long as its unique \
+How to discern between the Jacks?
+
+*Primary key* is different. *Always* going to be unique for each row in the table
+
+Can be anything (str, int, etc.), as long as its unique
 
 #### Types of Primary keys
 
