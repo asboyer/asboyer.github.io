@@ -1446,3 +1446,17 @@ ninja-keys::part(ninja-input-wrapper) {
     display: block;
   }
 }
+
+#fc {
+  font-size: 4rem;
+  font-weight: 100;
+  color: var(--global-theme-color);
+  line-height: 0;
+  padding-right: 8px;
+}
+
+@media (max-width: 700px) {
+  #se {
+    margin-bottom: 30px;
+  }
+}
