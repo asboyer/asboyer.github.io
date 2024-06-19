@@ -135,4 +135,24 @@ layout: default
   {% if site.giscus and page.giscus_comments %}
     {% include giscus.liquid %}
   {% endif %}
+
+  {% if page.notebook %}
+    <style>
+      #markdown-content {
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+      }
+      .container.mt-5 {
+        max-width: 600px !important;
+      }
+    </style>
+  {% endif %}
+
+  {% if page.text_note %}
+    <style>
+      .container.mt-5 {
+        max-width: 550px !important;
+      }
+    </style>
+  {% endif %}
 </div>
