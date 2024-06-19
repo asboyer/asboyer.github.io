@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-06-18 05:00:00
-time: 9:44pm
+date: 2024-06-19 05:00:00
+time: 9:10pm
 location: Lisbon, Portugal
 inline: false
 related_posts: false
@@ -10,6 +10,9 @@ giscus_comments: true
 unfinished: true
 notebook: true
 ---
+
+<span id="dt"><i class="fa-solid fa-pen fa-sm"></i> 6/18/24 • 9:44pm</span>
+
 ---
 Notes from [SQL Tutorial - Full Database Course for Beginners](https://www.youtube.com/watch?v=HXV3zeQKqGY)
 
@@ -116,6 +119,37 @@ Can be anything (str, int, etc.), as long as its unique
 Can also use foreign key to map to another row in the same table \
 Can define a **composite key** to define a key that uses multiple columns to combine to make a primary key. \
 ie: two columns uniquely defining a row to make a primary key
+
+---
+
+<span id="dt"><i class="fa-solid fa-pen fa-sm"></i> 6/19/24 • 9:10pm</span>
+
+### SQL Basics
+Not technically a programming language
+Language used for interacting with relational database management systems
+
+SQL
+: structured query language
+
+There are different "flavors" SQL \
+Sometimes different depending on the management system
+
+#### 4 aspects
+Data Query language (DQL)
+: used to get data already stored
+
+Data definition language (DDL)
+: define layout, schema
+
+Data control language (DCL)
+: used for controlling access to the data in the database
+
+Data manipulation language (DML)
+: used for inserting, updating, deleting data from the databases
+
+#### Queries
+Goal is to only get the data you need \
+Often hidden in a complex schema
 
 ---
 
