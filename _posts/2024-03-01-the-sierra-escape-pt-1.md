@@ -18,6 +18,7 @@ authors:
 
 <style>
   #markdown-content {
+    font-size: 1.2rem !important;
     line-height: 2.0 !important;
   }
 </style>
