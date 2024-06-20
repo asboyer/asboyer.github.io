@@ -149,8 +149,188 @@ Data manipulation language (DML)
 
 #### Queries
 Goal is to only get the data you need \
-Often hidden in a complex schema
+Often hidden in a complex schema \
+Tell RDBMS what information you want and it will give it back to you
+
+```sql
+SELECT employee.name, employee.age
+FROM employee
+WHERE employee.salary > 3000;
+```
+
+---
+
+#### [MySQL](https://dev.mysql.com/downloads/mysql/) installation
+Install, set up and start server
+
+```bash
+$ echo "export PATH=/usr/local/mysql/bin:$PATH" >> ~/.bash_profile
+```
+^ appends mysql path to path accessible by bash command line [^2]
+
+```bash
+$ mysql -u root -p
+```
+^ enter password (logs into mysql as root)
+
+```mysql
+create database giraffe;
+```
+
+---
+
+#### Data types
+-> using [popSQL](https://popsql.com/download) for visualization purposes
+
+```sql
+INT -- WHOLE NUMBERS
+DECIMAL(M, N) -- DECIMAL NUMBERS (M - TOTAL NUM OF DIGITS) (N - NUM DIGITS AFTER DECIMAL POINT)
+VARCHAR(1) -- STRING OF TEXT OF LENGTH 1
+BLOB -- BINARY LARGE OBJECT, STORES LARGE DATA
+DATE -- 'YYYY-MM-DD' 
+TIMESTAMP -- 'YYYY-MM-DD HH:MM:SS' USED FOR RECORDING WHEN THINGS HAPPEN
+```
+
+#### Creating tables
+```sql 
+CREATE TABLE -- convention is to use all caps for reserve words
+```
+
+Trying to create this table:
+![image](/assets/img/notes/primary_key.png)
+
+```sql
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(20), -- ALLOCATE FOR STORING A NAME
+    major VARCHAR(20)
+); -- ALL COMMANDS SHOULD END IN ';'
+```
+
+```sql
+CREATE TABLE student (
+    student_id INT,
+    name VARCHAR(20),
+    major VARCHAR(20),
+    PRIMARY KEY(student_id) -- can also define primary key like this
+);
+
+DESCRIBE student; -- prints the table you made
+```
+
+**NOTE**: that if you want to run this in the command line:
+```bash
+$ USE giraffe; DESCRIBE student;
+```
+I will be writing these commands in popSQL, but it is good to know how to run thing in the terminal 
+
+#### Delete and modify a table
+```sql
+DROP TABLE student; -- deletes the table
+
+ALTER TABLE student ADD gpa DECIMAL(3, 2); -- add a row for gpa
+                                           -- 3 digits, 2 after the
+                                           -- decimal point
+ALTER TABLE student DROP COLUMN gpa; -- drops the gpa column
+```
+
+#### inserting data
+
+```sql
+INSERT INTO student VALUES(1, 'Jack', 'Biology'); -- insert information into table
+                                -- insert in the order table was created
+
+SELECT * FROM student; -- gives us all info from student table
+
+INSERT INTO student(student_id, name) VALUES(2, 'Lucas');
+-- leaves major null and allows you to insert the known values
+```
+**NOTE**: you can't insert duplicate entries
+
+#### creating tables for ease of insertion
+```sql
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL, -- name can't be null
+    major VARCHAR(20) UNIQUE -- major has to be unique
+); 
+```
+`PRIMARY KEY` is both `NOT NULL` and `UNIQUE`
+
+setting a default value and auto incrementing
+```sql
+CREATE TABLE student (
+    student_id INT PRIMARY KEY AUTO_INCREMENT, -- data inserted will auto increment
+                                               -- starting from 1 
+    name VARCHAR(20),
+    major VARCHAR(20) DEFAULT 'undecided' -- default value
+);
+
+INSERT INTO student(name) VALUES('Jack'); 
+-- values for id: 1, major: undecided
+```
+
+#### Updating and deleting tables
+
+```sql
+UPDATE student
+SET major = 'Bio'
+WHERE major = 'Biology'
+;
+```
+**Comparison ops**
+- `=` equals
+- `<>` not equals
+- `<` less than
+- `>=` greater than or equal
+- `<=` less than or equals 
+
+```sql
+-- updating
+UPDATE STUDENT
+SET major = 'Biochemistry'
+WHERE major = 'Bio' OR major = 'Chemistry'
+;
+
+UPDATE STUDENT
+SET name = 'Tom', major = 'undecided'
+WHERE student_id = 1;
+;
+--- without WHERE, all students are affected
+
+-- deleting
+DELETE FROM student
+WHERE student_id = 5
+;
+```
+
+#### Basic Queries
+Get specific entries from the relational database management system
+
+```sql
+SELECT * FROM STUDENT; -- selecting 'all information'
+SELECT name FROM STUDENT; -- get just the names
+SELECT name, major FROM STUDENT; -- get both names and majors
+--- can also be written as
+SELECT student.name, student.major;
+
+-- displays students ordered by name
+SELECT *
+FROM STUDENT
+ORDER BY name;
+
+-- displays in ascending order
+SELECT *
+FROM STUDENT
+ORDER BY name ASC;
+
+-- displays order from major first, then name
+SELECT *
+FROM STUDENT
+ORDER BY major, name
+```
 
 ---
 
 [^1]: two or more events happening at the same time
+[^2]: yeah, I still use `bash` over `zsh`
