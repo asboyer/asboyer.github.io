@@ -351,6 +351,8 @@ WHERE name IN ('Kaden', 'Lucas', 'Quin') and student_id > 2;
 #### Complex schema
 Moving on from basics and core concepts, moving towards applicable examples
 
+<a href="https://www.giraffeacademy.com/databases/sql/company-database.pdf" download>Download company database PDF</a> <i class="fa-solid fa-download"></i>
+
 ---
 
 [^1]: two or more events happening at the same time
