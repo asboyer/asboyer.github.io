@@ -327,8 +327,29 @@ ORDER BY name ASC;
 -- displays order from major first, then name
 SELECT *
 FROM STUDENT
-ORDER BY major, name
+ORDER BY major, name;
+
+-- only gives 2 results
+SELECT *
+FROM student
+LIMIT 2;
+
+-- use WHERE to specify
+SELECT name, major
+FROM student
+WHERE major = 'Chemistry' OR name == 'Lucas';
+
+-- comparison operators:
+-- <, >, <=, >=, =, <>, AND, OR
+
+-- use set of data to filter 
+SELECT *
+FROM STUDENT
+WHERE name IN ('Kaden', 'Lucas', 'Quin') and student_id > 2;
 ```
+
+#### Complex schema
+Moving on from basics and core concepts, moving towards applicable examples
 
 ---
 
