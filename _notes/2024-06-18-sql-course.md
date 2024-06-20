@@ -1,7 +1,6 @@
 ---
 layout: post
 date: 2024-06-19 05:00:00
-time: 9:10pm
 location: Lisbon, Portugal
 inline: false
 related_posts: false
@@ -9,6 +8,8 @@ title: sql notes
 giscus_comments: true
 unfinished: true
 notebook: true
+multi_date: true
+author: Andrew Boyer
 ---
 
 <span id="dt"><i class="fa-solid fa-pen fa-sm"></i> 6/18/24 • 9:44pm</span>
@@ -171,13 +172,11 @@ $ echo "export PATH=/usr/local/mysql/bin:$PATH" >> ~/.bash_profile
 ```bash
 $ mysql -u root -p
 ```
-^ enter password (logs into mysql as root)
+enter password (logs into mysql as root)
 
-```mysql
+```sql
 create database giraffe;
 ```
-
----
 
 #### Data types
 -> using [popSQL](https://popsql.com/download) for visualization purposes

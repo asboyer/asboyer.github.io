@@ -1422,7 +1422,16 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 .right-div {
-  margin-right: 32px;
+  // margin-right: 2px;
+  // max-width: 200px;
+}
+
+.right-div td {
+  overflow: hidden;
+  display: table-caption;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 170px;
 }
 
 @media (max-width: 800px) {
