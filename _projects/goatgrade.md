@@ -10,7 +10,7 @@ website: https://goatgrade.com
 related_publications: false
 key: true
 github: https://github.com/goatgrade
-technologies: python react
+tech: python react
 ---
 
     redirect to website...

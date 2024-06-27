@@ -10,6 +10,7 @@ key: true
 github: https://github.com/asboyer/reporty
 redirect: https://pypi.org/project/reporty/
 website: https://pypi.org/project/reporty/
+tehc: python
 ---
 
     redirect to website...

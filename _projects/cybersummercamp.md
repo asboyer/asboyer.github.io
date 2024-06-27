@@ -8,4 +8,5 @@ website: https://sites.google.com/view/cybersummercamp/
 importance: 10
 category: work
 key: false
+tech: cyber
 ---

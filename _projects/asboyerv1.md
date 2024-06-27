@@ -9,6 +9,7 @@ website: https://asboyer.pythonanywhere.com
 importance: 4
 category: fun
 key: false
+tech: flask javascript
 ---
 
     redirect to website...

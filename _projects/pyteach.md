@@ -8,6 +8,7 @@ category: work
 redirect: https://github.com/asboyer/python-lessons
 key: false
 github: https://github.com/asboyer/python-lessons
+tech: python
 ---
 
     redirect to website...

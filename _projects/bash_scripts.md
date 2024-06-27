@@ -8,6 +8,7 @@ github: https://github.com/asboyer/bash-scripts
 importance: 4
 category: fun
 key: false
+tech: bash
 ---
 
     redirect to website...
