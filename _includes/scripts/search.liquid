@@ -116,8 +116,62 @@
         },
       {%- endif -%}
       {%- endfor -%}
+
+      {%- assign notes = site.notes | reverse -%}
+      {%- for item in notes -%}
+        {%- if item.inline -%}
+          {%- else -%}
+        {
+            {%- assign title = item.title | escape -%}
+          id: "notes-{{ title | slugify }}",
+          title: '{{ title | emojify }}',
+          description: "{{ item.description | strip_html | strip_newlines | escape }}",
+          section: "Notes",
+          {%- unless item.inline -%}
+            handler: () => {
+              window.location.href = "{{ item.url | relative_url }}";
+            },
+          {%- endunless -%}
+        },
+      {%- endif -%}
+      {%- endfor -%}
+
+      {%- assign projects = site.projects | sort: 'importance' -%}
+      {%- for item in projects -%}
+        {
+            {%- assign title = item.title | escape -%}
+          id: "projects-{{ title | slugify }}",
+          title: '{{ title | emojify }}',
+          description: "{{ item.tech | join: ', ' | strip_html | strip_newlines | replace: '"', "'" | escape | strip }} {{ item.description | strip_html | strip_newlines | escape }}",
+          section: "Projects",
+          {%- unless item.inline -%}
+            handler: () => {
+              window.location.href = "{{ item.url | relative_url }}";
+            },
+          {%- endunless -%}
+        },
+      {%- endfor -%}
+
+      {%- assign pages = site.pages -%}
+      {%- for item in pages -%}
+        {%- if item.permalink contains '/favs/' or item.vinyl or item.goat -%}
+        {
+            {%- assign title = item.title | escape -%}
+          id: "favorites-{{ title | slugify }}",
+          title: '{{ title | emojify }}',
+          description: "{{ item.description | strip_html | strip_newlines | escape }}",
+          section: "favorites",
+          {%- unless item.inline -%}
+            handler: () => {
+              window.location.href = "{{ item.url | relative_url }}";
+            },
+          {%- endunless -%}
+        },
+      {%- endif -%}
+      {%- endfor -%}
+
       {%- for collection in site.collections -%}
-        {%- if collection.label != 'news' and collection.label != 'posts' and collection.label != 'projects' and collection.label != 'favs' and collection.label != 'roles' -%}
+        {%- if collection.label != 'news' and collection.label != 'posts' and collection.label != 'projects' and collection.label != 'favs' and collection.label != 'notes' -%}
           {%- for item in collection.docs -%}
             {%- if item.inline -%}
               {%- else -%}
