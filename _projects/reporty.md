@@ -3,6 +3,7 @@ layout: page
 title: reporty
 description: python library for organizing and distributing visual data
 img: assets/img/projects/reporty.png
+key_img: assets/img/projects/reportyk.png
 importance: 1
 category: work
 giscus_comments: false

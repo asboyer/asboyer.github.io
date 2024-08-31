@@ -71,26 +71,39 @@ layout: default
       {% endif %}
     </div>
 
+    <hr>
+    <div class="top-div">
+      {% if page.current_roles %}
+        <div id="smiv">
+          <h2>
+            <a href="{{ '/resume/' | relative_url }}" style="color: inherit">current roles</a>
+          </h2>
+          {% include current_roles.liquid %}
+        </div>
+      {% endif %}
+      {% if page.key_projects %}
+        <div class="right-div-2">
+          <h2>
+            <a href="{{ '/projects/' | relative_url }}" style="color: inherit">cool projects</a>
+          </h2>
+          {% include key_projects.liquid %}
+        </div>
+      {% endif %}
+    </div>
+
     <!-- Latest posts -->
 
     <!-- favorite projects -->
     {% if page.key_projects %}
-      <h2 style="margin-top: 15px">
-        <hr>
+      <div class="other-div">
+        <h2 style="margin-top: 10px">
 
-        <a href="{{ '/projects/' | relative_url }}" style="color: inherit">key projects</a>
-      </h2>
-      {% include key_projects.liquid %}
+          <a href="{{ '/projects/' | relative_url }}" style="color: inherit">cool projects</a>
+        </h2>
+        {% include key_projects.liquid div=true %}
+      </div>
     {% endif %}
     <!-- do latest post thing but for projects -->
-
-    {% if page.current_roles %}
-      <h2 style="margin-top: 15px">
-        <hr>
-        <a href="{{ '/resume/' | relative_url }}" style="color: inherit">current roles</a>
-      </h2>
-      {% include current_roles.liquid %}
-    {% endif %}
 
     {% if page.favs %}
       <h2 style="margin-top: 15px">

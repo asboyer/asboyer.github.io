@@ -1434,8 +1434,22 @@ ninja-keys::part(ninja-input-wrapper) {
   width: 170px;
 }
 
+.right-div-2 td {
+}
+
+.right-div-2 {
+  width: 230px;
+}
+
+.right-div-2 #date_width {
+  width: 45%;
+}
+
 @media (max-width: 800px) {
   .right-div {
+    margin-right: 0px;
+  }
+    .right-div-2 {
     margin-right: 0px;
   }
 }
@@ -1444,8 +1458,17 @@ ninja-keys::part(ninja-input-wrapper) {
   display: none;
 }
 
+#project_img_home {
+  padding-right: 15px; 
+  padding-top: 15px; 
+  max-width: 90%
+}
+
 @media (max-width: 575px) {
   .right-div {
+    display: none;
+  }
+    .right-div-2 {
     display: none;
   }
   .other-div {
@@ -1454,6 +1477,13 @@ ninja-keys::part(ninja-input-wrapper) {
   .top-div {
     display: block;
   }
+  #smiv {
+    width: 500px;
+  }
+  #project_img_home {
+    max-width: 100% !important;
+    padding: 20px !important;
+  } 
 }
 
 #fc {
@@ -1474,4 +1504,14 @@ ninja-keys::part(ninja-input-wrapper) {
   color: var(--global-text-color-light);
   font-size: 1.1em;
   font-weight: 100;
+}
+
+#smiv {
+  width: 450px;
+}
+
+@media (max-width: 670px) {
+  #smiv {
+    width: 400px;
+  }
 }
