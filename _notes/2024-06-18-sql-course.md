@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 title: sql notes
 giscus_comments: true
-unfinished: true
+unfinished: false
 notebook: true
 multi_date: true
 author: Andrew Boyer
