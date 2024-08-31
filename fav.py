@@ -140,5 +140,5 @@ description: favorite {category}s of {year}
 {{% include archive_list.liquid category="{category}s" archive="{year}" %}}
 '''.format(category=args.category[:-1], year=datetime.now().strftime('%Y'))
 
-with open(f'_pages/{args.category}-{datetime.now().strftime('%Y')}.md', 'w') as f:
+with open(f"_pages/{args.category}-{datetime.now().strftime('%Y')}.md", 'w') as f:
     f.write(markdown_content)
