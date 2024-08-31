@@ -3,7 +3,7 @@
     class="table-responsive"
   >
     <table class="table table-sm table-borderless" style="margin: 0px">
-      {% for item in site.data.resume.work %}
+      {% for item in site.data.resume.education %}
         {% if item.homepage %}
           <tr>
             <!-- add an image here! -->
@@ -51,7 +51,7 @@
           </tr>
         {% endif %}
       {% endfor %}
-      {% for item in site.data.resume.education %}
+      {% for item in site.data.resume.work %}
         {% if item.homepage %}
           <tr>
             <!-- add an image here! -->

@@ -109,8 +109,9 @@
       "name": "Neurture",
       "position": "Software Engineering Intern",
       "startDate": "2024-05-06",
+      "endDate": "2024-08-06",
       "highlights": [],
-      "summary": "Working on app development and UI/UX design.",
+      "summary": "Worked on app development and UI/UX design.",
       "url": "https://neurtureapp.com/",
       "location": "Remote",
       "homepage_keyword": "Internship",
@@ -129,14 +130,15 @@
       "studyType": "Bachelor of Science - BS",
       "startDate": "2023-05-31",
       "score": "",
-      "gpa": "4.0",
+      "major_gpa": "4.0 [Major]",
       "courses": [
-        "CS 2050 - Discrete Math",
-        "CS 1332 - Data Structures and Algorithms",
-        "CS 2110 - Computer Organization and Programming",
-        "CS 2340 - Objects and Design",
         "MATH 1554 - Linear Algebra",
-        "PHYS 2211 - Physics I"
+        "CS 2050 - Discrete Mathematics",
+        "CS 2110 - Computer Organization and Programming",
+        "CS 2200 - Computer Systems and Networks",
+        "CS 2340 - Objects and Design",
+        "CS 3510 - Design & Analysis of Algorithms",
+        "CS 4400 - Database Systems"
       ],
       "homepage_keyword": "Junior",
       "homepage_description": "B.S. Computer Science",
@@ -193,13 +195,12 @@
       "url": "https://www.linkedin.com/company/76358633"
     },
     {
-      "organization": "National Honor Society",
-      "position": "Member",
-      "startDate": "2021-06-30",
-      "endDate": "2022-06-30",
-      "summary": "Tutoring students at high school and leading service projects.",
+      "organization": "Transfer2Tech",
+      "position": "Student Mentor",
+      "startDate": "2024-08-05",
+      "summary": "Mentor undergraduate students as they transition from a new school.",
       "highlights": [],
-      "url": "https://www.linkedin.com/company/11094416"
+      "url": "https://www.mentorcollective.org/"
     }
   ],
   "awards": [
