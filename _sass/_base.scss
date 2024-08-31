@@ -1449,7 +1449,7 @@ ninja-keys::part(ninja-input-wrapper) {
   .right-div {
     margin-right: 0px;
   }
-    .right-div-2 {
+  .right-div-2 {
     margin-right: 0px;
   }
 }
@@ -1459,16 +1459,16 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 #project_img_home {
-  padding-right: 15px; 
-  padding-top: 15px; 
-  max-width: 90%
+  padding-right: 15px;
+  padding-top: 15px;
+  max-width: 90%;
 }
 
 @media (max-width: 575px) {
   .right-div {
     display: none;
   }
-    .right-div-2 {
+  .right-div-2 {
     display: none;
   }
   .other-div {
@@ -1483,7 +1483,7 @@ ninja-keys::part(ninja-input-wrapper) {
   #project_img_home {
     max-width: 100% !important;
     padding: 20px !important;
-  } 
+  }
 }
 
 #fc {

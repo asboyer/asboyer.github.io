@@ -18,8 +18,14 @@
             <tr>
               <!-- add an image here! -->
               {% if item.img %}
-                <th scope="row" id="date_width" {% if include.div %} style="padding-right: 10px; padding-left: 0px !important" {% endif %}>
-                  {% include figure.liquid home=true path=item.key_img sizes="(min-width: 768px) 156px, 50vw" alt="project thumbnail" id="project_img_home"%}
+                <th
+                  scope="row"
+                  id="date_width"
+                  {% if include.div %}
+                    style="padding-right: 10px; padding-left: 0px !important"
+                  {% endif %}
+                >
+                  {% include figure.liquid home=true path=item.key_img sizes="(min-width: 768px) 156px, 50vw" alt="project thumbnail" id="project_img_home" %}
                 </th>
               {% endif %}
 
@@ -27,17 +33,15 @@
                 {% if item.redirect == blank %}
                   <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                   {% if include.div %}
-                  
-                  {%- if item.description %}:{% endif %}
-                  {{ item.description }}
-
+                    {%- if item.description %}:{% endif %}
+                    {{ item.description }}
                   {% endif %}
 
                 {% elsif item.redirect contains '://' %}
                   <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a>
                   {% if include.div %}
-                  {%- if item.description %}:{% endif %}
-                  {{ item.description }}
+                    {%- if item.description %}:{% endif %}
+                    {{ item.description }}
                   {% endif %}
                 {% else %}
                   <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
