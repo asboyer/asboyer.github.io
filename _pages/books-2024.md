@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 2024 book list
-permalink: /favs/2024/books/
+permalink: /favs/2024/book/
 description: favorite books of 2024
 ---
 
