@@ -13,7 +13,7 @@
               </th>
             {% endif %}
 
-            <td style="vertical-align: middle;">
+            <td style="vertical-align: middle;" id="width-resume">
               {% if item.redirect == blank %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.homepage_title }}</a>
                 {%- if item.homepage_description %}:{% endif %}
@@ -48,6 +48,19 @@
                 {% endif %}
               </span>
             </td>
+            <td style="vertical-align: middle;" id="non-width-resume">
+              {% if item.redirect == blank %}
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.homepage_title }}</a>
+              {% elsif item.redirect contains '://' %}
+                <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.homepage_title }}</a>
+              {% else %}
+                <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.homepage_title }}</a>
+              {% endif %}
+              <br>
+              <span style="font-size: .75rem">
+                {{ item.homepage_description }}
+              </span>
+            </td>
           </tr>
         {% endif %}
       {% endfor %}
@@ -60,8 +73,7 @@
                 {% include figure.liquid home=true path=item.img sizes="(min-width: 768px) 156px, 50vw" alt="project thumbnail" style="padding: 15px" %}
               </th>
             {% endif %}
-
-            <td style="vertical-align: middle;">
+            <td style="vertical-align: middle;" id="width-resume">
               {% if item.redirect == blank %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.homepage_title }}</a>
                 {%- if item.homepage_description %}:{% endif %}
@@ -94,6 +106,19 @@
                   &nbsp; &middot; &nbsp;
                   {{ item.location }}
                 {% endif %}
+              </span>
+            </td>
+            <td style="vertical-align: middle;" id="non-width-resume">
+              {% if item.redirect == blank %}
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.homepage_title }}</a>
+              {% elsif item.redirect contains '://' %}
+                <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.homepage_title }}</a>
+              {% else %}
+                <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.homepage_title }}</a>
+              {% endif %}
+              <br>
+              <span style="font-size: .75rem">
+                {{ item.homepage_description }}
               </span>
             </td>
           </tr>

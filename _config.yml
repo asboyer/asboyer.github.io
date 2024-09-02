@@ -70,7 +70,7 @@ og_image: /assets/img/logo/l.png # The site-wide (default for all links) Open Gr
 github_username: asboyer # your GitHub user name
 gitlab_username: # your GitLab user name
 x_username: # your X handle
-mastodon_username: mastodon.social/@asboyer # your mastodon instance+username in the format instance.tld/@username
+# mastodon_username: mastodon.social/@asboyer # your mastodon instance+username in the format instance.tld/@username
 linkedin_username: asboyer # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID

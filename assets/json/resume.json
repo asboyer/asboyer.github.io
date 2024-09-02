@@ -117,9 +117,24 @@
       "homepage_keyword": "Internship",
       "homepage_description": "software engineering intern",
       "homepage_title": "Neurture",
-      "homepage": true,
+      "homepage": false,
       "img": "assets/img/roles/intern/neurture.png",
       "redirect": "https://neurtureapp.com/"
+    },
+    {
+      "name": "College of Computing",
+      "position": "Academic Tutor",
+      "startDate": "2024-08-06",
+      "highlights": [],
+      "summary": "With students to enhance course engagement and understanding of material.",
+      "url": "https://www.cc.gatech.edu/tutoring-assistance",
+      "location": "Atlanta, GA",
+      "homepage_keyword": "Tutor",
+      "homepage_description": "Academic tutor",
+      "homepage_title": "College of Computing",
+      "homepage": true,
+      "img": "assets/img/roles/edu/gatech.png",
+      "redirect": "https://www.cc.gatech.edu/tutoring-assistance"
     }
   ],
   "education": [
