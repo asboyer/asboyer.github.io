@@ -24,7 +24,7 @@ This is my fourth consecutive month keeping this up, and I have to say, I'm real
 - [Vol 1](https://open.spotify.com/playlist/1WOKmiaW3gfGMvOlRNTDDh?si=39a869c2aac441a2) (June 2024)
 - [Vol 2](https://open.spotify.com/playlist/5bl5RSJbYdVOMYRSwMGbZr?si=9239b0f3501b481f) (July 2024)
 - [Vol 3](https://open.spotify.com/playlist/6cAtqz1we9EC5D95ra2dhU?si=e0af998de8584d00) (August 2024)
-- [Vol 4](https://open.spotify.com/playlist/1PA1VelRjexhnMdWuwsTBa?si=708e1ee571b4410e) (__Current__)
+- [Vol 4](https://open.spotify.com/playlist/1PA1VelRjexhnMdWuwsTBa?si=708e1ee571b4410e) (__Current__) [^1]
 
 Not only that, but I've also gotten into playlist sequencing through this process. Wanting to spread out the genres and moods of the songs, I've put a lot of thought into the order of the songs, which affect the pacing of the playlist. 
 
@@ -38,6 +38,20 @@ I'm excited to see where this habit goes and my goal is to have at least a year'
 
 I've also been adding some of my absolute favorites from each 10 to the [reccomendation](/favs) section of my website. I may even include a note or two about why I like the song so much. You can filter by songs [here](/favs/songs) and see all the songs I've added so far. I may have added some that didn't fit in the 10 songs playlist, but I still really liked.
 
-If you want to keep up with the playlist, you can follow it [here](https://open.spotify.com/playlist/1PA1VelRjexhnMdWuwsTBa?si=708e1ee571b4410e). I'll be updating it once a month, and I'll change the image of the playlist to indicate that the new 10 songs are up.
+<div class="row justify-content-md-center">
+        <div class="col-md-8">
+            <a href="https://open.spotify.com/playlist/1PA1VelRjexhnMdWuwsTBa?si=708e1ee571b4410e" target="_blank">
+                {% include figure.liquid path="/assets/img/pictures/dj.jpg" title="10 songs" class="img-fluid rounded z-depth-1" %}
+            </a>
+        <div class="caption">10 songs Vol. 4</div>
+        </div>
+</div>
+
+If you want to keep up with the playlist, you can follow it [here](https://open.spotify.com/playlist/1PA1VelRjexhnMdWuwsTBa?si=708e1ee571b4410e). I'll be updating it once a month, and I'll change the image of the playlist to indicate that the new 10 songs are up [^2].
 
 **@asboyer**
+
+---
+
+[^1]: [This](https://open.spotify.com/playlist/1PA1VelRjexhnMdWuwsTBa?si=708e1ee571b4410e) is the permanent link for the playlist, the one that gets updated. The other links are archived versions of the playlist for each volume. I will make an archive for Vol. 4 once Vol. 5 is up.
+[^2]: The next update will happen mid September. It's going to be a good one, you should defintely follow the playlist 🤞
