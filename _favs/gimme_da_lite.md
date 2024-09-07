@@ -11,5 +11,5 @@ album_link: https://open.spotify.com/album/3nje1igt9y3c85Hx5IbxVx
 album: Gimme Da Lite
 released: 2023
 perfect: true
-score: 99
+score: 98
 ---
