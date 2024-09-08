@@ -68,7 +68,7 @@ if args.category in ['albums', 'songs', 'playlists', 'artists']:
     else:
         args.link = result['images'][0]['url']
     
-    title = result['name'].replace(".", "").replace("(", "").replace(")", "")
+    title = result['name'].replace(".", "").replace("(", "").replace(")", "").replace("/", "")
     args.image_name = title.lower().replace(" ", "_") + '.jpeg'
 
 if args.category in ['movies', 'shows']:
