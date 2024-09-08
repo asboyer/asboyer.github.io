@@ -9,7 +9,6 @@ categories: songs
 link: https://open.spotify.com/track/1GHOLip5jcgRIBqd8QUx7N?si=594ca9431de84810
 album_link: https://open.spotify.com/album/7GGVUzqEZQFwbHsBO3Fzam
 album: Believer (Marsh's Guatape Remix)
-score: 96
+score: 93
 released: 2022
-perfect: true
 ---

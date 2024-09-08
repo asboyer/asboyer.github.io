@@ -7,9 +7,7 @@ creator: Southside, Lil Yachty
 img: assets/img/favs/songs/gimme_da_lite.jpeg
 categories: songs
 link: https://open.spotify.com/track/5VE6OSfJkMHyMpHaJzuUqn?si=9ed7f0e286924ab0
-album_link: https://open.spotify.com/album/3nje1igt9y3c85Hx5IbxVx
-album: Gimme Da Lite
 released: 2023
 perfect: true
-score: 98
+score: 97
 ---

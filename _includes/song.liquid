@@ -97,14 +97,18 @@
   {% endif %}
 
       function determineColor(value) {
-          if (value >= 0 && value < 30) return 'red';
-          else if (value >= 30 && value < 60) return 'var(--global-album-tier-bad)';
-          else if (value >= 60 && value < 70) return 'var(--global-album-tier-mid)';
-          else if (value >= 70 && value < 80) return 'var(--global-album-tier-good)';
-          else if (value >= 80 && value < 90) return 'var(--global-album-tier-great)';
-          else if (value >= 90 && value < 100) return 'var(--global-album-tier-amazing)';
-          else if (value == 100) return 'var(--global-album-tier-perfect)';
-          return 'var(--global-theme-color)'; // Default if out of range
+        if (value >= 0 && value < 30) return 'red';
+        else if (value >= 30 && value < 60) return 'var(--global-album-tier-bad)';
+        else if (value >= 60 && value < 70) return 'var(--global-album-tier-mid)';
+        else if (value >= 70 && value < 80) return 'var(--global-album-tier-good)';
+        else if (value >= 80 && value < 87) return 'var(--global-album-tier-great)';
+        else if (value >= 87 && value < 90) return 'var(--global-album-tier-good)';
+        else if (value >= 90 && value < 93) return 'var(--global-album-tier-great)';
+        else if (value >= 93 && value < 96) return 'var(--global-album-tier-amazing)';
+        else if (value >= 96 && value < 99) return 'var(--global-album-tier-perfect)';
+        else if (value == 99) return 'var(--global-album-tier-legendary)';
+        else if (value == 100) return 'var(--global-theme-color)';
+        return 'var(--global-theme-color)'; // Default if out of range
       }
 
       function animateCircleFill() {

@@ -9,7 +9,6 @@ categories: songs
 link: https://open.spotify.com/track/4CzhtKifG867Lu5DNQVBSA?si=caecbade4c1b4f14
 album_link: https://open.spotify.com/album/2QRedhP5RmKJiJ1i8VgDGR
 album: Whole Lotta Red
-perfect: true
 released: 2021
-score: 97
+score: 91
 ---

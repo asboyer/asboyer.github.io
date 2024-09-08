@@ -11,5 +11,5 @@ album_link: https://open.spotify.com/album/7luxPo6uIc8GseoVfDBqB4
 album: Rexdale
 released: 2024
 perfect: true
-score: 91
+score: 97
 ---
