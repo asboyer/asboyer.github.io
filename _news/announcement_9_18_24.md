@@ -14,7 +14,7 @@ notebook: true
 It all started with an idea and a text to a few friends:
 > "Yo this is a playlist im starting that im gonna try to update like once a month and keep it pretty short and sweet with my 10 favorite songs atm. Toss a follow if you wanna keep up to date with it"
 
-My goal was to curate a list of my top 10 favorite songs of a given month. I wanted my reccomendations to be unique, but also at the same time, authentic. While I wanted this to playlist to be diverse acorss genres, it also had to be an accurate picture of what I was listening to that month.
+My goal was to curate a list of my top 10 favorite songs of a given month. I wanted my recommendations to be unique, but also at the same time, authentic. While I wanted this to playlist to be diverse acorss genres, it also had to be an accurate picture of what I was listening to that month.
 
 In addition to sharing the playlist with friends, I thought this would be a good practice for myself. At the very least I would keep an archive of the top songs I liked the most each month.
 

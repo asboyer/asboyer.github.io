@@ -1,7 +1,7 @@
 ---
 layout: page
 title: favs
-alt_title: reccomendations
+alt_title: recommendations
 permalink: /favs/
 description: a list of things that I like, and think you might like too
 nav: true
