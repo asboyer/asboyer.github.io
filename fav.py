@@ -121,7 +121,7 @@ markdown_content = '''---
 layout: page
 title: {category}s
 permalink: /favs/{category}s/
-description: list of {category} reccomendations
+description: list of {category} recommendations
 ---
 
 {{% include archive_list.liquid category="{category}s" %}}
