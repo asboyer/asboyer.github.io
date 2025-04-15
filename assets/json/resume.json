@@ -125,6 +125,7 @@
       "name": "College of Computing",
       "position": "Academic Tutor",
       "startDate": "2024-08-06",
+      "endDate": "2024-12-01",
       "highlights": [],
       "summary": "With students to enhance course engagement and understanding of material.",
       "url": "https://www.cc.gatech.edu/tutoring-assistance",
@@ -132,9 +133,22 @@
       "homepage_keyword": "Tutor",
       "homepage_description": "Academic tutor",
       "homepage_title": "College of Computing",
-      "homepage": true,
+      "homepage": false,
       "img": "assets/img/roles/edu/gatech.png",
       "redirect": "https://www.cc.gatech.edu/tutoring-assistance"
+    },
+    {
+      "name": "Stealth AI Startup",
+      "position": "Software Engineering Intern",
+      "startDate": "2025-01-06",
+      "highlights": [],
+      "summary": "",
+      "location": "Cambridge, MA",
+      "homepage_keyword": "Full-time",
+      "homepage_description": "Software Engineering Intern",
+      "homepage_title": "Stealth AI Startup",
+      "homepage": true,
+      "img": "assets/img/roles/intern/stealth.png"
     }
   ],
   "education": [
@@ -145,9 +159,9 @@
       "studyType": "Bachelor of Science - BS",
       "startDate": "2023-05-31",
       "score": "",
-      "major_gpa": "4.0 [Major]",
+      "major_gpa": "4.0",
       "courses": [
-        "MATH 1554 - Linear Algebra",
+        "CS 1332 - Data Structures & Algorithms",
         "CS 2050 - Discrete Mathematics",
         "CS 2110 - Computer Organization and Programming",
         "CS 2200 - Computer Systems and Networks",
@@ -155,7 +169,7 @@
         "CS 3510 - Design & Analysis of Algorithms",
         "CS 4400 - Database Systems"
       ],
-      "homepage_keyword": "Junior",
+      "homepage_keyword": "Senior",
       "homepage_description": "B.S. Computer Science",
       "homepage_title": "Georgia Tech",
       "homepage": true,
@@ -254,6 +268,12 @@
       "date": "2018-09-30",
       "awarder": null,
       "summary": "Students who earn an unweighted GPA above 3.6 and meet the requirements for the honor roll are named to the high honors list"
+    },
+    {
+      "title": "Dean's List",
+      "date": "2024-12-01",
+      "awarder": null,
+      "summary": "Georgia Tech Fall Semester 2024"
     }
   ],
   "projects": [

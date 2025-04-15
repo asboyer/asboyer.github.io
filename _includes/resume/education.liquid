@@ -50,8 +50,11 @@
             {%- if content.gpa -%}
               &nbsp; &middot; &nbsp;<b>GPA:</b> {{ content.gpa }}/4.0
             {%- endif %}
-            {%- if content.major_gpa -%}
-              &nbsp; &middot; &nbsp;<b>GPA:</b> {{ content.major_gpa }} [Major]
+            {%- if content.major_gpa and content.gpa == null -%}
+              &nbsp; &middot; &nbsp;<b>GPA:</b> {{ content.major_gpa }}/4.0 [Major]
+            {%- endif %}
+            {%- if content.major_gpa and content.gpa -%}
+              &nbsp; &middot; &nbsp; {{ content.major_gpa }}/4.0 [Major]
             {%- endif %}
           </h6>
           <ul class="items">
