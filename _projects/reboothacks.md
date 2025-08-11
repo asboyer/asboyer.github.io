@@ -2,7 +2,7 @@
 layout: page
 title: reboot hacks
 description: next-generation hackathons and tech events
-img: assets/img/projects/reboothacks.png
+img: assets/img/projects/RebootHacks.png
 redirect: https://www.reboothacks.com/
 website: https://www.reboothacks.com/
 importance: 3
