@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: developer & entrepreneur. cs @ <a href='https://directory.gatech.edu/directory/detail/Andrew/Boyer/ZnUPgG7TRJIo1QcqJFfjAfNGjE-Jf2zzmGiOToNIXG8YW6T9aPf9YRhnOHmk5oTS'>georgia tech</a>.
+subtitle: developer & student. cs @ <a href='https://directory.gatech.edu/directory/detail/Andrew/Boyer/ZnUPgG7TRJIo1QcqJFfjAfNGjE-Jf2zzmGiOToNIXG8YW6T9aPf9YRhnOHmk5oTS'>georgia tech</a>.
 
 profile:
   align: right
