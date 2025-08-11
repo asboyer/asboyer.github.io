@@ -6,8 +6,7 @@
     "image": "",
     "email": "asboyer.com@gmail.com",
     "phone": "",
-    "url": "https://asboyer.com",
-    "summary": "Interested in all things computers and math. I am always looking for an opportunity to explore interests, express creativity, and learn. ",
+    "summary": "Full-stack developer with passion for building scalable, efficient, and user-friendly applications.",
     "location": {
       "city": "Atlanta",
       "countryCode": "US",
@@ -141,14 +140,37 @@
       "name": "Stealth AI Startup",
       "position": "Software Engineering Intern",
       "startDate": "2025-01-06",
-      "highlights": [],
-      "summary": "",
+      "endDate": "2025-05-16",
+      "highlights": [
+        "Worked with team to build and maintain full-stack web app for reviewers verifying LLM extractions",
+        "Built LLM-based service to identify bounding boxes within document pipeline",
+        "Integrated app with EHR API"
+      ],
+      "summary": "React, Typescript, Python, PostgreSQL, Kubernetes, REST API, LLM",
       "location": "Cambridge, MA",
       "homepage_keyword": "Full-time",
       "homepage_description": "Software Engineering Intern",
       "homepage_title": "Stealth AI Startup",
-      "homepage": true,
+      "homepage": false,
       "img": "assets/img/roles/intern/stealth.png"
+    },
+    {
+      "name": "Amazon",
+      "position": "Software Development Intern",
+      "startDate": "2025-05-27",
+      "endDate": "2025-08-16",
+      "highlights": [
+        "Architected full-stack enterprise tool to automate workflows, with authenticated onboarding, monitoring, and OE.",
+        "Tool reduces operational overhead by 99.8%, saving $300,000 annually, built to scale with company-wide adoption."
+      ],
+      "summary": "Java, TypeScript, React, AWS, SQL, CDK, REST, CI/CD",
+      "location": "Dallas, TX",
+      "homepage_keyword": "Full-time",
+      "homepage_description": "Software Development Intern",
+      "homepage_title": "Amazon",
+      "homepage": true,
+      "url": "https://www.amazon.com/",
+      "img": "assets/img/roles/intern/amazon.png"
     }
   ],
   "education": [
@@ -175,7 +197,7 @@
       "homepage": true,
       "location": "Atlanta, GA",
       "img": "assets/img/roles/edu/gatech.png",
-      "redirect": "https://directory.gatech.edu/directory/detail/Andrew/Boyer?dn=ZnUPgG7TRJIo1QcqJFfjAfNGjE%2BJf2zzmGiOToNIXG8YW6T9aPf9YRhnOHmk5oTS"
+      "redirect": "https://directory.gatech.edu/directory/detail/Andrew/Boyer/ZnUPgG7TRJIo1QcqJFfjAfNGjE-Jf2zzmGiOToNIXG8YW6T9aPf9YRhnOHmk5oTS"
     },
     {
       "institution": "Arizona State University",
