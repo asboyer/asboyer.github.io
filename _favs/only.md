@@ -11,5 +11,4 @@ album_link: https://open.spotify.com/album/5GuWww4OaildzkmTTlfMN3
 album: Lahai
 released: 2023
 score: 96
-perfect: true
 ---
