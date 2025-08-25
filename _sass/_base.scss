@@ -1419,6 +1419,8 @@ ninja-keys::part(ninja-input-wrapper) {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .right-div {
@@ -1439,6 +1441,13 @@ ninja-keys::part(ninja-input-wrapper) {
 
 .right-div-2 {
   width: 230px;
+  flex-shrink: 0;
+}
+
+#smiv {
+  flex: 1;
+  max-width: calc(100% - 250px);
+  min-width: 300px;
 }
 
 .right-div-2 #date_width {
@@ -1476,10 +1485,12 @@ ninja-keys::part(ninja-input-wrapper) {
   }
   .top-div {
     display: block;
+    gap: 0;
   }
-  // #smiv {
-  //   width: 500px;
-  // }
+  #smiv {
+    max-width: 100%;
+    min-width: auto;
+  }
   #project_img_home {
     max-width: 100% !important;
     padding: 20px !important;
