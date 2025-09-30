@@ -6,7 +6,7 @@ subtitle: developer & student. cs @ <a href='https://directory.gatech.edu/direct
 
 profile:
   align: right
-  image: pictures/at_desk.png
+  image: pictures/headshot.png
   image_circular: false # crops the image to make it circular
   more_info: > #
     <p><a href="mailto:asboyer.com@gmail.com">asboyer<span id="link-text">.</span>com<span id="link-text">@</span>gmail<span id="link-text">.</span>com<a/></p>
