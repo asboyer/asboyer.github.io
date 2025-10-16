@@ -161,7 +161,7 @@ WHERE employee.salary > 3000;
 
 ---
 
-#### [MySQL](https://dev.mysql.com/downloads/mysql/) installation
+#### MySQL installation
 Install, set up and start server
 
 ```bash
