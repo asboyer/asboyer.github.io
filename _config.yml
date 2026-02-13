@@ -8,8 +8,8 @@ middle_name: S.
 last_name: Boyer
 email: #
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Hi, I'm Andrew Boyer and this is my personal website, asboyer.com.
-  Here you can find more about what I’m up to and what I find interesting.
+    Hi, I'm Andrew Boyer and this is my personal website, asboyer.com.
+    Here you can find more about what I’m up to and what I find interesting.
 footer_text: >
 keywords: andrew, boyer, asboyer, tech-blog, gatech, georiga-tech, wayland, boston # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -28,9 +28,9 @@ impressum_path: # set to path to include impressum link in the footer, use the s
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_trophies:
-  enabled: true
-  theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
-  theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
+    enabled: true
+    theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
+    theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 
 # -----------------------------------------------------------------------------
 # RSS Feed
@@ -130,26 +130,26 @@ permalink: /blog/:year/:title/
 
 # Pagination
 pagination:
-  enabled: true
+    enabled: true
 
 related_blog_posts:
-  enabled: true
-  max_related: 3
+    enabled: true
+    max_related: 3
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
-  repo: asboyer/asboyer.github.io # <your-github-user-name>/<your-github-repo-name>
-  repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
-  category: Comments # name of the category under which discussions will be created
-  category_id: # leave empty or specify your category_id (see https://giscus.app/)
-  mapping: title # identify discussions by post title
-  strict: 1 # use strict identification mode
-  reactions_enabled: 0 # enable (1) or disable (0) emoji reactions
-  input_position: bottom # whether to display input form below (bottom) or above (top) the comments
-  theme: preferred_color_scheme # name of the color scheme (preferred works well with al-folio light/dark mode)
-  emit_metadata: 0
-  lang: en
+    repo: asboyer/asboyer.github.io # <your-github-user-name>/<your-github-repo-name>
+    repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
+    category: Comments # name of the category under which discussions will be created
+    category_id: # leave empty or specify your category_id (see https://giscus.app/)
+    mapping: title # identify discussions by post title
+    strict: 1 # use strict identification mode
+    reactions_enabled: 0 # enable (1) or disable (0) emoji reactions
+    input_position: bottom # whether to display input form below (bottom) or above (top) the comments
+    theme: preferred_color_scheme # name of the color scheme (preferred works well with al-folio light/dark mode)
+    emit_metadata: 0
+    lang: en
 
 # Disqus comments (DEPRECATED)
 # disqus_shortname: al-folio # put your disqus shortname
@@ -167,49 +167,49 @@ giscus:
 # -----------------------------------------------------------------------------
 
 collections:
-  news:
-    defaults:
-      layout: post
-    output: true
-    permalink: /news/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
-  notes:
-    defaults:
-      layout: post
-    output: true
-    permalink: /notes/:path/
-  favs:
-    defaults:
-      layout: post
-    output: true
-    permalink: /favs/:categories/:path/
+    news:
+        defaults:
+            layout: post
+        output: true
+        permalink: /news/:path/
+    projects:
+        output: true
+        permalink: /projects/:path/
+    notes:
+        defaults:
+            layout: post
+        output: true
+        permalink: /notes/:path/
+    favs:
+        defaults:
+            layout: post
+        output: true
+        permalink: /favs/:categories/:path/
 
 announcements:
-  enabled: true
-  scrollable: false # adds a vertical scroll bar if there are more than 3 news items
-  limit: 3 # leave blank to include all the news in the `_news` folder
+    enabled: true
+    scrollable: false # adds a vertical scroll bar if there are more than 3 news items
+    limit: 3 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
-  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+    enabled: true
+    scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
+    limit: 3 # leave blank to include all the blog posts
 
 key_projects:
-  enabled: true
-  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+    enabled: true
+    scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
+    limit: 3 # leave blank to include all the blog posts
 
 latest_notes:
-  enabled: true
-  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 8 # leave blank to include all the blog posts
+    enabled: true
+    scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
+    limit: 8 # leave blank to include all the blog posts
 
 latest_favs:
-  enabled: true
-  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+    enabled: true
+    scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
+    limit: 3 # leave blank to include all the blog posts
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -219,77 +219,77 @@ latest_favs:
 markdown: kramdown
 highlighter: rouge
 kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    css_class: "highlight"
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-      start_line: 1
+    input: GFM
+    syntax_highlighter_opts:
+        css_class: "highlight"
+        span:
+            line_numbers: false
+        block:
+            line_numbers: false
+            start_line: 1
 
 # Includes & excludes
 include: ["_pages"]
 exclude:
-  - bin
-  - Gemfile
-  - Gemfile.lock
-  - vendor
+    - bin
+    - Gemfile
+    - Gemfile.lock
+    - vendor
 keep_files:
-  - CNAME
-  - .nojekyll
-  - .git
+    - CNAME
+    - .nojekyll
+    - .git
 
 # Plug-ins
 plugins:
-  - jekyll-archives
-  - jekyll-email-protect
-  - jekyll-feed
-  - jekyll-get-json
-  - jekyll-imagemagick
-  - jekyll-jupyter-notebook
-  - jekyll-link-attributes
-  - jekyll-minifier
-  - jekyll-paginate-v2
-  - jekyll/scholar
-  - jekyll-sitemap
-  - jekyll-toc
-  - jekyll-twitter-plugin
-  - jemoji
+    - jekyll-archives
+    - jekyll-email-protect
+    - jekyll-feed
+    - jekyll-get-json
+    - jekyll-imagemagick
+    - jekyll-jupyter-notebook
+    - jekyll-link-attributes
+    - jekyll-minifier
+    - jekyll-paginate-v2
+    - jekyll/scholar
+    - jekyll-sitemap
+    - jekyll-toc
+    - jekyll-twitter-plugin
+    - jemoji
 
 # Sitemap settings
 defaults:
-  - scope:
-      path: "assets"
-    values:
-      sitemap: false
+    - scope:
+          path: "assets"
+      values:
+          sitemap: false
 
 sass:
-  style: compressed
+    style: compressed
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js"]
-  uglifier_args:
-    harmony: true
+    exclude: ["robots.txt", "assets/js/search/*.js"]
+    uglifier_args:
+        harmony: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
 # -----------------------------------------------------------------------------
 
 jekyll-archives:
-  enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
-  layouts:
-    year: archive-year
-    tag: archive-tag
-    category: archive-category
-  permalinks:
-    year: "/blog/:year/"
-    tag: "/blog/tag/:name/"
-    category: "/blog/category/:name/"
+    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    layouts:
+        year: archive-year
+        tag: archive-tag
+        category: archive-category
+    permalinks:
+        year: "/blog/:year/"
+        tag: "/blog/tag/:name/"
+        category: "/blog/category/:name/"
 
 display_tags: ["code", "sierra-escape"] # these tags will be displayed on the front page of your blog
 display_categories: ["essays", "projects"] # these categories will be displayed on the front page of your blog
@@ -301,38 +301,38 @@ all_authors: ["andrew-boyer"]
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+    last_name: [Einstein]
+    first_name: [Albert, A.]
 
-  style: apa
-  locale: en
+    style: apa
+    locale: en
 
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-  # Note: if you have latex math in your bibtex, the latex filter
-  # preprocessing may conflict with MathJAX if the latter is enabled.
-  # See https://github.com/alshedivat/al-folio/issues/357.
-  bibtex_filters: [latex, smallcaps, superscript]
+    source: /_bibliography/
+    bibliography: papers.bib
+    bibliography_template: bib
+    # Note: if you have latex math in your bibtex, the latex filter
+    # preprocessing may conflict with MathJAX if the latter is enabled.
+    # See https://github.com/alshedivat/al-folio/issues/357.
+    bibtex_filters: [latex, smallcaps, superscript]
 
-  replace_strings: true
-  join_strings: true
+    replace_strings: true
+    join_strings: true
 
-  details_dir: bibliography
-  details_link: Details
+    details_dir: bibliography
+    details_link: Details
 
-  query: "@*"
-  group_by: year
-  group_order: descending
+    query: "@*"
+    group_by: year
+    group_order: descending
 
 # Display different badges withs stats for your publications
 enable_publication_badges:
-  altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
-  dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
+    altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
+    dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
-  [abbr, abstract, altmetric, arxiv, bibtex_show, blog, code, html, pdf, poster, preview, selected, slides, supp, video, website]
+    [abbr, abstract, altmetric, arxiv, bibtex_show, blog, code, html, pdf, poster, preview, selected, slides, supp, video, website]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
 max_author_limit: 3 # leave blank to always show all authors
@@ -347,10 +347,10 @@ enable_publication_thumbnails: true
 
 # These are the defaults
 external_links:
-  enabled: true
-  rel: external nofollow noopener
-  target: _blank
-  exclude:
+    enabled: true
+    rel: external nofollow noopener
+    target: _blank
+    exclude:
 
 # -----------------------------------------------------------------------------
 # Responsive WebP Images
@@ -359,21 +359,21 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
-  widths:
-    - 480
-    - 800
-    - 1400
-  input_directories:
-    - assets/img/
-  input_formats:
-    - ".jpg"
-    - ".jpeg"
-    - ".png"
-    - ".tiff"
-    - ".gif"
-  output_formats:
-    webp: "-quality 85"
+    enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+    widths:
+        - 480
+        - 800
+        - 1400
+    input_directories:
+        - assets/img/
+    input_formats:
+        - ".jpg"
+        - ".jpeg"
+        - ".png"
+        - ".tiff"
+        - ".gif"
+    output_formats:
+        webp: "-quality 85"
 
 # -----------------------------------------------------------------------------
 # Optional Features
@@ -397,41 +397,41 @@ enable_progressbar: true # enables a horizontal progress bar linked to the verti
 # -----------------------------------------------------------------------------
 
 bootstrap-table:
-  version: "1.22.1"
+    version: "1.22.1"
 jquery:
-  version: "3.6.0"
-  integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    version: "3.6.0"
+    integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 mathjax:
-  version: "3.2.0"
+    version: "3.2.0"
 masonry:
-  version: "4.2.2"
-  integrity: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+    version: "4.2.2"
+    integrity: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
 mdb:
-  version: "4.20.0"
-  integrity:
-    css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
-    js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+    version: "4.20.0"
+    integrity:
+        css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+        js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
 medium_zoom:
-  version: "1.0.8"
-  integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
+    version: "1.0.8"
+    integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
 
 # -----------------------------------------------------------------------------
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
 jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
+    - data: resume
+      json: assets/json/resume.json # it can also be an url
 jsonresume:
-  - basics
-  - work
-  - education
-  - publications
-  - projects
-  - volunteer
-  - awards
-  - certificates
-  - skills
-  - languages
-  - interests
-  - references
+    - basics
+    - work
+    - education
+    - publications
+    - projects
+    - volunteer
+    - awards
+    - certificates
+    - skills
+    - languages
+    - interests
+    - references
