@@ -17,7 +17,8 @@
                                 {% else %}
                                     <a href="{{ item.url | relative_url }}">
                                 {% endif %}
-                                {% include figure.liquid home=true path=item.img sizes="(min-width: 768px) 156px, 50vw" alt="{{ item.title }} image" %}
+                                {% assign img_alt = item.title | append: " image" %}
+                                {% include figure.liquid home=true path=item.img sizes="(min-width: 768px) 156px, 50vw" alt=img_alt %}
                                 {% if item.link %}
                                     </a>
                                 {% endif %}
