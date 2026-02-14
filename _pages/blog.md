@@ -76,7 +76,13 @@ pagination:
       <!-- TODO: fix the links, info it displays, like redirects and predicted length -->
       {% for post in featured_posts %}
         <div class="card-item col">
-          <a href="{{ post.url | relative_url }}">
+          {% if post.redirect == blank %}
+            <a href="{{ post.url | relative_url }}">
+          {% elsif post.redirect contains '://' %}
+            <a href="{{ post.redirect }}" target="_blank">
+          {% else %}
+            <a href="{{ post.redirect | relative_url }}">
+          {% endif %}
             <div class="card hoverable">
               <div class="row g-0">
                 <div class="col-md-12">
@@ -84,20 +90,29 @@ pagination:
                     <div class="float-right">
                       <i class="fa-solid fa-thumbtack fa-xs"></i>
                     </div>
-                    <h3 class="card-title text-lowercase">{{ post.title }}</h3>
+                    <h3 class="card-title">{{ post.title }}</h3>
                     <p class="card-text">{{ post.description }}</p>
 
                       {% if post.external_source == blank %}
                         {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
                       {% else %}
-                        {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+                        {% assign read_time = post.read_time %}
                       {% endif %}
                       {% assign year = post.date | date: "%Y" %}
 
                       <p class="post-meta">
                         {{ read_time }} min read &nbsp; &middot; &nbsp;
                         <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">
-                          <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
+                          <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
+                        </a>
+                        {% if post.external_source %}
+                          &nbsp; &middot; &nbsp; {{ post.external_source }}
+                          {% if post.redirect contains '://' %}
+                            <svg width="2rem" height="1.2rem" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          {% endif %}
+                        {% endif %}
                       </p>
                     </div>
                   </div>
