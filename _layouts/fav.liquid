@@ -138,7 +138,7 @@ layout: default
                         &nbsp; &middot; &nbsp;
                     {% endif %}
                 {% endif %}
-                {% if page.imdb_link and page.started %}
+                {% if page.imdb_link and page.started and page.stars == blank %}
                     {% if page.started or page.finished %}
                         &nbsp; &middot; &nbsp;
                     {% endif %}
@@ -171,6 +171,12 @@ layout: default
                     {% if page.star_link %}
                         </a>
                     {% endif %}
+                {% endif %}
+                {% if page.imdb_link and page.stars %}
+                    &nbsp; &middot; &nbsp;
+                    <a target="_blank" href="{{ page.imdb_link }}"
+                        ><i class="fa-brands fa-imdb fa-lg" style="color: var(--global-theme-color) !important"></i
+                    ></a>
                 {% endif %}
             </p>
         {% endif %}
