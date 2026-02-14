@@ -404,9 +404,21 @@ blockquote {
                 transition-property: all 0.2s ease-in-out;
             }
 
+            .substack-icon {
+                width: 0.85em;
+                height: 0.85em;
+                vertical-align: -0.05em;
+                fill: var(--global-text-color);
+                transition: fill 0.2s ease-in-out;
+            }
+
             &:hover {
                 i::before {
                     color: var(--global-theme-color);
+                }
+
+                .substack-icon {
+                    fill: var(--global-theme-color);
                 }
             }
         }
