@@ -132,6 +132,14 @@ layout: default
                         &nbsp; &middot; &nbsp;
                     {% endif %}
                 {% endif %}
+                {% if page.imdb_link and page.started %}
+                    {% if page.started or page.finished %}
+                        &nbsp; &middot; &nbsp;
+                    {% endif %}
+                    <a target="_blank" href="{{ page.imdb_link }}"
+                        ><i class="fa-brands fa-imdb fa-lg" style="color: var(--global-theme-color) !important"></i
+                    ></a>
+                {% endif %}
                 {% if page.stars %}
                     {% if page.star_link %}
                         <style>
