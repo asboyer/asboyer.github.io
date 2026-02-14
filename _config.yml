@@ -126,7 +126,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: boyer's blog # blog_name will be displayed in your blog page
-blog_description: all things asboyer
+blog_description: I believe writing is one of the most powerful tools we have to understand the world. Hopefully, through my writing, you can discover something new in technology, lifestyle, ideas, projects, or storytelling.
 permalink: /blog/:year/:title/
 
 # Pagination
