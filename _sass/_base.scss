@@ -630,6 +630,13 @@ footer.sticky-bottom {
             display: unset;
         }
     }
+
+    @media (max-width: 768px) {
+        li {
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+        }
+    }
 }
 
 .pagination {
