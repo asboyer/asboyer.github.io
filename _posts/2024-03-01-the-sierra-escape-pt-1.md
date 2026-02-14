@@ -21,6 +21,12 @@ authors:
     font-size: 1.2rem !important;
     line-height: 2.0 !important;
   }
+  @media (max-width: 768px) {
+    #markdown-content {
+      font-size: 1.1rem !important;
+      line-height: 1.8 !important;
+    }
+  }
 </style>
 
 <h2 style="text-align: center; margin-top: 30px">Prologue</h2>
