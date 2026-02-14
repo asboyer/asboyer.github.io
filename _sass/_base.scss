@@ -991,8 +991,13 @@ html.transition *:after {
 }
 
 #markdown-content {
-    font-size: 1.15rem !important;
-    line-height: 1.8 !important;
+    font-size: 1.18rem !important;
+    line-height: 1.7 !important;
+
+    @media (max-width: 768px) {
+        font-size: 1.075rem !important;
+        line-height: 1.6 !important;
+    }
 }
 
 #navbar {
