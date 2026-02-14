@@ -186,7 +186,9 @@ layout: default
                 </div>
                 <div class="col-md-6">
                     {% if page.warning %}
-                        <h3 class="author-note-title"><i id="note-icon-warning" class="fa-solid fa-triangle-exclamation"></i>&nbsp;a note from the author</h3>
+                        <h3 class="author-note-title">
+                            <i id="note-icon-warning" class="fa-solid fa-triangle-exclamation"></i>&nbsp;a note from the author
+                        </h3>
                         <div id="author-note-warning">{{ page.note }}</div>
                     {% else %}
                         <h3 class="author-note-title"><i id="note-icon" class="fas fa-sticky-note"></i>&nbsp;a note from the author</h3>
@@ -201,7 +203,9 @@ layout: default
             {% endif %}
             {% if page.note %}
                 {% if page.warning %}
-                    <h3 class="author-note-title"><i id="note-icon-warning" class="fa-solid fa-triangle-exclamation"></i>&nbsp;a note from the author</h3>
+                    <h3 class="author-note-title">
+                        <i id="note-icon-warning" class="fa-solid fa-triangle-exclamation"></i>&nbsp;a note from the author
+                    </h3>
                     <div id="author-note-warning">{{ page.note }}</div>
                 {% else %}
                     <h3 class="author-note-title"><i id="note-icon" class="fas fa-sticky-note"></i>&nbsp;a note from the author</h3>
