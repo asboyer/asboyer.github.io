@@ -8,7 +8,7 @@ released: 2022
 img: assets/img/favs/shows/the_bear.jpg
 categories: shows
 link: https://www.imdb.com/title/tt14452776/
-score: 8.2
+score: 7
 ---
 
 I'd heard a lot of praise about this show, and had seen a few clips, but really had no idea what it would be when I started it. The first season was masterful in the way it set the scene, developed the characters, and came to a resolution/full-circle moment.
