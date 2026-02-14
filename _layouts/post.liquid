@@ -18,6 +18,9 @@ layout: default
 <div class="post">
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+            <p class="post-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
         <p class="post-meta">
             {% if page.author %}{{ page.author }}{% endif %}
             {%- if page.multi_date -%}
