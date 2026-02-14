@@ -1,5 +1,5 @@
 <table class="table table-cv table-sm table-borderless table-responsive table-cv-map">
-    {% assign skip_basics = 'image,profiles,location' | split: ',' %}
+    {% assign skip_basics = 'image,profiles,location,email_domain,email_tld' | split: ',' %}
     {% for content in data[1] %}
         {%
             if (content[1] == "") or (skip_basics contains
@@ -10,13 +10,22 @@
 
         <tr>
             <td class="p-1 pr-2 font-weight-bold">
-                <b>{{ content[0] | capitalize }}</b>
+                <b>
+                    {%- if content[0] == 'email_user' %}Email{% else %}{{ content[0] | capitalize }}{% endif -%}
+                </b>
             </td>
             <td class="p-1 pl-2 font-weight-light text">
                 {% if content[0] == 'url' %}
                     <a href="{{ content[1] }}" target="_blank" rel="noopener noreferrer">{{ content[1] }}</a>
-                {% elsif content[0] == 'email' %}
-                    <a href="mailto:{{ content[1] }}" target="_blank">{{ content[1] }}</a>
+                {% elsif content[0] == 'email_user' %}
+                    {% assign eu = content[1] %}
+                    {% assign ed_name = data[1].email_domain %}
+                    {% assign ed_tld = data[1].email_tld %}
+                    {% assign ed = ed_name | append: '.' | append: ed_tld %}
+                    <span class="email-copy" data-eu="{{ eu }}" data-ed="{{ ed }}"
+                        ><span class="email-text">{{ eu }}</span><span class="email-sep"> [at] </span><span class="email-text">{{ ed_name }}</span
+                        ><span class="email-sep"> [dot] </span><span class="email-text">{{ ed_tld }}</span></span
+                    >
                 {% elsif content[0] == 'phone' %}
                     <a href="tel:{{ content[1] }}">{{ content[1] }}</a>
                 {% else %}

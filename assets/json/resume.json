@@ -4,7 +4,9 @@
         "name": "Andrew Boyer",
         "label": "CS @ Georgia Tech",
         "image": "",
-        "email": "asboyer@gmail.com",
+        "email_user": "asboyer",
+        "email_domain": "gmail",
+        "email_tld": "com",
         "phone": "",
         "summary": "Full-stack developer with passion for building scalable, efficient, and user-friendly applications.",
         "location": {
