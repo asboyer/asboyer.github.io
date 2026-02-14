@@ -953,6 +953,12 @@ html.transition *:after {
 
 // Extra Markdown style (post Customization)
 .post {
+    .post-related {
+        li {
+            list-style-position: inside;
+        }
+    }
+
     .post-meta {
         color: var(--global-text-color-light);
         font-size: 1rem;
@@ -1549,5 +1555,55 @@ ninja-keys::part(ninja-input-wrapper) {
     }
     #width-resume {
         display: none;
+    }
+}
+
+// Post subtitle
+.post-subtitle {
+    color: var(--global-text-color);
+    opacity: 0.55;
+    font-size: 1.1rem;
+    margin-top: -0.4rem;
+    margin-bottom: 1rem;
+}
+
+// Email copy
+.email-copy {
+    cursor: pointer;
+
+    .email-text {
+        color: var(--global-theme-color);
+    }
+
+    .email-sep {
+        color: var(--global-text-color);
+    }
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--global-hover-color);
+
+        .email-text {
+            color: var(--global-hover-color);
+        }
+    }
+}
+
+#email-copied-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    z-index: 9999;
+    transition: transform 0.25s ease;
+    pointer-events: none;
+
+    &.show {
+        transform: translateX(-50%) translateY(0);
     }
 }
