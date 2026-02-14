@@ -544,12 +544,25 @@ footer.sticky-bottom {
         color: var(--global-theme-color);
         font-size: 5rem;
     }
+
+    .blog-description {
+        color: var(--global-text-color-light);
+        font-size: 1rem;
+        // margin-top: -0.75rem;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
 }
 
 .tag-category-list {
     border-bottom: 1px solid var(--global-divider-color);
     text-align: center;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 
     ul {
         justify-content: center;
@@ -559,8 +572,18 @@ footer.sticky-bottom {
         li {
             list-style: none;
             display: inline-block;
-            padding: 1rem 0.5rem;
+            padding: 0.25rem 0.5rem;
+            margin: 0;
             color: var(--global-text-color-light);
+        }
+    }
+
+    @media (max-width: 768px) {
+        ul {
+            p,
+            li {
+                padding: 0.1rem 0.5rem;
+            }
         }
     }
 }
