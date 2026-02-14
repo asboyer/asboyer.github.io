@@ -115,8 +115,14 @@ layout: default
                 {% include scripts/category-icon.liquid category=category %}
                 <a href="{{ category | slugify | prepend: '/favs/' | relative_url }}">{{ category }}</a>
             {% endfor %}
+            {% if page.imdb_link and page.started == blank and page.finished == blank %}
+                &nbsp; &middot; &nbsp;
+                <a target="_blank" href="{{ page.imdb_link }}"
+                    ><i class="fa-brands fa-imdb fa-lg" style="color: var(--global-theme-color) !important"></i
+                ></a>
+            {% endif %}
         </p>
-        {% if page.started or page.finished or page.stars %}
+        {% if page.started or page.finished or page.stars or page.imdb_link %}
             <p class="post-tags" style="font-size: .875em; padding-bottom: 0px !important">
                 {% if page.started %}
                     <i class="fa-solid fa-play fa-sm" style="color: var(--global-tip-block) !important"></i> <em>{{ page.started }}</em>
@@ -131,6 +137,14 @@ layout: default
                     {% if page.stars %}
                         &nbsp; &middot; &nbsp;
                     {% endif %}
+                {% endif %}
+                {% if page.imdb_link and page.started and page.stars == blank %}
+                    {% if page.started or page.finished %}
+                        &nbsp; &middot; &nbsp;
+                    {% endif %}
+                    <a target="_blank" href="{{ page.imdb_link }}"
+                        ><i class="fa-brands fa-imdb fa-lg" style="color: var(--global-theme-color) !important"></i
+                    ></a>
                 {% endif %}
                 {% if page.stars %}
                     {% if page.star_link %}
@@ -158,32 +172,51 @@ layout: default
                         </a>
                     {% endif %}
                 {% endif %}
+                {% if page.imdb_link and page.stars %}
+                    &nbsp; &middot; &nbsp;
+                    <a target="_blank" href="{{ page.imdb_link }}"
+                        ><i class="fa-brands fa-imdb fa-lg" style="color: var(--global-theme-color) !important"></i
+                    ></a>
+                {% endif %}
             </p>
         {% endif %}
         <hr>
     </header>
 
     <article class="post-content">
-        {% if page.admin_note %}
-            <h3 class="author-note-title"><i id="note-icon" class="fas fa-at"></i>&nbsp;a note from asboyer</h3>
-            <div id="author-note">
-                {{ page.admin_note }}
-            </div>
-        {% endif %}
         {% if page.admin_note and page.note %}
-            <span style="margin: 5px"></span>
-        {% endif %}
-        {% if page.note %}
-            {% if page.warning %}
-                <h3 class="author-note-title"><i id="note-icon-warning" class="fa-solid fa-triangle-exclamation"></i>&nbsp;a note from the author</h3>
-                <div id="author-note-warning">
-                    {{ page.note }}
+            <div class="row g-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h3 class="author-note-title"><i id="note-icon" class="fas fa-at"></i>&nbsp;a note from asboyer</h3>
+                    <div id="author-note">{{ page.admin_note }}</div>
                 </div>
-            {% else %}
-                <h3 class="author-note-title"><i id="note-icon" class="fas fa-sticky-note"></i>&nbsp;a note from the author</h3>
-                <div id="author-note">
-                    {{ page.note }}
+                <div class="col-md-6">
+                    {% if page.warning %}
+                        <h3 class="author-note-title">
+                            <i id="note-icon-warning" class="fa-solid fa-triangle-exclamation"></i>&nbsp;a note from the author
+                        </h3>
+                        <div id="author-note-warning">{{ page.note }}</div>
+                    {% else %}
+                        <h3 class="author-note-title"><i id="note-icon" class="fas fa-sticky-note"></i>&nbsp;a note from the author</h3>
+                        <div id="author-note">{{ page.note }}</div>
+                    {% endif %}
                 </div>
+            </div>
+        {% else %}
+            {% if page.admin_note %}
+                <h3 class="author-note-title"><i id="note-icon" class="fas fa-at"></i>&nbsp;a note from asboyer</h3>
+                <div id="author-note">{{ page.admin_note }}</div>
+            {% endif %}
+            {% if page.note %}
+                {% if page.warning %}
+                    <h3 class="author-note-title">
+                        <i id="note-icon-warning" class="fa-solid fa-triangle-exclamation"></i>&nbsp;a note from the author
+                    </h3>
+                    <div id="author-note-warning">{{ page.note }}</div>
+                {% else %}
+                    <h3 class="author-note-title"><i id="note-icon" class="fas fa-sticky-note"></i>&nbsp;a note from the author</h3>
+                    <div id="author-note">{{ page.note }}</div>
+                {% endif %}
             {% endif %}
         {% endif %}
         {% if page.note or page.admin_note %}

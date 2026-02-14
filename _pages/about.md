@@ -9,8 +9,8 @@ profile:
   image: pictures/generated_headshot.jpeg
   image_circular: false # crops the image to make it circular
   more_info: > #
-    <p><a href="mailto:asboyer.com@gmail.com">asboyer<span id="link-text">.</span>com<span id="link-text">@</span>gmail<span id="link-text">.</span>com<a/></p>
-    <p>Computer Science, B.S.</p>
+    <p><span class="email-copy" data-eu="asboyer" data-ed="gmail.com" style="font-size: 0.85rem;"><span class="email-text">asboyer</span><span class="email-sep"> [at] </span><span class="email-text">gmail</span><span class="email-sep"> [dot] </span><span class="email-text">com</span></span></p>
+    <p style="font-size: 0.85rem;">Computer Science, B.S.</p>
 
 news: true # includes a list of news items
 latest_posts: true # includes a list of the newest posts

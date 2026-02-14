@@ -1,4 +1,36 @@
+function showCopiedToast() {
+    var toast = document.getElementById("email-copied-toast");
+    if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "email-copied-toast";
+        toast.textContent = "copied to clipboard";
+        document.body.appendChild(toast);
+    }
+    toast.classList.add("show");
+    setTimeout(function () {
+        toast.classList.remove("show");
+    }, 1800);
+}
+
 $(document).ready(function () {
+    $(".email-copy").on("click", function () {
+        var eu = $(this).data("eu");
+        var ed = $(this).data("ed");
+        var email = eu + "@" + ed;
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(email).then(showCopiedToast);
+        } else {
+            var ta = document.createElement("textarea");
+            ta.value = email;
+            ta.style.cssText = "position:fixed;opacity:0";
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            document.body.removeChild(ta);
+            showCopiedToast();
+        }
+    });
+
     // add toggle functionality to abstract and bibtex buttons
     $("a.abstract").click(function () {
         $(this).parent().parent().find(".abstract.hidden").toggleClass("open");

@@ -4,7 +4,9 @@
         "name": "Andrew Boyer",
         "label": "CS @ Georgia Tech",
         "image": "",
-        "email": "asboyer.com@gmail.com",
+        "email_user": "asboyer",
+        "email_domain": "gmail",
+        "email_tld": "com",
         "phone": "",
         "summary": "Full-stack developer with passion for building scalable, efficient, and user-friendly applications.",
         "location": {
@@ -137,7 +139,7 @@
             "redirect": "https://www.cc.gatech.edu/tutoring-assistance"
         },
         {
-            "name": "Stealth AI Startup",
+            "name": "Ashvin AI",
             "position": "Software Engineering Intern",
             "startDate": "2025-01-06",
             "endDate": "2025-05-16",
@@ -150,9 +152,10 @@
             "location": "Cambridge, MA",
             "homepage_keyword": "Full-time",
             "homepage_description": "Software Engineering Intern",
-            "homepage_title": "Stealth AI Startup",
+            "homepage_title": "Ashvin AI",
             "homepage": false,
-            "img": "assets/img/roles/intern/stealth.png"
+            "img": "assets/img/roles/intern/ashvin.png",
+            "url": "https://ashvin.ai/"
         },
         {
             "name": "Amazon",

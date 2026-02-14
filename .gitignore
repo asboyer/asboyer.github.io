@@ -13,3 +13,4 @@ secret.py
 .cache
 __pycache__/
 _drafts/
+.vscode/
