@@ -79,11 +79,14 @@ if args.category in ['movies', 'shows']:
     r = requests.get(args.link, headers=headers)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, 'html.parser')
-    title = soup.find('meta', property='og:title')['content'].split(' (')[0].strip()
+    og_title = soup.find('meta', property='og:title')['content']
+    title = og_title.split(' (')[0].strip()
+    released = og_title.split('(')[-1].split(')')[0].strip() if '(' in og_title else ''
     args.link = soup.find('meta', property='og:image')['content']
     args.image_name = title.lower().replace(" ", "_") + '.jpg'
     director_tag = soup.find('meta', attrs={'name': 'description'})
     creator = director_tag['content'].split('Directed by ')[-1].split('.')[0].strip() if director_tag and 'Directed by' in director_tag.get('content', '') else 'Unknown'
+    extra_field += f'\nreleased: {released}' if released else ''
 
 # Download the image
 response = requests.get(args.link, stream=True)
