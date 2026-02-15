@@ -142,3 +142,19 @@ description: favorite {category}s of {year}
 
 with open(f"_pages/{args.category}-{datetime.now().strftime('%Y')}.md", 'w') as f:
     f.write(markdown_content)
+
+year = datetime.now().strftime('%Y')
+favs_year_path = f'_pages/favs_{year}.md'
+if not os.path.exists(favs_year_path):
+    markdown_content = '''---
+layout: page
+title: favs from {year}
+permalink: /favs/{year}/
+description: favorite things from {year}
+year: "{year}"
+---
+
+{{% include archive_list.liquid archive="{year}" %}}
+'''.format(year=year)
+    with open(favs_year_path, 'w') as f:
+        f.write(markdown_content)
