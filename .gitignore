@@ -14,3 +14,4 @@ secret.py
 __pycache__/
 _drafts/
 .vscode/
+.claudeignore
