@@ -7,4 +7,7 @@ creator: Woody Allen
 img: assets/img/favs/movies/match_point.jpg
 categories: movies
 link: https://www.imdb.com/title/tt0416320/
+perfect: true
+stars: 4.5
+started: 2026-02-13
 ---
