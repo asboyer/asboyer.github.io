@@ -12,6 +12,7 @@ started: 2024-05-27
 finished: 2024-06-10
 stars: 4.5
 released: 2022
+perfect: true
 star_link: https://www.goodreads.com/review/show/6575621209
 opener: |
 ---
