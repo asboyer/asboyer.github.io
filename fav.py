@@ -7,8 +7,6 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from secret import client_id, client_secret
 
-import imdb
-
 from datetime import datetime
 today = datetime.now().strftime('%Y-%m-%d')
 
@@ -72,18 +70,23 @@ if args.category in ['albums', 'songs', 'playlists', 'artists']:
     args.image_name = title.lower().replace(" ", "_") + '.jpeg'
 
 if args.category in ['movies', 'shows']:
-    ia = imdb.IMDb()
+    from bs4 import BeautifulSoup
     link = args.link
-    movie_id = args.link.split('/')[-2][2:]
-    movie = ia.get_movie(movie_id)
-    args.link = movie['full-size cover url']
-    args.image_name = movie['title'].lower().replace(" ", "_") + '.jpg'
-    title = movie['title']
-
-    if 'director' in movie:
-        creator = ', '.join([person['name'] for person in movie['director']])
-    elif 'creator' in movie:
-        creator = ', '.join([person['name'] for person in movie['creator']])
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept-Language': 'en-US,en;q=0.9'
+    }
+    r = requests.get(args.link, headers=headers)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, 'html.parser')
+    og_title = soup.find('meta', property='og:title')['content']
+    title = og_title.split(' (')[0].strip()
+    released = og_title.split('(')[-1].split(')')[0].strip() if '(' in og_title else ''
+    args.link = soup.find('meta', property='og:image')['content']
+    args.image_name = title.lower().replace(" ", "_") + '.jpg'
+    director_tag = soup.find('meta', attrs={'name': 'description'})
+    creator = director_tag['content'].split('Directed by ')[-1].split('.')[0].strip() if director_tag and 'Directed by' in director_tag.get('content', '') else 'Unknown'
+    extra_field += f'\nreleased: {released}' if released else ''
 
 # Download the image
 response = requests.get(args.link, stream=True)
@@ -142,3 +145,19 @@ description: favorite {category}s of {year}
 
 with open(f"_pages/{args.category}-{datetime.now().strftime('%Y')}.md", 'w') as f:
     f.write(markdown_content)
+
+year = datetime.now().strftime('%Y')
+favs_year_path = f'_pages/favs_{year}.md'
+if not os.path.exists(favs_year_path):
+    markdown_content = '''---
+layout: page
+title: favs from {year}
+permalink: /favs/{year}/
+description: favorite things from {year}
+year: "{year}"
+---
+
+{{% include archive_list.liquid archive="{year}" %}}
+'''.format(year=year)
+    with open(favs_year_path, 'w') as f:
+        f.write(markdown_content)
