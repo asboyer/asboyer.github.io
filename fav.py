@@ -10,13 +10,25 @@ from secret import client_id, client_secret
 from datetime import datetime
 today = datetime.now().strftime('%Y-%m-%d')
 
+# Separate key=value overrides from positional args before argparse
+import sys
+raw_args = sys.argv[1:]
+positional = []
+field_overrides = {}
+for arg in raw_args:
+    if '=' in arg and not arg.startswith('http'):
+        key, value = arg.split('=', 1)
+        field_overrides[key] = value
+    else:
+        positional.append(arg)
+
 # Set up command-line argument parsing
 parser = argparse.ArgumentParser(description='Download an image and move it to a specific directory.')
 parser.add_argument('link', type=str, help='The URL of the image to download.')
 parser.add_argument('category', type=str, help='The category of the image.')
 parser.add_argument('image_name', type=str, nargs='?', default='default.jpg', help='The name to give to the image.')
 
-args = parser.parse_args()
+args = parser.parse_args(positional)
 
 title = "a favorite " + args.category
 creator = "creator of the " + args.category
@@ -63,9 +75,14 @@ if args.category in ['albums', 'songs', 'playlists', 'artists']:
         args.link = result['album']['images'][0]['url']
         extra_field = f'\nalbum_link: {result["album"]["external_urls"]["spotify"]}'
         extra_field += f'\nalbum: {result["album"]["name"]}'
+        release_date = result['album'].get('release_date', '')
     else:
         args.link = result['images'][0]['url']
-    
+        release_date = result.get('release_date', '')
+
+    if release_date:
+        extra_field += f'\nreleased: {release_date[:4]}'
+
     title = result['name'].replace(".", "").replace("(", "").replace(")", "").replace("/", "")
     args.image_name = title.lower().replace(" ", "_") + '.jpeg'
 
@@ -103,18 +120,89 @@ shutil.move('/tmp/temp_image', f'{destination_dir}/{args.image_name}')
 
 markdown_file_path = os.path.join("_favs", args.image_name.split('.')[0] + '.md')
 
-# Create the markdown content
-markdown_content = '''---
-layout: fav
-date: {date}
-author: Andrew Boyer
-title: {title}
-creator: {creator}
-img: assets/img/favs/{category}/{image_name}
-categories: {category}
-link: {link}{extra_field}
----
-'''.format(date=today, title=title, creator=creator, image_name=args.image_name, link=link, category=args.category, extra_field=extra_field)
+# Build category-specific fields
+fields = []
+fields.append(f'layout: fav')
+fields.append(f'date: {today}')
+fields.append(f'author: Andrew Boyer')
+fields.append(f'title: {title}')
+fields.append(f'creator: {creator}')
+fields.append(f'img: assets/img/favs/{args.category}/{args.image_name}')
+fields.append(f'categories: {args.category}')
+fields.append(f'link: {link}')
+
+if args.category in ['movies', 'shows']:
+    fields.append(f'released: {extra_field.split("released: ")[-1].strip()}' if 'released' in extra_field else 'released:')
+    fields.append('started:')
+    fields.append('finished:')
+    fields.append('stars:')
+    fields.append('star_link:')
+    fields.append('imdb_link:')
+    fields.append('perfect:')
+    fields.append('opener: |')
+elif args.category == 'books':
+    fields.append('released:')
+    fields.append('started:')
+    fields.append('finished:')
+    fields.append('stars:')
+    fields.append('star_link:')
+    fields.append('perfect:')
+    fields.append('opener: |')
+elif args.category == 'albums':
+    fields.append(f'released: {extra_field.split("released: ")[-1].strip()}' if 'released' in extra_field else 'released:')
+    fields.append('score:')
+    fields.append('vinyl:')
+    fields.append('vinyl_link:')
+    fields.append('perfect:')
+elif args.category == 'songs':
+    if 'album_link' in extra_field:
+        for line in extra_field.strip().split('\n'):
+            line = line.strip()
+            if line and not line.startswith('released:'):
+                fields.append(line)
+    else:
+        fields.append('album:')
+        fields.append('album_link:')
+    fields.append(f'released: {extra_field.split("released: ")[-1].strip()}' if 'released' in extra_field else 'released:')
+    fields.append('score:')
+    fields.append('vinyl:')
+    fields.append('perfect:')
+elif args.category == 'playlists':
+    fields.append('perfect:')
+else:
+    fields.append('perfect:')
+    fields.append('opener: |')
+
+# Apply field overrides
+for i, field in enumerate(fields):
+    key = field.split(':')[0]
+    if key in field_overrides:
+        fields[i] = f'{key}: {field_overrides[key]}'
+
+# Auto-set perfect based on score/stars thresholds
+perfect_thresholds = {
+    'songs': ('score', 95),
+    'albums': ('score', 9.5),
+    'books': ('stars', 4.5),
+    'movies': ('stars', 4.5),
+    'shows': ('score', 9),
+}
+if args.category in perfect_thresholds:
+    rating_field, threshold = perfect_thresholds[args.category]
+    for field in fields:
+        if field.startswith(f'{rating_field}:'):
+            val = field.split(':', 1)[1].strip()
+            if val:
+                try:
+                    if float(val) >= threshold:
+                        for j, f in enumerate(fields):
+                            if f.startswith('perfect:'):
+                                fields[j] = 'perfect: true'
+                except ValueError:
+                    pass
+            break
+
+markdown_content = '---\n' + '\n'.join(fields) + '\n---\n'
 
 # Write the markdown content to the file
 with open(markdown_file_path, 'w') as f:
@@ -136,12 +224,12 @@ with open(f'_pages/{args.category}.md', 'w') as f:
 markdown_content = '''---
 layout: page
 title: {year} {category} list
-permalink: /favs/{year}/{category}/
-description: favorite {category}s of {year}
+permalink: /favs/{year}/{categories}/
+description: favorite {categories} of {year}
 ---
 
-{{% include archive_list.liquid category="{category}s" archive="{year}" %}}
-'''.format(category=args.category[:-1], year=datetime.now().strftime('%Y'))
+{{% include archive_list.liquid category="{categories}" archive="{year}" %}}
+'''.format(category=args.category[:-1], categories=args.category, year=datetime.now().strftime('%Y'))
 
 with open(f"_pages/{args.category}-{datetime.now().strftime('%Y')}.md", 'w') as f:
     f.write(markdown_content)
