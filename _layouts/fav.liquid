@@ -32,12 +32,32 @@ layout: default
         {% if page.released %}
             <em>{{ page.released }}</em>
         {% endif %}
-        {% if page.creator or page.released %}
+        {% if page.published %}
+            {% if page.creator or page.released %}&nbsp;&middot;&nbsp;{% endif %}
+            <em>{{ page.published }}</em>
+        {% endif %}
+        {% if page.publication %}
+            {% if page.creator or page.released or page.published %}&nbsp;&middot;&nbsp;{% endif %}
+            {% include scripts/platform-icon.liquid url=page.link %}
+            <i class="{{ platform_icon }}"></i> <a href="{{ page.link }}" target="_blank">{{ page.publication }}</a>
+        {% endif %}
+        {% if page.season and page.episode %}
+            {% if page.creator or page.released %}&nbsp;&middot;&nbsp;{% endif %}
+            S{{ page.season }}E{{ page.episode }}
+        {% endif %}
+        {% if page.creator or page.released or page.published or page.publication %}
             {% if page.location %}&nbsp;&middot;&nbsp;{% endif -%}
         {%- endif %}
-        {% if page.creator or page.released -%}
-            {%- if page.album %}&nbsp;&middot;&nbsp;{% endif -%}
+        {% if page.creator or page.released or page.published or page.publication or page.season -%}
+            {%- if page.album or page.show %}&nbsp;&middot;&nbsp;{% endif -%}
         {%- endif %}
+        {% if page.show %}
+            {% if page.show_link %}
+                <i class="fa-brands fa-imdb"></i> <a href="{{ page.show_link }}" target="_blank">{{ page.show }}</a>
+            {% else %}
+                <i class="fa-solid fa-tv"></i> {{ page.show }}
+            {% endif %}
+        {% endif %}
         {% if page.album %}
             {% if page.album_link %}
                 {% include scripts/platform-icon.liquid url=page.album_link %}

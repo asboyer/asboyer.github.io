@@ -33,9 +33,23 @@
             style="{{ include.styles }}"
         {%- endif -%}
     ></i>
+{%- elsif include.category == 'episodes' -%}
+    <i
+        class="fa-solid fa-tv"
+        {% if include.styles -%}
+            style="{{ include.styles }}"
+        {%- endif -%}
+    ></i>
 {%- elsif include.category contains 'show' -%}
     <i
         class="fa-solid fa-tv"
+        {% if include.styles -%}
+            style="{{ include.styles }}"
+        {%- endif -%}
+    ></i>
+{%- elsif include.category == 'videos' -%}
+    <i
+        class="fa-solid fa-video"
         {% if include.styles -%}
             style="{{ include.styles }}"
         {%- endif -%}
