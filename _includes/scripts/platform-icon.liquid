@@ -1,0 +1,9 @@
+{% if include.url contains 'spotify' %}
+    {% assign platform_icon = 'fa-brands fa-spotify' %}
+{% elsif include.url contains 'soundcloud' %}
+    {% assign platform_icon = 'fa-brands fa-soundcloud' %}
+{% elsif include.url contains 'youtube' or include.url contains 'youtu.be' %}
+    {% assign platform_icon = 'fa-brands fa-youtube' %}
+{% else %}
+    {% assign platform_icon = 'fa-solid fa-link' %}
+{% endif %}

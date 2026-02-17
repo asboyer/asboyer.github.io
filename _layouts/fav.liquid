@@ -40,15 +40,8 @@ layout: default
         {%- endif %}
         {% if page.album %}
             {% if page.album_link %}
-                {% if page.album_link contains 'spotify' %}
-                    {% assign icon = 'fa-brands fa-spotify' %}
-                {% elsif page.album_link contains 'soundcloud' %}
-                    {% assign icon = 'fa-brands fa-soundcloud' %}
-                {% elsif page.album_link contains 'youtube' %}
-                    {% assign icon = 'fa-brands fa-youtube' %}
-                {% else %}
-                    {% assign icon = 'fa-solid fa-link' %}
-                {% endif %}
+                {% include scripts/platform-icon.liquid url=page.album_link %}
+                {% assign icon = platform_icon %}
                 <i class="{{ icon }}"></i> <a href="{{ page.album_link }}" target="_blank">{{ page.album -}}</a>
             {% else %}
                 {% assign exist_album = true %}
