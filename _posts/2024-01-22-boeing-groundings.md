@@ -47,7 +47,7 @@ Secondly, in both situations, there was a clear failure to eliminate root causes
 
 {::nomarkdown}
 
-<div class="profile float-right">
+<div class="profile float-right mobile-small">
 {% assign profile_image_path = 'therac.jpg' | prepend: 'assets/img/blog/' %}
 {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
 {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}

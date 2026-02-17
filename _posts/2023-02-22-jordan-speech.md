@@ -34,7 +34,7 @@ Another appeal to pathos and a key point throughout his speech is Jordan’s des
 
 {::nomarkdown}
 
-<div class="profile float-right">
+<div class="profile float-right mobile-small">
   {% assign profile_image_path = 'kobe.jpeg' | prepend: 'assets/img/blog/' %}
   {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
   {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.75}}px, (min-width: 576px) 40vw, 95vw"{% endcapture %}

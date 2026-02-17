@@ -237,6 +237,16 @@ blockquote {
     }
 }
 
+@media (max-width: 575px) {
+    .profile.mobile-small {
+        float: none;
+        width: 100%;
+        padding: 0 20%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .post-description {
     margin-bottom: 1rem;
     // margin-bottom: 0px !important;
