@@ -63,9 +63,14 @@ if args.category in ['albums', 'songs', 'playlists', 'artists']:
         args.link = result['album']['images'][0]['url']
         extra_field = f'\nalbum_link: {result["album"]["external_urls"]["spotify"]}'
         extra_field += f'\nalbum: {result["album"]["name"]}'
+        release_date = result['album'].get('release_date', '')
     else:
         args.link = result['images'][0]['url']
-    
+        release_date = result.get('release_date', '')
+
+    if release_date:
+        extra_field += f'\nreleased: {release_date[:4]}'
+
     title = result['name'].replace(".", "").replace("(", "").replace(")", "").replace("/", "")
     args.image_name = title.lower().replace(" ", "_") + '.jpeg'
 
@@ -103,18 +108,60 @@ shutil.move('/tmp/temp_image', f'{destination_dir}/{args.image_name}')
 
 markdown_file_path = os.path.join("_favs", args.image_name.split('.')[0] + '.md')
 
-# Create the markdown content
-markdown_content = '''---
-layout: fav
-date: {date}
-author: Andrew Boyer
-title: {title}
-creator: {creator}
-img: assets/img/favs/{category}/{image_name}
-categories: {category}
-link: {link}{extra_field}
----
-'''.format(date=today, title=title, creator=creator, image_name=args.image_name, link=link, category=args.category, extra_field=extra_field)
+# Build category-specific fields
+fields = []
+fields.append(f'layout: fav')
+fields.append(f'date: {today}')
+fields.append(f'author: Andrew Boyer')
+fields.append(f'title: {title}')
+fields.append(f'creator: {creator}')
+fields.append(f'img: assets/img/favs/{args.category}/{args.image_name}')
+fields.append(f'categories: {args.category}')
+fields.append(f'link: {link}')
+
+if args.category in ['movies', 'shows']:
+    fields.append(f'released: {extra_field.split("released: ")[-1].strip()}' if 'released' in extra_field else 'released:')
+    fields.append('started:')
+    fields.append('finished:')
+    fields.append('stars:')
+    fields.append('star_link:')
+    fields.append('imdb_link:')
+    fields.append('perfect:')
+    fields.append('opener: |')
+elif args.category == 'books':
+    fields.append('released:')
+    fields.append('started:')
+    fields.append('finished:')
+    fields.append('stars:')
+    fields.append('star_link:')
+    fields.append('perfect:')
+    fields.append('opener: |')
+elif args.category == 'albums':
+    fields.append(f'released: {extra_field.split("released: ")[-1].strip()}' if 'released' in extra_field else 'released:')
+    fields.append('score:')
+    fields.append('vinyl:')
+    fields.append('vinyl_link:')
+    fields.append('perfect:')
+elif args.category == 'songs':
+    if 'album_link' in extra_field:
+        for line in extra_field.strip().split('\n'):
+            line = line.strip()
+            if line and not line.startswith('released:'):
+                fields.append(line)
+    else:
+        fields.append('album:')
+        fields.append('album_link:')
+    fields.append(f'released: {extra_field.split("released: ")[-1].strip()}' if 'released' in extra_field else 'released:')
+    fields.append('score:')
+    fields.append('vinyl:')
+    fields.append('perfect:')
+elif args.category == 'playlists':
+    fields.append('perfect:')
+else:
+    fields.append('perfect:')
+    fields.append('opener: |')
+
+markdown_content = '---\n' + '\n'.join(fields) + '\n---\n'
 
 # Write the markdown content to the file
 with open(markdown_file_path, 'w') as f:
