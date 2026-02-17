@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 2026 movie list
-permalink: /favs/2026/movie/
+permalink: /favs/2026/movies/
 description: favorite movies of 2026
 ---
 

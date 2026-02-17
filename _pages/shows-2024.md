@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 2024 show list
-permalink: /favs/2024/show/
+permalink: /favs/2024/shows/
 description: favorite shows of 2024
 ---
 

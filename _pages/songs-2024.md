@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 2024 song list
-permalink: /favs/2024/song/
+permalink: /favs/2024/songs/
 description: favorite songs of 2024
 ---
 

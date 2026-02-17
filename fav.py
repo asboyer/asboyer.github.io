@@ -224,12 +224,12 @@ with open(f'_pages/{args.category}.md', 'w') as f:
 markdown_content = '''---
 layout: page
 title: {year} {category} list
-permalink: /favs/{year}/{category}/
-description: favorite {category}s of {year}
+permalink: /favs/{year}/{categories}/
+description: favorite {categories} of {year}
 ---
 
-{{% include archive_list.liquid category="{category}s" archive="{year}" %}}
-'''.format(category=args.category[:-1], year=datetime.now().strftime('%Y'))
+{{% include archive_list.liquid category="{categories}" archive="{year}" %}}
+'''.format(category=args.category[:-1], categories=args.category, year=datetime.now().strftime('%Y'))
 
 with open(f"_pages/{args.category}-{datetime.now().strftime('%Y')}.md", 'w') as f:
     f.write(markdown_content)

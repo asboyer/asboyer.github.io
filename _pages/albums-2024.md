@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 2024 album list
-permalink: /favs/2024/album/
+permalink: /favs/2024/albums/
 description: favorite albums of 2024
 ---
 
