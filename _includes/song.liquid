@@ -71,12 +71,14 @@
         </div>
     </div>
     <!-- Animation container -->
-    <div class="animation-container">
-        <svg viewBox="0 0 120 120" width="120" height="120" id="circleSvg">
-            <circle class="circle-bg" cx="60" cy="60" r="45" id="circleBg"/>
-            <text x="60" y="60" class="number-text" id="numberText">{{ include.score }}</text>
-        </svg>
-    </div>
+    {% if include.score %}
+        <div class="animation-container">
+            <svg viewBox="0 0 120 120" width="120" height="120" id="circleSvg">
+                <circle class="circle-bg" cx="60" cy="60" r="45" id="circleBg"/>
+                <text x="60" y="60" class="number-text" id="numberText">{{ include.score }}</text>
+            </svg>
+        </div>
+    {% endif %}
 </div>
 
 <script>
