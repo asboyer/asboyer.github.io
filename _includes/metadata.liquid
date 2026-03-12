@@ -73,8 +73,7 @@
     {% assign social_image = site.og_image | absolute_url %}
     {% assign use_large_card = true %}
 {% else %}
-    {% assign social_image = site.og_image | absolute_url %}
-    {% assign use_large_card = true %}
+    {% assign social_image = '/assets/img/logo/l.png' | absolute_url %}
 {% endif %}
 
 {% if page.title and page.url != '/' %}
