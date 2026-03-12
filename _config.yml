@@ -7,9 +7,7 @@ first_name: Andrew
 middle_name: S.
 last_name: Boyer
 email: #
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-    Hi, I'm Andrew Boyer and this is my personal website, asboyer.com.
-    Here you can find more about what I’m up to and what I find interesting.
+description: an asboyer production.
 footer_text: >
 keywords: andrew, boyer, asboyer, tech-blog, gatech, georiga-tech, wayland, boston # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -61,7 +59,7 @@ max_width: 800px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: /assets/img/logo/l.png # The site-wide (default for all links) Open Graph preview image
+og_image: /assets/img/og-preview.png # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration

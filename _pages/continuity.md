@@ -23,7 +23,7 @@ permalink: /continuity/
       content="A short manifesto on continuity in AI-assisted software work, and why Continuity Template exists."
     />
     <meta property="og:url" content="https://asboyer.com/continuity/" />
-    <meta property="og:image" content="https://asboyer.com/assets/img/logo/l.png" />
+    <meta property="og:image" content="https://asboyer.com/assets/img/continuity.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Continuity | asboyer.com" />
@@ -31,7 +31,7 @@ permalink: /continuity/
       name="twitter:description"
       content="A short manifesto on continuity in AI-assisted software work, and why Continuity Template exists."
     />
-    <meta name="twitter:image" content="https://asboyer.com/assets/img/logo/l.png" />
+    <meta name="twitter:image" content="https://asboyer.com/assets/img/continuity.png" />
     <style>
       :root {
         color-scheme: light;
