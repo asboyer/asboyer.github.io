@@ -1047,12 +1047,48 @@ html.transition *:after {
 }
 
 #markdown-content {
-    font-size: 1.18rem !important;
-    line-height: 1.7 !important;
+    max-width: 68ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1875rem !important;
+    line-height: 1.8 !important;
+
+    p,
+    ul,
+    ol,
+    blockquote {
+        margin-bottom: 1.35rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    h2,
+    h3,
+    h4 {
+        margin-top: 2.2rem;
+        margin-bottom: 0.9rem;
+    }
 
     @media (max-width: 768px) {
-        font-size: 1.075rem !important;
-        line-height: 1.6 !important;
+        max-width: 100%;
+        font-size: 1.0625rem !important;
+        line-height: 1.75 !important;
+
+        p,
+        ul,
+        ol,
+        blockquote {
+            margin-bottom: 1.2rem;
+        }
+
+        h2,
+        h3,
+        h4 {
+            margin-top: 1.9rem;
+            margin-bottom: 0.8rem;
+        }
     }
 }
 
