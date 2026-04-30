@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spotify Wrapped Android App | Andrew Boyer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/styles.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-inner">
+                <a href="index.html" class="nav-brand">Andrew Boyer · <span class="accent">LMC 3403</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="analysis.html">Analysis</a></li>
+                    <li><a href="mp1.html">MP1</a></li>
+                    <li><a href="mp2.html">MP2</a></li>
+                    <li><a href="mp3.html">MP3</a></li>
+                    <li><a href="goatgrade.html">Goat Grade</a></li>
+                    <li><a href="spotify.html" class="active">Spotify App</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <span class="eyebrow">Project outside of LMC 3403</span>
+            <h1>Spotify Wrapped Android App</h1>
+            <p class="lead">
+                An Android app built for CS2340. Led the group and contributed backend work utilizing Firebase, Spotify API, and local storage.
+            </p>
+
+            <div class="meta-row">
+                <span class="chip">Java</span>
+                <span class="chip">Firebase</span>
+                <span class="chip">Spotify API</span>
+                <span class="chip">XML</span>
+                <span class="chip">Gson</span>
+                <span class="chip">Android</span>
+            </div>
+
+            <figure>
+                <img src="assets/img/spotify.png" alt="Spotify Wrapped Android app" />
+                <figcaption>App generates personalized listening summaries using Spotify data.</figcaption>
+            </figure>
+
+            <div class="intro-block">
+                <span class="label">Project Introduction</span>
+                <p>
+                    This was an Android app I built with a team in CS2340 during spring 2024. I was the "Scrum Master," which meant I helped delegate
+                    work and distribute tasks. I also designed and built most of the backend, including the Firebase integration, the Spotify API
+                    authentication flow, the local storage layer, and the QA pass before each release. The app generates personalized "wraps" from a
+                    user's Spotify listening history over a chosen time range and lets users share their wraps publicly through a feed. What I'm
+                    including here are the team's public landing page, our GitHub repository, and the demo video. Coordinating six people on the same
+                    codebase was the part of the project that taught me the most about how to communicate technical decisions across a team. As scrum
+                    master, I utilized a task board where teammates could easily update the status of their tasks. I also had to frequently check in
+                    with members to ensure goals were being met.
+                </p>
+            </div>
+
+            <div class="btn-row">
+                <a class="btn" href="https://sites.google.com/view/spotify-wrapped-project/" target="_blank" rel="noopener">Project landing page</a>
+                <a class="btn outline" href="https://github.com/MarkoDoesML/SPOTIFY_API_CS2340" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn outline" href="https://sites.google.com/view/spotify-wrapped-project/demo" target="_blank" rel="noopener">Demo video</a>
+            </div>
+
+            <h2>What I built</h2>
+            <p>
+                I implemented the Spotify OAuth flow so users could log in with their Spotify accounts and pull their listening data. I integrated
+                Firebase as the cloud database for user profiles and saved wraps, and wrote the local storage layer so the app would still feel
+                responsive offline. Once this data flow was working, I tested the features the rest of the team built, filed bugs, and pushed fixes
+                before the demo.
+            </p>
+
+            <h2>Communication</h2>
+            <p>
+                The Scrum Master work wasn't about writing code, but was focused on keeping the sprint board moving, as well as making sure no one was
+                blocked. We also put together a public landing page (linked above) to explain the app to people who weren't in the class. This project
+                is on my resume and I would reference it in interviews.
+            </p>
+
+            <p class="next-link"><a href="analysis.html">Read the analysis →</a></p>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 Andrew Boyer · Built for LMC 3403 · Hosted on <a href="https://asboyer.com" target="_blank" rel="noopener">asboyer.com</a></p>
+        </footer>
+    </body>
+</html>

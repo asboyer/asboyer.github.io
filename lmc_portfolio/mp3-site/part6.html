@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 6 — Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <ul class="nav-links">
+        <li><a href="index.html">Part 1</a></li>
+        <li><a href="part2.html">Part 2</a></li>
+        <li><a href="part3.html">Part 3</a></li>
+        <li><a href="part4.html">Part 4</a></li>
+        <li><a href="part5.html">Part 5</a></li>
+        <li><a href="part6.html" class="active">Part 6</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <span class="part-label">Part 6</span>
+    <h1>Adding in Projects</h1>
+    <p class="lead">
+      Now that we have our homepage and resume section, let’s add a projects section. Since we don’t have real projects to display yet, we can delegate a subagent to generate realistic sample projects from scratch.
+    </p>
+
+    <h2>Subagents</h2>
+    <p>
+      Subagents are specialized workers with their own isolated context window. They do the “messy” work like searching hundreds of files and return only a clean summary to your main chat to prevent context bloat. You can create them via the UI or by manually creating a file.
+    </p>
+    <ul>
+      <li><strong>Via UI:</strong> Type <code>/agents</code> &rarr; Library &rarr; Create new agent</li>
+      <li><strong>Via File:</strong> Create a <code>.md</code> file in <code>~/.claude/agents/</code> (global) or <code>.claude/agents/</code> (project-specific)</li>
+    </ul>
+
+    <h2>Creating a Tech Lead Subagent</h2>
+    <p>
+      <strong>Walkthrough Video</strong>
+    </p>
+    <div class="video-embed">
+      <iframe
+        src="https://drive.google.com/file/d/1ss50lm0oasL-svo97fETFkm3q7y4SrvM/preview"
+        allow="autoplay"
+        allowfullscreen
+        title="Part 6 walkthrough: Creating and using a subagent"
+      ></iframe>
+    </div>
+    
+    <ul>
+      <li><strong>0:03</strong> &rarr; Creating subagent</li>
+      <li><strong>2:15</strong> &rarr; Generating projects using subagent</li>
+    </ul>
+
+    <p>
+      To create a Tech Lead Subagent, first open your terminal.
+    </p>
+
+    <div class="code-block">
+      <div class="code-header">
+        <span class="code-dots"><span></span><span></span><span></span></span>
+        <span>claude code</span>
+      </div>
+      <pre><code>/agents</code></pre>
+    </div>
+
+    <p>
+      Using your arrow keys, switch to the <strong>Library</strong> tab, select <strong>Create new agent</strong>, then choose either <strong>Project</strong> or <strong>Personal</strong>. Selecting Project will confine the availability of this subagent to the current project and Personal will allow you to use this agent across all of your projects. For this particular tutorial, selecting Project will suffice.
+    </p>
+
+    <p>
+      Afterwards, select <strong>Generate with Claude</strong>. When prompted, describe the subagent. An example prompt for our tech lead subagent is:
+    </p>
+
+    <div class="code-block">
+      <div class="code-header">
+        <span class="code-dots"><span></span><span></span><span></span></span>
+        <span>example prompt</span>
+      </div>
+      <pre><code>Act as a tech lead. Your task is to design a portfolio of 3 different
+technical engineering projects and then build the UI to display them.
+First, brainstorm 3 advanced projects across different specialties. Write a
+2-sentence technical architecture description, a project name, and a tech
+stack for each. Secondly, act as a frontend developer to implement these
+into projects.html using a responsive CSS grid and clean HTML.</code></pre>
+    </div>
+
+    <p>
+      Claude will generate the identifier, description, and system prompt for you.
+    </p>
+    
+    <p>
+      On the <strong>Select tools page</strong>, press <strong>Continue</strong> since the default is “All tools”. This will give the subagent permission to read, edit, and execute your code on your behalf.
+    </p>
+
+    <p>
+      On the <strong>Select models page</strong>, we suggest selecting <strong>Sonnet</strong> for the best all around performance, which should suffice for our use case.
+    </p>
+
+    <p>
+      On the <strong>Choose background color</strong> page, choose whichever color you desire for your agent.
+    </p>
+
+    <p>
+      For <strong>Configure agent memory</strong>, select <strong>Project scope</strong>. This will apply to the current project and give the subagent persistent memory across different sessions.
+    </p>
+
+    <p>
+      The final screen should look like this:
+    </p>
+
+    <figure>
+      <img src="assets/img/subagentfinalscreen.png" alt="The final configuration screen for the subagent." />
+      <figcaption>Figure 1. The final configuration screen for the subagent.</figcaption>
+    </figure>
+
+    <p>
+      Remember the name of the subagent. This will be important so that we can reference it later to delegate our task to it.
+    </p>
+
+    <h2>Using the Subagent</h2>
+
+    <p>
+      Within your project folder, open claude. Then:
+    </p>
+
+    <div class="code-block">
+      <div class="code-header">
+        <span class="code-dots"><span></span><span></span><span></span></span>
+        <span>claude code</span>
+      </div>
+      <pre><code>/new 
+/s-sesh phase 3, projects phase</code></pre>
+    </div>
+
+    <p>
+      When prompted with <strong>Do you want to create blah.md</strong>, select <strong>Yes, allow all edits during this session</strong>.
+    </p>
+
+    <div class="code-block">
+      <div class="code-header">
+        <span class="code-dots"><span></span><span></span><span></span></span>
+        <span>claude code</span>
+      </div>
+      <pre><code>/plan</code></pre>
+    </div>
+
+    <p>
+      Then run the following prompt:
+    </p>
+
+    <div class="code-block">
+      <div class="code-header">
+        <span class="code-dots"><span></span><span></span><span></span></span>
+        <span>example prompt</span>
+      </div>
+      <pre><code>I want to delegate the tech lead portfolio-builder subagent to create
+and populate sample project cards in the projects section of the website.</code></pre>
+    </div>
+
+    <div class="callout">
+      It’s important to mention the subagent you want to delegate the task to. This can either be done by simply referencing the name or explicitly mentioning it with <code>@agent-name</code>.
+    </div>
+
+    <p>
+      Read the plan and approve as needed. Claude should generate the code and inform you when it is complete. The projects section should look similar to this:
+    </p>
+
+    <figure>
+      <img src="assets/img/projectspagefinal.png" alt="The finalized projects section with generated sample cards." />
+      <figcaption>Figure 2. Complete projects page generated by the tech lead subagent.</figcaption>
+    </figure>
+  </main>
+</body>
+</html>

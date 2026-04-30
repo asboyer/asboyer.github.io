@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Goat Grade | Andrew Boyer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/styles.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-inner">
+                <a href="index.html" class="nav-brand">Andrew Boyer · <span class="accent">LMC 3403</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="analysis.html">Analysis</a></li>
+                    <li><a href="mp1.html">MP1</a></li>
+                    <li><a href="mp2.html">MP2</a></li>
+                    <li><a href="mp3.html">MP3</a></li>
+                    <li><a href="goatgrade.html" class="active">Goat Grade</a></li>
+                    <li><a href="spotify.html">Spotify App</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <span class="eyebrow">Project outside of LMC 3403</span>
+            <h1>Goat Grade</h1>
+            <p class="lead">
+                An NBA analytics web app that scrapes 70 years of statistics and ranks every player and team. Rankings are exposed via a custom API.
+            </p>
+
+            <div class="meta-row">
+                <span class="chip">Python</span>
+                <span class="chip">Flask</span>
+                <span class="chip">React</span>
+                <span class="chip">BeautifulSoup</span>
+            </div>
+
+            <figure>
+                <img src="assets/img/nba.png" alt="Goat Grade NBA rankings interface" />
+                <figcaption>Uses official NBA data.</figcaption>
+            </figure>
+
+            <div class="intro-block">
+                <span class="label">Project Introduction</span>
+                <p>
+                    Goat Grade is a project I started in 2021 and have kept running since. It scrapes NBA statistics with Python and BeautifulSoup,
+                    computes a custom ranking for every player and team going back to the 1956 season, and serves the data through a Flask backend.
+                    The site has correctly identified the season MVP at an 80% rate, and predicted the 2024 NBA champion. The communication side of
+                    the project came from explaining the ranking system, which I did in a
+                    <a href="https://asboyer.com/blog/1" target="_blank">blog post</a>. This is important because as users view the rankings and use
+                    them to think about the NBA, its to be transparent how we use data to make these rankings. I am still adding to and improving the
+                    site, and am planning on releasing more blog posts explaining new additions and features. A key part of this project is the users
+                    viewing the rankings.
+                </p>
+            </div>
+
+            <div class="btn-row">
+                <a class="btn" href="https://goatgrade.com" target="_blank" rel="noopener">Visit goatgrade.com</a>
+                <a class="btn outline" href="https://github.com/goatgrade" target="_blank" rel="noopener">GitHub</a>
+            </div>
+
+            <p class="next-link"><a href="spotify.html">Continue to Spotify Wrapped →</a></p>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 Andrew Boyer · Built for LMC 3403 · Hosted on <a href="https://asboyer.com" target="_blank" rel="noopener">asboyer.com</a></p>
+        </footer>
+    </body>
+</html>
