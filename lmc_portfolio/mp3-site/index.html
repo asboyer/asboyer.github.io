@@ -1,106 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Part 1 — Introduction</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Part 1 — Introduction</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/styles.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-inner">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Part 1</a></li>
+                    <li><a href="part2.html">Part 2</a></li>
+                    <li><a href="part3.html">Part 3</a></li>
+                    <li><a href="part4.html">Part 4</a></li>
+                    <li><a href="part5.html">Part 5</a></li>
+                    <li><a href="part6.html">Part 6</a></li>
+                </ul>
+            </div>
+        </nav>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Part 1</a></li>
-        <li><a href="part2.html">Part 2</a></li>
-        <li><a href="part3.html">Part 3</a></li>
-        <li><a href="part4.html">Part 4</a></li>
-        <li><a href="part5.html">Part 5</a></li>
-        <li><a href="part6.html">Part 6</a></li>
-      </ul>
-    </div>
-  </nav>
+        <main>
+            <span class="part-label">Part 1</span>
+            <h1>Welcome to our Training Materials!</h1>
+            <p class="lead">
+                This tutorial will go over all the essentials you'll need to get started with Claude Code. Specifically, we'll be working on building
+                your own portfolio website. You should start here for a conceptual overview on AI Agents & Claude Code, then proceed to part 2.
+            </p>
 
-  <main>
-    <span class="part-label">Part 1</span>
-    <h1>Welcome to our Training Materials!</h1>
-    <p class="lead">This tutorial will go over all the essentials you'll need to get started with Claude Code.
-      Specifically, we'll be working on building your own portfolio website.
-      You should start here for a conceptual overview on AI Agents & Claude Code, then proceed to part 2.
-    </p>
+            <h2>What is an AI Agent?</h2>
+            <p>
+                By now, nearly all Computer Science students (including freshmen) are familiar with LLMs, or Large Language Models. As of recording
+                writing this tutorial, there are 3 popular LLMs: <strong>ChatGPT</strong> by OpenAI, <strong>Claude</strong> by Anthropic, and
+                <strong>Gemini</strong> by Google. These are effectively just gigantic machine learning models that can accept some natural language
+                input, such as text, and generate a natural language output.
+            </p>
 
-    <h2>What is an AI Agent?</h2>
-    <p>By now, nearly all Computer Science students (including freshmen) are familiar with LLMs, or Large Language Models. As of recording writing this tutorial, there are 3 popular LLMs: <strong>ChatGPT</strong> by OpenAI, <strong>Claude</strong> by Anthropic, and <strong>Gemini</strong> by Google. These are effectively just gigantic machine learning models that can accept some natural language input, such as text, and generate a natural language output.</p>
+            <p>
+                When these LLMs were first announced, all you could really do with them was have a conversation by typing into your keyboard and
+                reading the output on your screen. However, if you've used any modern LLM recently, you might have noticed a few upgrades over the
+                past couple of years:
+            </p>
+            <ul>
+                <li>You can now input images into LLMs like Claude, the models can analyze the image, and give you responses based on the image.</li>
+                <li>When you ask a question or want information, LLMs can perform a web search, just like you would perform a Google search.</li>
+                <li>LLMs like ChatGPT can now even write Python code and run the Python code, providing you with the output.</li>
+            </ul>
 
-    <p>When these LLMs were first announced, all you could really do with them was have a conversation by typing into your keyboard and reading the output on your screen. However, if you've used any modern LLM recently, you might have noticed a few upgrades over the past couple of years:</p>
-    <ul>
-      <li>You can now input images into LLMs like Claude, the models can analyze the image, and give you responses based on the image.</li>
-      <li>When you ask a question or want information, LLMs can perform a web search, just like you would perform a Google search.</li>
-      <li>LLMs like ChatGPT can now even write Python code and run the Python code, providing you with the output.</li>
-    </ul>
+            <p>
+                Let's call the new capability of these LLMs <strong>tools</strong>. Now, we can split up the functionality of services like Claude
+                into 2 parts:
+            </p>
+            <ul>
+                <li><strong>The LLM:</strong> this is responsible for all the reasoning and planning.</li>
+                <li>
+                    <strong>Tools:</strong> This is like giving your LLM hands. It can now take actions and use its tool to "interact" with other
+                    software.
+                </li>
+            </ul>
 
-    <p>Let's call the new capability of these LLMs <strong>tools</strong>. Now, we can split up the functionality of services like Claude into 2 parts:</p>
-    <ul>
-      <li><strong>The LLM:</strong> this is responsible for all the reasoning and planning.</li>
-      <li><strong>Tools:</strong> This is like giving your LLM hands. It can now take actions and use its tool to "interact" with other software.</li>
-    </ul>
+            <p>An AI Agent is a specific combination of LLM, tools, and memory.</p>
 
-    <p>An AI Agent is a specific combination of LLM, tools, and memory.</p>
+            <h3>What do we mean by memory?</h3>
+            <p>
+                Have you ever tried asking Claude too many questions, and suddenly it forgets about the first question you asked? This has to do with
+                a concept called <strong>context</strong>. Think of context like the specific set of information the agent can reference at any given
+                point you try to use it.
+            </p>
 
-    <h3>What do we mean by memory?</h3>
-    <p>Have you ever tried asking Claude too many questions, and suddenly it forgets about the first question you asked? This has to do with a concept called <strong>context</strong>. Think of context like the specific set of information the agent can reference at any given point you try to use it.</p>
+            <p>For agents, we typically break up context into the following:</p>
+            <ul>
+                <li><strong>The goal:</strong> what are you trying to do with the agent?</li>
+                <li><strong>Instructions:</strong> how do you want the agent to accomplish your task?</li>
+                <li><strong>State:</strong> what has the agent already done? What does the agent need to accomplish next?</li>
+                <li><strong>Environment:</strong> what tools can the agent use right now? "Where" is the agent working?</li>
+            </ul>
 
-    <p>For agents, we typically break up context into the following:</p>
-    <ul>
-      <li><strong>The goal:</strong> what are you trying to do with the agent?</li>
-      <li><strong>Instructions:</strong> how do you want the agent to accomplish your task?</li>
-      <li><strong>State:</strong> what has the agent already done? What does the agent need to accomplish next?</li>
-      <li><strong>Environment:</strong> what tools can the agent use right now? "Where" is the agent working?</li>
-    </ul>
+            <p>
+                Memory is effectively a storage unit that provides your agent with relevant context as it's performing a task. We break memory down
+                into 2 types:
+            </p>
+            <ul>
+                <li><strong>Short-Term Memory:</strong> this is the amount of information that the LLM can process at once.</li>
+                <li>
+                    <strong>Long-Term Memory:</strong> since an LLMs context cannot fit a ton of information, we store other relevant information for
+                    the agent in other files, and the agent pulls information from these files as necessary.
+                </li>
+            </ul>
 
-    <p>Memory is effectively a storage unit that provides your agent with relevant context as it's performing a task. We break memory down into 2 types:</p>
-    <ul>
-      <li><strong>Short-Term Memory:</strong> this is the amount of information that the LLM can process at once.</li>
-      <li><strong>Long-Term Memory:</strong> since an LLMs context cannot fit a ton of information, we store other relevant information for the agent in other files, and the agent pulls information from these files as necessary.</li>
-    </ul>
+            <p>Taking this information together, you can see that AI Agents can be super customizable:</p>
+            <ul>
+                <li>
+                    You pick the model. Whether you want a super high-reasoning model, like Claude Opus 4.6 or a lightweight model that doesn't have
+                    as much reasoning capabilities, like ChatGPT 5 Instant.
+                </li>
+                <li>You decide what tools the agent has access to.</li>
+                <li>You decide how to control the agent's memory.</li>
+            </ul>
 
-    <p>Taking this information together, you can see that AI Agents can be super customizable:</p>
-    <ul>
-      <li>You pick the model. Whether you want a super high-reasoning model, like Claude Opus 4.6 or a lightweight model that doesn't have as much reasoning capabilities, like ChatGPT 5 Instant.</li>
-      <li>You decide what tools the agent has access to.</li>
-      <li>You decide how to control the agent's memory.</li>
-    </ul>
+            We can see this visually:
 
-    We can see this visually:
+            <figure>
+                <img
+                    src="assets/ai-agent-diagram.png"
+                    alt="Diagram showing the flow of an AI agent: memory and user input feed into the LLM context, which drives tool calls (actions), whose results combine with the prompt to produce a final output."
+                />
+                <figcaption>The general flow of an AI agent.</figcaption>
+            </figure>
 
-    <figure>
-      <img
-        src="assets/ai-agent-diagram.png"
-        alt="Diagram showing the flow of an AI agent: memory and user input feed into the LLM context, which drives tool calls (actions), whose results combine with the prompt to produce a final output."
-      />
-      <figcaption>
-        The general flow of an AI agent.
-      </figcaption>
-    </figure>
+            From the diagram, we see that the memory adds to the information that you provide the LLM (such as a question, a prompt, etc). From there,
+            the LLM uses all of the information in its context to call certain tools, which results in the LLM making "actions", and based on the
+            actions and their results, combined with the user's prompt, the LLM will generate a result.<br /><br />
+            This can all get pretty complicated pretty fast!
 
-    From the diagram, we see that the memory adds to the information that you provide the LLM (such as a question, a prompt, etc). From there, the LLM uses all of the information in its context to call certain tools, which results in the LLM making "actions", and based on the actions and their results, combined with the user's prompt, the LLM will generate a result.<br><br>
-    This can all get pretty complicated pretty fast!
+            <hr />
 
-    <hr>
+            <h2>Claude Code</h2>
+            <p>
+                For this project, we will be using <strong>Claude Code</strong>. Rather than chatting with an LLM in your browser, you gain the
+                ability to chat with an LLM directly in a coding workspace through your terminal. In our specific case, this gives Claude the ability
+                to read code, refactor files, and run commands to help you code faster. By doing this, we gain an assistant directly embedded into the
+                context of our project that can understand large codebases, generate and edit files directly, debug errors, and run tests for us. This
+                eliminates the need to copy several things to a chat window in your browser and automates several steps of coding with LLMs. Not all
+                steps are the same though; there are several differences between generating code through a chat window and through Claude Code that
+                require specific steps to produce better outputs.
+            </p>
 
-    <h2>Claude Code</h2>
-    <p>For this project, we will be using <strong>Claude Code</strong>. Rather than chatting with an LLM in your browser, you gain the ability to chat with an LLM directly in a coding workspace through your terminal. In our specific case, this gives Claude the ability to read code, refactor files, and run commands to help you code faster. By doing this, we gain an assistant directly embedded into the context of our project that can understand large codebases, generate and edit files directly, debug errors, and run tests for us. This eliminates the need to copy several things to a chat window in your browser and automates several steps of coding with LLMs. Not all steps are the same though; there are several differences between generating code through a chat window and through Claude Code that require specific steps to produce better outputs.</p>
+            <p>
+                There are several agentic coding tools—like <strong>GitHub Copilot</strong> and <strong>Cursor</strong>, with the closest one being
+                <strong>OpenAI's Codex</strong>—but we will be using Claude for this tutorial as it has an array of features that can enhance your
+                productivity. While tools like Copilot are designed for inline code generation and assistance, Claude Code is able to handle much
+                larger codebases and tasks. It should be noted however that the landscape of coding agents is changing frequently, and the next best
+                tool could arise at any time.
+            </p>
 
-    <p>There are several agentic coding tools—like <strong>GitHub Copilot</strong> and <strong>Cursor</strong>, with the closest one being <strong>OpenAI's Codex</strong>—but we will be using Claude for this tutorial as it has an array of features that can enhance your productivity. While tools like Copilot are designed for inline code generation and assistance, Claude Code is able to handle much larger codebases and tasks. It should be noted however that the landscape of coding agents is changing frequently, and the next best tool could arise at any time.</p>
+            <p>
+                You should also have some IDE, like <strong>VSCode</strong>, set up already in this section (although companies are beginning to make
+                IDE-free coding agents, we will still use an IDE to visualize code changes easier). You should also have <strong>Node</strong> setup
+                (<code>npm</code>/<code>npx</code>) as we will need it to install some packages. Furthermore, you should have a terminal application
+                to run Claude Code with, as it is a CLI-based application (the default terminal on your machine works fine).
+            </p>
 
-    <p>You should also have some IDE, like <strong>VSCode</strong>, set up already in this section (although companies are beginning to make IDE-free coding agents, we will still use an IDE to visualize code changes easier). You should also have <strong>Node</strong> setup (<code>npm</code>/<code>npx</code>) as we will need it to install some packages. Furthermore, you should have a terminal application to run Claude Code with, as it is a CLI-based application (the default terminal on your machine works fine).</p>
+            <hr />
 
-    <hr>
-
-    <p class="next-link">Continue on to <a href="part2.html">Part 2</a>.</p>
-  </main>
-</body>
+            <p class="next-link">Continue on to <a href="part2.html">Part 2</a>.</p>
+        </main>
+    </body>
 </html>

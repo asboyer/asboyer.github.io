@@ -29,24 +29,17 @@
         <main>
             <span class="part-label">Part 2</span>
             <h1>Setting up the Project</h1>
-            <p class="lead">
-                Install Claude Code, build a memory system, and create two
-                skills that will drive "sessions."
-            </p>
+            <p class="lead">Install Claude Code, build a memory system, and create two skills that will drive "sessions."</p>
 
             <h2>Prereqs</h2>
             <p>
-                A terminal (and be comfortable with basic terminal commands), an
-                IDE (VSCode works), and Node so you have
-                <code>npm</code> / <code>npx</code>. From there you can install
-                Claude Code:
+                A terminal (and be comfortable with basic terminal commands), an IDE (VSCode works), and Node so you have
+                <code>npm</code> / <code>npx</code>. From there you can install Claude Code:
             </p>
 
             <div class="code-block">
                 <div class="code-header">
-                    <span class="code-dots"
-                        ><span></span><span></span><span></span
-                    ></span>
+                    <span class="code-dots"><span></span><span></span><span></span></span>
                     <span>terminal</span>
                 </div>
                 <pre><code>curl -fsSL https://claude.ai/install.sh | bash</code></pre>
@@ -54,29 +47,18 @@
 
             <p>
                 Docs
-                <a
-                    href="https://code.claude.com/docs/en/quickstart#native-install-recommended"
-                    target="_blank"
-                    rel="noopener"
-                    >here</a
-                >
+                <a href="https://code.claude.com/docs/en/quickstart#native-install-recommended" target="_blank" rel="noopener">here</a>
                 (stop after step 2). Also install the
-                <a href="https://cli.github.com/" target="_blank" rel="noopener"
-                    >GitHub CLI</a
-                >
+                <a href="https://cli.github.com/" target="_blank" rel="noopener">GitHub CLI</a>
                 and log in. Claude uses it later to push branches and open PRs.
             </p>
 
-            <p>
-                Then <code>cd</code> into your project folder and run
-                <code>claude</code>.
-            </p>
+            <p>Then <code>cd</code> into your project folder and run <code>claude</code>.</p>
 
             <h2>Walkthrough</h2>
             <p>
-                In this video we build the memory system from scratch. We
-                draft the init prompt in regular Claude, paste it into Claude
-                Code, and end up with a working <code>.memory/</code> folder.
+                In this video we build the memory system from scratch. We draft the init prompt in regular Claude, paste it into Claude Code, and end
+                up with a working <code>.memory/</code> folder.
             </p>
 
             <div class="video-embed">
@@ -89,123 +71,76 @@
             </div>
 
             <ul>
+                <li><strong>0:32</strong> &rarr; why a memory system matters</li>
+                <li><strong>1:40</strong> &rarr; draft the initialization prompt</li>
+                <li><strong>2:43</strong> &rarr; the folder structure Claude generates</li>
+                <li><strong>3:12</strong> &rarr; <code>Ctrl+G</code> opens your input in your editor</li>
                 <li>
-                    <strong>0:32</strong> &rarr; why a memory system matters
+                    <strong>4:27</strong> &rarr; <code>--allow-dangerously-skip-permissions</code> + <kbd>Shift</kbd>+<kbd>Tab</kbd> for bypass mode
                 </li>
-                <li>
-                    <strong>1:40</strong> &rarr; draft the initialization prompt
-                </li>
-                <li>
-                    <strong>2:43</strong> &rarr; the folder structure Claude
-                    generates
-                </li>
-                <li>
-                    <strong>3:12</strong> &rarr; <code>Ctrl+G</code> opens your
-                    input in your editor
-                </li>
-                <li>
-                    <strong>4:27</strong> &rarr;
-                    <code>--allow-dangerously-skip-permissions</code> +
-                    <kbd>Shift</kbd>+<kbd>Tab</kbd> for bypass mode
-                </li>
-                <li>
-                    <strong>5:40</strong> &rarr; <code>/resume</code> and
-                    renaming sessions
-                </li>
+                <li><strong>5:40</strong> &rarr; <code>/resume</code> and renaming sessions</li>
             </ul>
 
             <div class="callout">
-                The memory system we're setting up has one job. It makes sure
-                every new session knows (1) what we're building, (2) the
-                current state of the build, and (3) decisions we've already
-                made. Without it, we'd be re-explaining the project every time
-                the context window resets.
+                The memory system we're setting up has one job. It makes sure every new session knows (1) what we're building, (2) the current state
+                of the build, and (3) decisions we've already made. Without it, we'd be re-explaining the project every time the context window
+                resets.
             </div>
 
             <div class="callout">
                 A note about leading dots (<em>.</em>memory,
-                <em>.</em>CLAUDE.md): on Mac and Linux, files or folders
-                starting with <code>.</code> are hidden by default.
-                <code>ls</code> and Finder skip them unless you ask. That's why
-                configs live in <code>.memory/</code>, <code>.claude/</code>,
-                <code>.git/</code>. Run <code>ls -a</code> to see them.
+                <em>.</em>CLAUDE.md): on Mac and Linux, files or folders starting with <code>.</code> are hidden by default. <code>ls</code> and
+                Finder skip them unless you ask. That's why configs live in <code>.memory/</code>, <code>.claude/</code>, <code>.git/</code>. Run
+                <code>ls -a</code> to see them.
             </div>
 
             <h2>The Init Prompt</h2>
             <p>
                 Skip writing your own. Paste
-                <a
-                    href="https://github.com/asboyer/gatech-claude-code-guide/blob/master/INIT.md"
-                    target="_blank"
-                    rel="noopener"
-                    >INIT.md</a
-                >
-                into Claude Code and it builds the memory system for you. The
-                prompt does three things. It creates the <code>.memory/</code>
+                <a href="https://github.com/asboyer/gatech-claude-code-guide/blob/master/INIT.md" target="_blank" rel="noopener">INIT.md</a>
+                into Claude Code and it builds the memory system for you. The prompt does three things. It creates the <code>.memory/</code>
                 folder with a specific set of tracking files, fills
-                <code>STATUS.md</code> with your stack (HTML/CSS, GitHub Pages,
-                no build step), and stops there. It's essentially a setup
-                script written in English. You'll end up with:
+                <code>STATUS.md</code> with your stack (HTML/CSS, GitHub Pages, no build step), and stops there. It's essentially a setup script
+                written in English. You'll end up with:
             </p>
 
             <ul>
-                <li>
-                    <code>.memory/PLAN.md</code> &rarr; phases and "done"
-                    criteria
-                </li>
+                <li><code>.memory/PLAN.md</code> &rarr; phases and "done" criteria</li>
                 <li><code>.memory/STATUS.md</code> &rarr; current phase</li>
-                <li>
-                    <code>.memory/DECISIONS.md</code> &rarr; design choices,
-                    append-only
-                </li>
-                <li>
-                    <code>.memory/LAST_SESSION.md</code> &rarr; what shipped
-                    last time
-                </li>
+                <li><code>.memory/DECISIONS.md</code> &rarr; design choices, append-only</li>
+                <li><code>.memory/LAST_SESSION.md</code> &rarr; what shipped last time</li>
                 <li><code>.claude/</code> &rarr; skills and project config</li>
             </ul>
 
             <h2>Skip Permission Prompts</h2>
-            <p>
-                To make the bypass flag from the video (4:27) stick, alias it:
-            </p>
+            <p>To make the bypass flag from the video (4:27) stick, alias it:</p>
 
             <div class="code-block">
                 <div class="code-header">
-                    <span class="code-dots"
-                        ><span></span><span></span><span></span
-                    ></span>
+                    <span class="code-dots"><span></span><span></span><span></span></span>
                     <span>terminal (zsh)</span>
                 </div>
                 <pre><code>echo "\nalias claude='claude --allow-dangerously-skip-permissions'" &gt;&gt; ~/.zshrc &amp;&amp; source ~/.zshrc</code></pre>
             </div>
 
             <div class="callout">
-                The flag is called "dangerously" because Claude can run any
-                shell command without asking, including deleting files,
-                installing packages, or pushing to git. It's fine for this
-                tutorial because you're working inside a fresh project folder
-                and there's no production system to break. Anything Claude does
-                locally can be undone with git. Don't alias this flag in a
-                directory you care about (your home folder, a repo with
-                uncommitted work, anything touching real credentials).
+                The flag is called "dangerously" because Claude can run any shell command without asking, including deleting files, installing
+                packages, or pushing to git. It's fine for this tutorial because you're working inside a fresh project folder and there's no
+                production system to break. Anything Claude does locally can be undone with git. Don't alias this flag in a directory you care about
+                (your home folder, a repo with uncommitted work, anything touching real credentials).
             </div>
 
             <h2>Skills</h2>
             <p>
-                Skills are reusable prompts you trigger with a slash command.
-                Rather than typing out a long prompt, you can alias it to a
-                skill, so when you run that skill Claude reads that entire
-                prompt. This is how we can start to build out complex workflows
-                in Claude Code that we can run quickly. The actual text for
-                skills live in
+                Skills are reusable prompts you trigger with a slash command. Rather than typing out a long prompt, you can alias it to a skill, so
+                when you run that skill Claude reads that entire prompt. This is how we can start to build out complex workflows in Claude Code that
+                we can run quickly. The actual text for skills live in
                 <code>.claude/skills/&lt;name&gt;/SKILL.md</code>. Set up two:
             </p>
 
             <ul>
                 <li>
-                    <strong>s-sesh</strong> &rarr; opens a session. Reads
-                    memory, prints a briefing, takes your goal as an argument.
+                    <strong>s-sesh</strong> &rarr; opens a session. Reads memory, prints a briefing, takes your goal as an argument.
                     <a
                         href="https://github.com/asboyer/gatech-claude-code-guide/blob/master/.claude/skills/s-sesh/SKILL.md"
                         target="_blank"
@@ -214,8 +149,7 @@
                     >
                 </li>
                 <li>
-                    <strong>c-sesh</strong> &rarr; closes a session. Logs what
-                    shipped, updates <code>STATUS.md</code> and
+                    <strong>c-sesh</strong> &rarr; closes a session. Logs what shipped, updates <code>STATUS.md</code> and
                     <code>LAST_SESSION.md</code>.
                     <a
                         href="https://github.com/asboyer/gatech-claude-code-guide/blob/master/.claude/skills/c-sesh/SKILL.md"
@@ -226,33 +160,20 @@
                 </li>
             </ul>
 
-            <p>
-                <strong>s-sesh</strong> gets you and Claude on the same page.
-                <strong>c-sesh</strong> hands off to the next session.
-            </p>
+            <p><strong>s-sesh</strong> gets you and Claude on the same page. <strong>c-sesh</strong> hands off to the next session.</p>
 
             <h2>CLAUDE.md</h2>
             <p>
-                <code>CLAUDE.md</code> is a meta-prompt appended to
-                <em>every</em> message in the project, so keep it short. Its job
-                is to remind Claude of the project, the goal, and the memory
-                layout. Drop
-                <a
-                    href="https://github.com/asboyer/gatech-claude-code-guide/blob/master/CLAUDE.md"
-                    target="_blank"
-                    rel="noopener"
-                    >this one</a
-                >
-                at the project root. It describes the project, structure, rules
-                / constraints we have, how we work with Claude, how we manage
-                memory files, and any conventions we want Claude to abide by.
+                <code>CLAUDE.md</code> is a meta-prompt appended to <em>every</em> message in the project, so keep it short. Its job is to remind
+                Claude of the project, the goal, and the memory layout. Drop
+                <a href="https://github.com/asboyer/gatech-claude-code-guide/blob/master/CLAUDE.md" target="_blank" rel="noopener">this one</a>
+                at the project root. It describes the project, structure, rules / constraints we have, how we work with Claude, how we manage memory
+                files, and any conventions we want Claude to abide by.
             </p>
 
             <hr />
 
-            <p class="next-link">
-                Continue on to <a href="part3.html">Part 3</a>.
-            </p>
+            <p class="next-link">Continue on to <a href="part3.html">Part 3</a>.</p>
         </main>
     </body>
 </html>

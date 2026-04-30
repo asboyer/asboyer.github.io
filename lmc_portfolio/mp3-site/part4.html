@@ -1,131 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Part 4 — Training</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Part 4 — Training</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/styles.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-inner">
+                <ul class="nav-links">
+                    <li><a href="index.html">Part 1</a></li>
+                    <li><a href="part2.html">Part 2</a></li>
+                    <li><a href="part3.html">Part 3</a></li>
+                    <li><a href="part4.html" class="active">Part 4</a></li>
+                    <li><a href="part5.html">Part 5</a></li>
+                    <li><a href="part6.html">Part 6</a></li>
+                </ul>
+            </div>
+        </nav>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <ul class="nav-links">
-        <li><a href="index.html">Part 1</a></li>
-        <li><a href="part2.html">Part 2</a></li>
-        <li><a href="part3.html">Part 3</a></li>
-        <li><a href="part4.html" class="active">Part 4</a></li>
-        <li><a href="part5.html">Part 5</a></li>
-        <li><a href="part6.html">Part 6</a></li>
-      </ul>
-    </div>
-  </nav>
+        <main>
+            <span class="part-label">Part 4</span>
+            <h1>Building out the Homepage</h1>
+            <p class="lead">
+                Build out the homepage for our website, and learn how to test frontend attributes with the Claude Code Playwright plugin.
+            </p>
 
-  <main>
-    <span class="part-label">Part 4</span>
-    <h1>Building out the Homepage</h1>
-    <p class="lead">
-      Build out the homepage for our website, and learn how to test frontend attributes with the Claude Code Playwright plugin.
-    </p>
+            <p>We can now build out the basic homepage using the same structure that we previously utilized:</p>
 
-    <p>
-      We can now build out the basic homepage using the same structure that we previously utilized:
-    </p>
+            <iframe
+                src="https://drive.google.com/file/d/1wiIivsuI8mv3oi66O0QbvbjmKISWLVfn/preview"
+                width="100%"
+                height="480"
+                allow="autoplay"
+                title="Homepage training video"
+            ></iframe>
 
-    <iframe
-      src="https://drive.google.com/file/d/1wiIivsuI8mv3oi66O0QbvbjmKISWLVfn/preview"
-      width="100%"
-      height="480"
-      allow="autoplay"
-      title="Homepage training video"
-    ></iframe>
+            <ul>
+                <li><strong>0:12</strong> &rarr; start the session</li>
+                <li><strong>0:29</strong> &rarr; create the plan</li>
+                <li><strong>0:45</strong> &rarr; review the plan and approve it</li>
+                <li><strong>1:24</strong> &rarr; review the smoke test and other testing requirements</li>
+            </ul>
 
-    <ul>
-      <li>
-          <strong>0:12</strong> &rarr; start the session
-      </li>
-      <li>
-          <strong>0:29</strong> &rarr; create the plan
-      </li>
-      <li>
-          <strong>0:45</strong> &rarr; review the plan and approve it
-      </li>
-      <li>
-          <strong>1:24</strong> &rarr; review the smoke test and other testing requirements
-      </li>
-  </ul>
+            <p>
+                After following the steps in the video above, we should have a homepage that looks something like the below (yours will likely vary as
+                Claude does not generate deterministic outputs). Feel free to give Claude some specific instructions to change the homepage to your
+                liking with different colors, fonts, etc. This can be achieved by being specific about how you want the homepage to look and feel, or
+                you could even be broad with your instructions, only specifying overall themes or styles, and let Claude take the reins (but this will
+                have higher variability). You can also edit the biography section to your liking yourself or via Claude as well.
+            </p>
 
-    <p>
-      After following the steps in the video above, we should have a homepage that looks something like the below (yours will likely vary as Claude does not generate deterministic outputs).
-      Feel free to give Claude some specific instructions to change the homepage to your liking with different colors, fonts, etc. 
-      This can be achieved by being specific about how you want the homepage to look and feel, or you could even be broad with your instructions, only specifying overall themes or styles, and let Claude take the reins (but this will have higher variability).
-      You can also edit the biography section to your liking yourself or via Claude as well.
-    </p>
+            <figure>
+                <img src="assets/img/homepage.png" alt="Homepage example image from Claude's output of the session" />
+                <figcaption>
+                    Figure 1. Homepage example image from Claude's output of the session after it implemented the plan we created.
+                </figcaption>
+            </figure>
 
-    <figure>
-      <img
-          src="assets/img/homepage.png"
-          alt="Homepage example image from Claude's output of the session"
-      />
-      <figcaption>
-          Figure 1. Homepage example image from Claude's output of the session after it implemented the plan we created.
-      </figcaption>
-    </figure>
+            <p>
+                In the video, Claude told us to open index.html in a browser ourselves to confirm that everything works and our contact form works. To
+                test our form, we could in theory do this manually, but this process can be automated with Claude Code. This is where plugins come
+                into play. Plugins are similar to VSCode extensions, written by the community that empower Claude to have more abilities. There are
+                plugins to scan for common vulnerabilities in your codebase, review your code and simplify complex functions, and find relevant and
+                current documentation. For our purposes, since we just made a “Contact Me” form, we will use Playwright, a software originally created
+                by Microsoft which was turned into a plugin for Claude Code.
+            </p>
+            <p>
+                Note: since we don't have a backend setup, the form will throw a 501 error when we try to press the submit button. This is normal
+                because we don't have a backend to actually process the data, but in a real application, the frontend data would be sent to the
+                backend and there would be no error. But here, this error is expected and fully fine.
+            </p>
 
-    <p>
-      In the video, Claude told us to open index.html in a browser ourselves to confirm that everything works and our contact form works. 
-      To test our form, we could in theory do this manually, but this process can be automated with Claude Code. 
-      This is where plugins come into play. Plugins are similar to VSCode extensions, written by the community that empower Claude to have more abilities. 
-      There are plugins to scan for common vulnerabilities in your codebase, review your code and simplify complex functions, and find relevant and current documentation. 
-      For our purposes, since we just made a “Contact Me” form, we will use Playwright, a software originally created by Microsoft which was turned into a plugin for Claude Code. 
-    </p>
-    <p>
-      Note: since we don't have a backend setup, the form will throw a 501 error when we try to press the submit button. 
-      This is normal because we don't have a backend to actually process the data, but in a real application, the frontend data would be sent to the backend and there would be no error. 
-      But here, this error is expected and fully fine.
-    </p>
+            <h2>Installing the Playwright Plugin</h2>
+            <p>To install the Playwright plugin, we need to run these commands:</p>
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-dots"><span></span><span></span><span></span></span>
+                    <span>Terminal</span>
+                </div>
+                <pre><code>npm install -g @playwright/cli</code></pre>
+                <pre><code>npx playwright install chromium</code></pre>
+                <pre><code>playwright-cli install --skills</code></pre>
+            </div>
+            <p>
+                There are several ways to install plugins; this is just one such way. The third command will install a Claude skill that we talked
+                about previously.
+            </p>
+            <p>Now we can test our form using Playwright:</p>
 
-    <h2>
-      Installing the Playwright Plugin
-    </h2>
-    <p>
-      To install the Playwright plugin, we need to run these commands:
-    </p>
-    <div class="code-block">
-      <div class="code-header">
-        <span class="code-dots"><span></span><span></span><span></span></span>
-        <span>Terminal</span>
-      </div>
-      <pre><code>npm install -g @playwright/cli</code></pre>
-      <pre><code>npx playwright install chromium</code></pre>
-      <pre><code>playwright-cli install --skills</code></pre>
-    </div>
-    <p>
-      There are several ways to install plugins; this is just one such way. The third command will install a Claude skill that we talked about previously.
-    </p>
-    <p>
-      Now we can test our form using Playwright:
-    </p>
+            <iframe
+                src="https://drive.google.com/file/d/1SzAP_p7uGhgUy3MrG-MAOHrjAHAV7kfn/preview"
+                width="100%"
+                height="480"
+                allow="autoplay"
+                title="Playwright testing video"
+            ></iframe>
 
-    <iframe
-      src="https://drive.google.com/file/d/1SzAP_p7uGhgUy3MrG-MAOHrjAHAV7kfn/preview"
-      width="100%"
-      height="480"
-      allow="autoplay"
-      title="Playwright testing video"
-    ></iframe>
+            <p>
+                Congrats! You've created a homepage by following proper practice using Claude Code, and learned about plugins and used one yourself to
+                test your form. Now that we've tested everything to make sure it works, you can commit and submit a PR!
+            </p>
 
-    <p>
-      Congrats! You've created a homepage by following proper practice using Claude Code, and learned about plugins and used one yourself to test your form.
-      Now that we've tested everything to make sure it works, you can commit and submit a PR!
-    </p>
-
-    <p class="next-link">
-      Continue on to <a href="part5.html">Part 5</a>.
-    </p>
-  </main>
-</body>
+            <p class="next-link">Continue on to <a href="part5.html">Part 5</a>.</p>
+        </main>
+    </body>
 </html>

@@ -30,22 +30,16 @@
             <span class="part-label">Part 3</span>
             <h1>Website Scaffolding</h1>
             <p class="lead">
-                Run your first real session. Draft a plan, let Claude scaffold
-                the site, and add two skills that automate the end of every
-                phase after this one.
+                Run your first real session. Draft a plan, let Claude scaffold the site, and add two skills that automate the end of every phase after
+                this one.
             </p>
 
             <p>
-                While we hinted at it in the setup, the project for this
-                tutorial is a personal website with a home page, a resume page,
-                and a projects page. Plain HTML and CSS, hosted on GitHub Pages,
-                no JavaScript or frameworks. Phase 0, the one you're doing now,
-                is the
-                <em>scaffolding</em>. That means the folder structure, the
-                shared stylesheet, and the HTML boilerplate that every page will
-                use. Think of it like pouring the foundation before framing a
-                house. Get it right now and every later phase is easy, since the
-                focus is on content instead of underlying architecture.
+                While we hinted at it in the setup, the project for this tutorial is a personal website with a home page, a resume page, and a
+                projects page. Plain HTML and CSS, hosted on GitHub Pages, no JavaScript or frameworks. Phase 0, the one you're doing now, is the
+                <em>scaffolding</em>. That means the folder structure, the shared stylesheet, and the HTML boilerplate that every page will use. Think
+                of it like pouring the foundation before framing a house. Get it right now and every later phase is easy, since the focus is on
+                content instead of underlying architecture.
             </p>
 
             <h2>Start the Session</h2>
@@ -53,9 +47,7 @@
 
             <div class="code-block">
                 <div class="code-header">
-                    <span class="code-dots"
-                        ><span></span><span></span><span></span
-                    ></span>
+                    <span class="code-dots"><span></span><span></span><span></span></span>
                     <span>claude code</span>
                 </div>
                 <pre><code>/new
@@ -64,20 +56,11 @@
             </div>
 
             <ul>
+                <li><code>/new</code> &rarr; clears any leftover context from your last session</li>
+                <li><code>/rename init</code> &rarr; labels the session so you can <code>/resume</code> it by name later</li>
                 <li>
-                    <code>/new</code> &rarr; clears any leftover context from
-                    your last session
-                </li>
-                <li>
-                    <code>/rename init</code> &rarr; labels the session so you
-                    can <code>/resume</code> it by name later
-                </li>
-                <li>
-                    <code>/s-sesh</code> &rarr; runs the skill you set up in
-                    Part 2. Pulls in <code>PLAN.md</code>,
-                    <code>STATUS.md</code>, <code>LAST_SESSION.md</code>, and
-                    prints a briefing. The argument is your goal for this
-                    session.
+                    <code>/s-sesh</code> &rarr; runs the skill you set up in Part 2. Pulls in <code>PLAN.md</code>, <code>STATUS.md</code>,
+                    <code>LAST_SESSION.md</code>, and prints a briefing. The argument is your goal for this session.
                 </li>
             </ul>
 
@@ -87,46 +70,29 @@
                     alt="Terminal output from running /s-sesh phase 0, scaffolding phase. Claude writes a session file, then prints a Session Briefing with the phase goal, parallel sessions, last session, done-when criteria, and scope reminder."
                 />
                 <figcaption>
-                    Figure 1. <code>/s-sesh</code> reads your memory files and
-                    prints a briefing so Claude starts the session already
-                    knowing the phase, the goal, and what "done" looks like.
+                    Figure 1. <code>/s-sesh</code> reads your memory files and prints a briefing so Claude starts the session already knowing the
+                    phase, the goal, and what "done" looks like.
                 </figcaption>
             </figure>
 
             <h2>Plan Mode</h2>
             <p>
-                Enter plan mode with <code>/plan</code>. In this mode Claude
-                writes a plan but won't touch files yet. Describe what you want
-                the site to look and feel like. The more specific you are, the
-                less revision you'll do later. Useful things to include:
+                Enter plan mode with <code>/plan</code>. In this mode Claude writes a plan but won't touch files yet. Describe what you want the site
+                to look and feel like. The more specific you are, the less revision you'll do later. Useful things to include:
             </p>
 
             <ul>
-                <li>
-                    <strong>Visual direction</strong> &rarr; tone, font choice,
-                    color palette or theme name
-                </li>
-                <li>
-                    <strong>Constraints</strong> &rarr; "no JavaScript", "hosted
-                    on GitHub Pages", "works on mobile"
-                </li>
-                <li>
-                    <strong>Structure</strong> &rarr; which pages, what's shared
-                    across them, what's unique
-                </li>
-                <li>
-                    <strong>What each phase owns</strong> &rarr; so later phases
-                    can run in parallel without stepping on each other
-                </li>
+                <li><strong>Visual direction</strong> &rarr; tone, font choice, color palette or theme name</li>
+                <li><strong>Constraints</strong> &rarr; "no JavaScript", "hosted on GitHub Pages", "works on mobile"</li>
+                <li><strong>Structure</strong> &rarr; which pages, what's shared across them, what's unique</li>
+                <li><strong>What each phase owns</strong> &rarr; so later phases can run in parallel without stepping on each other</li>
             </ul>
 
             <p>For example:</p>
 
             <div class="code-block">
                 <div class="code-header">
-                    <span class="code-dots"
-                        ><span></span><span></span><span></span
-                    ></span>
+                    <span class="code-dots"><span></span><span></span><span></span></span>
                     <span>example prompt</span>
                 </div>
                 <pre><code>lets plan out phase 0. the overall style im going for here is clean
@@ -139,18 +105,14 @@ of those. index.html is just scaffolding.</code></pre>
 
             <p>
                 Claude writes a plan.
-                <strong>Read the whole thing.</strong> Plans get long but this
-                is the single most important step. If you and Claude don't agree
-                on what's being built, it builds the wrong thing. You have four
-                options when it's ready:
+                <strong>Read the whole thing.</strong> Plans get long but this is the single most important step. If you and Claude don't agree on
+                what's being built, it builds the wrong thing. You have four options when it's ready:
             </p>
 
             <ol>
                 <li>Approve and bypass permissions</li>
                 <li>Approve with manual review on each edit</li>
-                <li>
-                    Refine with Ultraplan (a bigger planning pass on the web)
-                </li>
+                <li>Refine with Ultraplan (a bigger planning pass on the web)</li>
                 <li>Tell Claude what to change</li>
             </ol>
             <figure>
@@ -158,61 +120,36 @@ of those. index.html is just scaffolding.</code></pre>
                     src="assets/img/plan-options.png"
                     alt="The four approval options Claude shows after writing a plan: 1. Yes, and bypass permissions. 2. Yes, manually approve edits. 3. No, refine with Ultraplan on Claude Code on the web. 4. Tell Claude what to change. A shift+tab hint lets you approve with feedback."
                 />
-                <figcaption>
-                    Figure 2. The four options Claude offers once the plan is
-                    ready.
-                </figcaption>
+                <figcaption>Figure 2. The four options Claude offers once the plan is ready.</figcaption>
             </figure>
 
-            <p>
-                Use option 4 liberally. It's always going to be easier to
-                iterate on the plan than to undo bad code that is already
-                written.
-            </p>
+            <p>Use option 4 liberally. It's always going to be easier to iterate on the plan than to undo bad code that is already written.</p>
 
             <div class="callout">
-                Ironically, this is the step where you do the least typing. Once
-                the plan is right, Claude writes the scaffold while you watch.
-                But because you paid close attention to the plan, you know
-                exactly what it is doing and why.
+                Ironically, this is the step where you do the least typing. Once the plan is right, Claude writes the scaffold while you watch. But
+                because you paid close attention to the plan, you know exactly what it is doing and why.
             </div>
 
             <div class="callout">
-                Pro tip: use dictation to speak your plan instead of typing it.
-                Either Claude Code's built-in <code>/voice</code> command or a
-                tool like
-                <a
-                    href="https://wisprflow.ai/r?ANDREW27012"
-                    target="_blank"
-                    rel="noopener"
-                    >Wispr Flow</a
-                >
-                works. Getting the vision out of your head is faster out loud,
-                and revisions feel more like a conversation.
+                Pro tip: use dictation to speak your plan instead of typing it. Either Claude Code's built-in <code>/voice</code> command or a tool
+                like
+                <a href="https://wisprflow.ai/r?ANDREW27012" target="_blank" rel="noopener">Wispr Flow</a>
+                works. Getting the vision out of your head is faster out loud, and revisions feel more like a conversation.
             </div>
 
             <h2>Smoke-Test Skill</h2>
             <p>
-                A <strong>smoke test</strong> is a quick sanity check, not a
-                full test suite. But sanity checks are important, and while AI
-                is phenomenal at writing code, quality assurance is still best
-                to be done by humans. You run it after a change to catch obvious
-                breakage, like checking if a file went missing, is the HTML
-                valid, did a stylesheet fail to load. The name comes from
-                hardware engineering. Hardware engineers would plug in the
-                circuit, see if smoke comes out.
+                A <strong>smoke test</strong> is a quick sanity check, not a full test suite. But sanity checks are important, and while AI is
+                phenomenal at writing code, quality assurance is still best to be done by humans. You run it after a change to catch obvious breakage,
+                like checking if a file went missing, is the HTML valid, did a stylesheet fail to load. The name comes from hardware engineering.
+                Hardware engineers would plug in the circuit, see if smoke comes out.
             </p>
 
-            <p>
-                Before closing the session, build a reusable smoke-test skill
-                using the built-in <code>skill-creator</code>:
-            </p>
+            <p>Before closing the session, build a reusable smoke-test skill using the built-in <code>skill-creator</code>:</p>
 
             <div class="code-block">
                 <div class="code-header">
-                    <span class="code-dots"
-                        ><span></span><span></span><span></span
-                    ></span>
+                    <span class="code-dots"><span></span><span></span><span></span></span>
                     <span>claude code</span>
                 </div>
                 <pre><code>/skill-creator:skill-creator create a smoke test skill where i can
@@ -222,24 +159,16 @@ properly and things run smoothly</code></pre>
             </div>
 
             <p>
-                It writes a checklist skill scoped to your project. The skill
-                checks that files exist, HTML is valid, CSS tokens are defined,
-                and no links are broken. Runs as <code>/smoke-test</code>. Flags
-                potential issues as FAIL, WARN, or PASS.
+                It writes a checklist skill scoped to your project. The skill checks that files exist, HTML is valid, CSS tokens are defined, and no
+                links are broken. Runs as <code>/smoke-test</code>. Flags potential issues as FAIL, WARN, or PASS.
             </p>
 
             <h2>PR Skill</h2>
-            <p>
-                The logic is the same for committing. One command that stages,
-                commits, pushes a branch, and opens a PR with a written
-                description:
-            </p>
+            <p>The logic is the same for committing. One command that stages, commits, pushes a branch, and opens a PR with a written description:</p>
 
             <div class="code-block">
                 <div class="code-header">
-                    <span class="code-dots"
-                        ><span></span><span></span><span></span
-                    ></span>
+                    <span class="code-dots"><span></span><span></span><span></span></span>
                     <span>claude code</span>
                 </div>
                 <pre><code>/skill-creator:skill-creator create a skill called pr that
@@ -251,19 +180,13 @@ should auto merge and switch to master</code></pre>
             </div>
 
             <p>
-                Have the <code>pr</code> skill run <code>c-sesh</code> before
-                any git work. That way your session-close edits
-                (<code>STATUS.md</code>, <code>LAST_SESSION.md</code>,
-                <code>DECISIONS.md</code>) in the same PR instead of lagging
-                behind as a second commit.
+                Have the <code>pr</code> skill run <code>c-sesh</code> before any git work. That way your session-close edits (<code>STATUS.md</code>,
+                <code>LAST_SESSION.md</code>, <code>DECISIONS.md</code>) in the same PR instead of lagging behind as a second commit.
             </p>
 
             <div class="callout">
-                This is where things can start to ramp up: skills can call other
-                skills. A skill that closes the session, runs the smoke test,
-                commits, pushes, and opens a PR is one command (<code
-                    >/pr auto</code
-                >) that replaces ten.
+                This is where things can start to ramp up: skills can call other skills. A skill that closes the session, runs the smoke test,
+                commits, pushes, and opens a PR is one command (<code>/pr auto</code>) that replaces ten.
             </div>
 
             <h2>Close Out</h2>
@@ -271,9 +194,7 @@ should auto merge and switch to master</code></pre>
 
             <div class="code-block">
                 <div class="code-header">
-                    <span class="code-dots"
-                        ><span></span><span></span><span></span
-                    ></span>
+                    <span class="code-dots"><span></span><span></span><span></span></span>
                     <span>claude code</span>
                 </div>
                 <pre><code>/pr auto</code></pre>
@@ -283,9 +204,7 @@ should auto merge and switch to master</code></pre>
 
             <div class="code-block">
                 <div class="code-header">
-                    <span class="code-dots"
-                        ><span></span><span></span><span></span
-                    ></span>
+                    <span class="code-dots"><span></span><span></span><span></span></span>
                     <span>claude code</span>
                 </div>
                 <pre><code>/smoke-test
@@ -294,9 +213,8 @@ should auto merge and switch to master</code></pre>
             </div>
 
             <p>
-                Either way, you end with Phase 0 scaffolded, smoke-tested,
-                committed, PR'd, and the session logged. Everything Phases 1, 2,
-                and 3 need is now in place, and they can be built in parallel.
+                Either way, you end with Phase 0 scaffolded, smoke-tested, committed, PR'd, and the session logged. Everything Phases 1, 2, and 3 need
+                is now in place, and they can be built in parallel.
             </p>
 
             <figure>
@@ -304,39 +222,27 @@ should auto merge and switch to master</code></pre>
                     src="assets/img/website.png"
                     alt="The scaffolded site at the end of Phase 0. A dark gruvbox theme shows the brand 'george p. burdell' top-left, home/resume/projects nav top-right, a large 'George P. Burdell' hero with the tagline 'student · tinkerer · ramblin' wreck', and an open DevTools inspector confirming no console errors."
                 />
-                <figcaption>
-                    Figure 3. Phase 0 output. Scaffold, nav, hero, theming, and
-                    a clean DevTools console.
-                </figcaption>
+                <figcaption>Figure 3. Phase 0 output. Scaffold, nav, hero, theming, and a clean DevTools console.</figcaption>
             </figure>
 
             <h2>You're Writing a Language</h2>
             <p>
-                Step back and look at what we've set up. <code>/s-sesh</code>,
-                <code>/c-sesh</code>, <code>/smoke-test</code>,
-                <code>/pr</code>, <code>/pr auto</code>, <code>CLAUDE.md</code>,
-                the <code>.memory/</code> files. None of that is Claude Code out
-                of the box; these are all things that we've set up so far.
+                Step back and look at what we've set up. <code>/s-sesh</code>, <code>/c-sesh</code>, <code>/smoke-test</code>, <code>/pr</code>,
+                <code>/pr auto</code>, <code>CLAUDE.md</code>, the <code>.memory/</code> files. None of that is Claude Code out of the box; these are
+                all things that we've set up so far.
             </p>
 
             <p>
-                That's the point. You're not just telling an AI what to do,
-                you're building a command set that drives it.
-                <code>/s-sesh phase 0</code> is a function call and
-                <code>/pr auto</code> is a pipeline. <code>CLAUDE.md</code> is a
-                contract. Skills calling skills is composition.
+                That's the point. You're not just telling an AI what to do, you're building a command set that drives it.
+                <code>/s-sesh phase 0</code> is a function call and <code>/pr auto</code> is a pipeline. <code>CLAUDE.md</code> is a contract. Skills
+                calling skills is composition.
             </p>
 
-            <p>
-                From here on out every phase gets easier because the language
-                you've written automates redundancy.
-            </p>
+            <p>From here on out every phase gets easier because the language you've written automates redundancy.</p>
 
             <hr />
 
-            <p class="next-link">
-                Continue on to <a href="part4.html">Part 4</a>.
-            </p>
+            <p class="next-link">Continue on to <a href="part4.html">Part 4</a>.</p>
         </main>
     </body>
 </html>
