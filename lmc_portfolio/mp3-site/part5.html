@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 5 — Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <ul class="nav-links">
+        <li><a href="index.html">Part 1</a></li>
+        <li><a href="part2.html">Part 2</a></li>
+        <li><a href="part3.html">Part 3</a></li>
+        <li><a href="part4.html">Part 4</a></li>
+        <li><a href="part5.html" class="active">Part 5</a></li>
+        <li><a href="part6.html">Part 6</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <span class="part-label">Part 5</span>
+    <h1>Adding in a Resume</h1>
+    <p class="lead">To expand on our portfolio website, we're going to be adding in our resume. However, rather than simply embed a PDF onto the website, we're going to learn how to use Claude Code to extract the contents of our resume and have Claude add in the contents of our resume for us.</p>
+
+    <h2>Model Context Protocol (MCP)</h2>
+    <p>Instead of copying and pasting a text-based version of our resume, we're going to simply provide Claude with a shareable Google Drive link to our resume. Claude will then do the following:</p>
+    <ol>
+      <li>Use the link to access the file in Google Drive.</li>
+      <li>Read the contents of the file by automatically downloading it.</li>
+      <li>Extract the relevant contents from the resume that we specify.</li>
+      <li>Use the contents of the resume to build the resume portion of the website.</li>
+    </ol>
+
+    <p>At this point, you might be wondering: how can we give Claude access to Google Drive? 
+      And why even bother doing all this work with a resume? The answer lies in understanding the super powerful <strong>Model Context Protocol</strong>.</p>
+
+    <p>As software continues to expand, we want to give these agents access to this software so that we can perform actions. In other words, we want to give our agent access to many tools.</p>
+
+    <p>However, there's a problem that arises: for each software we wish to integrate into Claude to use as a tool, we need to ensure that Claude communicates with this software correctly. Since every software is different, there might be multiple ways to communicate with other software. <strong>Model Context Protocol unifies this communication into a single standard.</strong></p>
+
+    <p>You can think of MCP like giving Claude access to an intercom system. Instead of talking directly to Google Drive, we talked to a specialized worker that exists outside of Claude that can access Google Drive for us. So, to get access to our resume, we have the following flow:</p>
+    <ol>
+      <li>You ask Claude to read your resume from Google Drive.</li>
+      <li>Claude cannot directly see into your private Google Drive. So, it uses the language defined in the Model Context Protocol to tell our Google Drive "worker" to find our resume file and provide Claude with the contents.</li>
+      <li>The worker goes into our Drive, finds the file, and provides it to Claude to temporarily download it to allow Claude to grab the contents.</li>
+    </ol>
+
+    <p>While this may not seem like a big deal at the moment (after all, we could have just downloaded the resume and copy-pasted the contents into Claude), <strong>MCP provides agents like Claude Code to access multiple pieces of software, all while only needing to know 1 language: MCP.</strong></p>
+
+    <figure>
+      <img
+        src="assets/drive-mcp-visal.png"
+        alt="AI Agent accessing the tools from the Google Drive MCP server."
+      />
+      <figcaption>
+        AI Agent accessing tools from the Google Drive MCP Server.
+      </figcaption>
+    </figure>
+
+    <div class="callout">
+      Also: for now, think about <strong>MCP Servers</strong> as giving Claude access to other software through a specialized set of tools. However, instead of needing to know how to build those tools and how the tools interact with something like Google Drive, Claude just needs to know how to correctly call those tools.
+    </div>
+
+    <h2>Setting up a Google Drive MCP Server</h2>
+    <p>To actually provide Claude with the tools to search your Google Drive, you need to use an MCP Server. This provides Claude Code with access to the set of tools needed to access your Google Drive.</p>
+
+    <p>You can think of it like a specific program that lives between Claude Code and Google Drive, containing the "worker" that goes into our Google Drive on behalf of Claude Code.</p>
+
+    <p>To set up Claude Code with a Google Drive MCP Server, which contains the tools we need to give Claude Code the ability to search + read files in your Google Drive, <strong>we need credentials.</strong></p>
+
+    <p>Specifically, we need to use Google Cloud to provide us with a file that we can download that we then provide to Claude Code to make authenticated requests to our Google Drive.</p>
+
+    <p>To obtain the credentials, the steps are as follows:</p>
+    <ol>
+      <li>Go to <strong>console.cloud.google.com</strong></li>
+      <li>Click on the projects icon at the top, and then create a new project.
+        <ul>
+          <li>Feel free to call the project whatever you'd like. It does not matter for our purposes.</li>
+        </ul>
+      </li>
+      <li>Once the new project is created, click on the search bar at the top and search for <strong>"Google Drive API"</strong>.</li>
+      <li>Once you find the Google Drive API, click on the option, then click <strong>"Enable"</strong>.</li>
+      <li>Click on the left sidebar to make it appear, then click on the <strong>"OAuth consent screen"</strong> option under the APIs and Services menu.</li>
+      <li>Once you reach the landing page, click <strong>"Get Started"</strong>, and fill in your information. You can set the name to whatever you'd like, but be sure to use the email associated with your Google Drive account.</li>
+      <li>Once you're done, head over to the left sidebar, and find the option for <strong>"Credentials"</strong> under the APIs and Services menu. Open the Credentials page.</li>
+      <li>At the top, click <strong>"Create Credentials"</strong>, and select <strong>"OAuth Client ID"</strong>.
+        <ul>
+          <li>Application Type: <strong>Desktop App</strong></li>
+          <li>Name: Whatever you'd like.</li>
+          <li>At the end: be sure to click <strong>download JSON</strong> to download the credentials.</li>
+        </ul>
+      </li>
+      <li>Click on the set of credentials you just made, then on the navigation bar on the left, select the <strong>"Audience"</strong> tab.</li>
+      <li>Under this tab, you will see an area called <strong>"Test users"</strong>. Add your email in to ensure you are added as a test user.</li>
+    </ol>
+
+    <p>You may also refer to the following video for getting a credentials file from Google Cloud:</p>
+
+    <div class="video-embed">
+      <iframe
+        src="https://drive.google.com/file/d/1eazHKB8vq24sW-K70KLizfXtfDvs94Kq/preview"
+        allow="autoplay"
+        allowfullscreen
+        title="Getting a credentials file from Google Cloud"
+      ></iframe>
+    </div>
+
+    <p>Once you have your credentials file downloaded, go ahead and get the file path of the JSON file.</p>
+    <ul>
+      <li><strong>On MacOS:</strong> right click the file name, hold down the option key, and select "Copy [File Name] as Pathname".</li>
+      <li><strong>On Windows:</strong> hold Shift and right-click the item, then select "Copy as path".</li>
+    </ul>
+
+    <p>Once you have the file path, you need to run 1 command to install the Google Drive MCP server:</p>
+
+    <div class="code-block">
+      <div class="code-header">
+        <span><div class="code-dots"><span></span><span></span><span></span></div></span>
+        <span>Terminal</span>
+      </div>
+      <pre><code>claude mcp add gdrive -e GOOGLE_DRIVE_OAUTH_CREDENTIALS="[FILE_PATH]" -- npx -y @piotr-agier/google-drive-mcp</code></pre>
+    </div>
+
+    <div class="callout">
+      Be sure to replace the <code>[FILE_PATH]</code> portion with the file path that you just copied.
+    </div>
+
+    <p>Here is a video demonstrating this command being run, along with the expected output:</p>
+
+    <div class="video-embed">
+      <iframe
+        src="https://drive.google.com/file/d/1fLtoEE2FdAKFHX-YhqK4SWGpt4N7un2x/preview"
+        allow="autoplay"
+        allowfullscreen
+        title="Setting up the Google Drive MCP server in Claude Code"
+      ></iframe>
+    </div>
+
+    <p>After the MCP Server has been installed, you can type in <code>claude</code> to open up Claude Code. Immediately, you should be prompted to log in with Google, and you should also see a screen like this:</p>
+
+    <figure style="margin: 0;">
+      <img
+        src="assets/google-login.png"
+        alt="Google OAuth login screen for an unpublished app, showing a warning that the app has not been verified by Google."
+        style="width: auto; max-width: 100%; border: none; border-radius: 0;"
+      />
+    </figure>
+
+    <div class="callout">
+      Don't worry, we're not installing a virus or anything. This is simply just an unpublished project. Feel free to hit continue (which is <strong>NOT</strong> highlighted in blue).
+    </div>
+
+    <p>After that, with Claude Code open, type in the command <code>/mcp</code>. You should see something similar to this:</p>
+
+    <figure>
+      <img
+        src="assets/running-mcp-command.png"
+        alt="Terminal output after running the /mcp command in Claude Code, showing gdrive listed under Local MCPs with a connected status."
+        style="border: none; border-radius: 0;"
+      />
+    </figure>
+
+    <p>Notice under the "Local MCPs" option, we see <strong>gdrive</strong>. This is our Google Drive MCP server. You can also see that it's still "connecting". Let's click enter to see the status:</p>
+
+    <figure>
+      <img
+        src="assets/mcp-reconnect.png"
+        alt="Claude Code /mcp status screen showing the Reconnect option and 104 available Google Drive tools."
+        style="border: none; border-radius: 0;"
+      />
+    </figure>
+
+    <p>Notice here that we have the option to <strong>"Reconnect"</strong>. You should select this, then re-run the <code>/mcp</code> command to see the image above. Notice: we have nearly <strong>104 tools</strong>, all for Google Drive related functionality!</p>
+
+    <p>With the Google Drive MCP server setup, we can finally use Claude Code to get the contents of our resume. Here are the general set of steps that we'll take:</p>
+    <ol>
+      <li>Start a new session for <strong>"phase 2"</strong>. This is the resume insertion phase, and will provide Claude Code with all the necessary information related to other phases and tasks completed previously.</li>
+      <li>Enter plan mode and have Claude Code create a plan. This includes fetching the contents of your resume.</li>
+      <li>Execute the plan with Claude Code.</li>
+      <li>Preview the website and its changes.</li>
+      <li>Commit the code to GitHub.</li>
+      <li>Close the session, allowing Claude Code to log its progress.</li>
+    </ol>
+
+    <div class="callout">
+      Note: after you close the session, you should also commit the files that Claude Code has updated. Or, you can simply close the session before committing to GitHub.
+    </div>
+
+    <p>Here is a video going over this process (note: there is no audio as we're simply prompting Claude and
+      confirming it's outputs - feel free to skip ahead throughout the video!):</p>
+
+    <div class="video-embed">
+      <iframe
+        src="https://drive.google.com/file/d/1fDQdrKCfeznmn1xkMNPYPDsojH_6kYhW/preview"
+        allow="autoplay"
+        allowfullscreen
+        title="Phase 2 walkthrough: adding resume with Claude Code"
+      ></iframe>
+    </div>
+
+    <p>Here's the final result:</p>
+
+    <figure>
+      <img
+        src="assets/website-with-resume.png"
+        alt="Portfolio website with the resume section added by Claude Code."
+        style="border: none; border-radius: 0;"
+      />
+    </figure>
+
+    Well done! You've successfully learned all about MCP and have added your resume to your
+    personal portfolio!
+
+    <hr>
+
+    <p class="next-link">Continue on to <a href="part6.html">Part 6</a>.</p>
+  </main>
+</body>
+</html>
